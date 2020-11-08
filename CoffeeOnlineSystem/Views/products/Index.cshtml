@@ -1,0 +1,78 @@
+﻿@model IEnumerable<CoffeeOnlineSystem.Models.products>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutForProduct.cshtml";
+    int i = 0;
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table ">
+    <tr class="bg-primary">
+        <th>
+            NO.
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdProduct)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameProduct)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InventoryProduct)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDCatogory)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @(++i)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IdProduct)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.NameProduct)
+    </td>
+    <td>
+        <img src="~/images/@Url.Content(item.Image)" style="height:100px" />
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.InventoryProduct)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Price)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Description)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IDCatogory)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.IdProduct }) |
+        @Html.ActionLink("Details", "Detail", new { id = item.IdProduct }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.IdProduct })
+    </td>
+</tr>
+ 
+}
+
+</table>
