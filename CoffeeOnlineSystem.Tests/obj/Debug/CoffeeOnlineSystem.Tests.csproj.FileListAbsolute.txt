@@ -1,0 +1,2 @@
+C:\Users\DELL\Desktop\Coffee-Online-System\CoffeeOnlineSystem.Tests\obj\Debug\CoffeeOnlineSystem.Tests.csprojAssemblyReference.cache
+C:\Users\DELL\Desktop\Coffee-Online-System\CoffeeOnlineSystem.Tests\obj\Debug\CoffeeOnlineSystem.Tests.csproj.CoreCompileInputs.cache
