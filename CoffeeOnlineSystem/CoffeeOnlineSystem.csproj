@@ -133,6 +133,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\productsController.cs" />
@@ -431,6 +432,12 @@
     <Content Include="Views\Employee\Detail.cshtml" />
     <Content Include="Views\Employee\Create.cshtml" />
     <Content Include="Views\Employee\Edit.cshtml" />
+    <Content Include="Views\Shared\_LayoutCoffee.cshtml" />
+    <Content Include="Views\HomePage\Home.cshtml" />
+    <Content Include="Views\HomePage\About.cshtml" />
+    <Content Include="Views\HomePage\Contact.cshtml" />
+    <Content Include="Views\HomePage\Login.cshtml" />
+    <Content Include="Views\HomePage\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
