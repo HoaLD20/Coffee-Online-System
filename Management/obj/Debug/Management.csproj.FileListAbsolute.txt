@@ -7,3 +7,13 @@ C:\Users\asus\Desktop\SRSSS\Coffee-Online-System\Management\obj\Debug\Management
 C:\Users\asus\Desktop\SRSSS\Coffee-Online-System\Management\obj\Debug\Management.csproj.CoreCompileInputs.cache
 C:\Users\asus\Desktop\SRSSS\Coffee-Online-System\Management\obj\Debug\Management.exe
 C:\Users\asus\Desktop\SRSSS\Coffee-Online-System\Management\obj\Debug\Management.pdb
+C:\Users\asus\Desktop\Management\bin\Debug\Management.exe.config
+C:\Users\asus\Desktop\Management\bin\Debug\Management.exe
+C:\Users\asus\Desktop\Management\bin\Debug\Management.pdb
+C:\Users\asus\Desktop\Management\obj\Debug\Management.csprojAssemblyReference.cache
+C:\Users\asus\Desktop\Management\obj\Debug\Management.Product.resources
+C:\Users\asus\Desktop\Management\obj\Debug\Management.Properties.Resources.resources
+C:\Users\asus\Desktop\Management\obj\Debug\Management.csproj.GenerateResource.cache
+C:\Users\asus\Desktop\Management\obj\Debug\Management.csproj.CoreCompileInputs.cache
+C:\Users\asus\Desktop\Management\obj\Debug\Management.exe
+C:\Users\asus\Desktop\Management\obj\Debug\Management.pdb
