@@ -12,7 +12,7 @@ namespace CoffeeOnlineSystem.Models
 
         public DBConection()
         {
-            conn = "Data Source=DESKTOP-G9K0HMN;Initial Catalog=COFFEE;Integrated Security=True";
+            conn = "Data Source=LAPTOP-37MD59F0;Initial Catalog=COFFEE;Integrated Security=True";
         }
 
         public SqlConnection GetConnection()

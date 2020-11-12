@@ -1,8 +1,9 @@
-﻿using CoffeeOnlineSystem.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,8 +19,13 @@ namespace Management.Models
         double price;
         string description;
         int idCatogory;
-        int idDetail;
-        public products(int idProduct, string nameProduct, string image, int inventoryProduct, double price, string description, int iDCatogory, int idDetail)
+        string photo;
+        int stutas;
+        public products()
+        {
+        }
+
+        public products(int idProduct, string nameProduct, string image, int inventoryProduct, double price, string description, int idCatogory, string photo)
         {
             this.idProduct = idProduct;
             this.nameProduct = nameProduct;
@@ -27,12 +33,21 @@ namespace Management.Models
             this.inventoryProduct = inventoryProduct;
             this.price = price;
             this.description = description;
-            idCatogory = iDCatogory;
-            this.idDetail = idDetail;
+            this.idCatogory = idCatogory;
+            this.photo = photo;
         }
 
-        public products()
+        public products(int idProduct, string nameProduct, string image, int inventoryProduct, double price, string description, int idCatogory, string photo, int stutas)
         {
+            this.idProduct = idProduct;
+            this.nameProduct = nameProduct;
+            this.image = image;
+            this.inventoryProduct = inventoryProduct;
+            this.price = price;
+            this.description = description;
+            this.idCatogory = idCatogory;
+            this.photo = photo;
+            this.Stutas = stutas;
         }
 
         public int IdProduct { get => idProduct; set => idProduct = value; }
@@ -41,24 +56,23 @@ namespace Management.Models
         public int InventoryProduct { get => inventoryProduct; set => inventoryProduct = value; }
         public double Price { get => price; set => price = value; }
         public string Description { get => description; set => description = value; }
-
-        public int IDCatogory { get => idCatogory; set => idCatogory = value; }
-        public int IDDetail { get => idDetail; set => idDetail = value; }
-
+        public int IdCatogory { get => idCatogory; set => idCatogory = value; }
+        public string Photo { get => photo; set => photo = value; }
+        public int Stutas { get => stutas; set => stutas = value; }
     }
     class productsList
     {
-        DBConection db;
+        DBConectionManager db;
         SqlCommand cmd;
         SqlConnection conn;
         public productsList()
         {
-            db = new DBConection();
+            db = new DBConectionManager();
         }
         public DataTable getProduct()
         {
             string sql;
-            sql = "select * from products";
+            sql = "select * from Product where status = 1";
             List<products> proList = new List<products>();
 
             SqlConnection con = db.GetConnection();
@@ -75,7 +89,7 @@ namespace Management.Models
         {
 
 
-            string sql = "insert into products(nameProduct, available,image, price,descripttion,IDCategory,IDDetail) values (@nameProduct,@available,@image,@price,@descripttion,@IDCategory,@IDDetail)";
+            string sql = "insert into Product(nameProduct, available,imageUrl, price,description,IDCategory, photo) values (@nameProduct,@available,@imageUrl,@price,@description,@IDCategory,@photo)";
             //tao ket noi toi sql
             conn = db.GetConnection();
 
@@ -85,11 +99,11 @@ namespace Management.Models
                 conn.Open();
                 cmd.Parameters.Add("@nameProduct", SqlDbType.NVarChar).Value = pro.NameProduct;
                 cmd.Parameters.Add("@available", SqlDbType.NVarChar).Value = pro.InventoryProduct;
-                cmd.Parameters.Add("@image", SqlDbType.NVarChar).Value = pro.Image;
+                cmd.Parameters.Add("@imageUrl", SqlDbType.NVarChar).Value = pro.Image;
                 cmd.Parameters.Add("@price", SqlDbType.Float).Value = pro.Price;
-                cmd.Parameters.Add("@descripttion", SqlDbType.Float).Value = pro.Description;
-                cmd.Parameters.Add("@IDCategory", SqlDbType.Int).Value = pro.IDCatogory;
-                cmd.Parameters.Add("@IDDetail", SqlDbType.Int).Value = pro.IDDetail;
+                cmd.Parameters.Add("@description", SqlDbType.Float).Value = pro.Description;
+                cmd.Parameters.Add("@IDCategory", SqlDbType.Int).Value = pro.IdCatogory;
+                cmd.Parameters.Add("@photo", SqlDbType.Image).Value = pro.Photo;
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
@@ -103,13 +117,14 @@ namespace Management.Models
 
         public bool delete(products pro)
         {
-            string sql = "delete products where IDProduct=@IDProduct";
+            string sql = "delete Product where IDProduct=@IDProduct";
+            cmd = new SqlCommand(sql, conn);
+            
             SqlConnection con = db.GetConnection();
             try
-            {
-                cmd = new SqlCommand(sql, conn);
+            {                
                 conn.Open();
-                cmd.Parameters.Add("@IDProduct", SqlDbType.NVarChar).Value = pro.IdProduct;
+                cmd.Parameters.Add("@IDProduct", SqlDbType.Int).Value = pro.IdProduct;
                 cmd.ExecuteNonQuery();
                 conn.Close();
             }
@@ -123,7 +138,7 @@ namespace Management.Models
         }
         public void update(products pro)
         {
-            string sql = "update products set nameProduct=@nameProduct, available=@available,image=@image, price=@price,descripttion=@descripttion,IDCategory=@IDCategory,IDDetail=@IDDetail where IDProduct=@IDProduct";
+            string sql = "update Product set nameProduct=@nameProduct, available=@available,imageUrl=@imageUrl, price=@price,description=@description,IDCategory=@IDCategory,photo=@photo where IDProduct=@IDProduct";
             //tao ket noi toi sql
             SqlConnection con = db.GetConnection();
             SqlCommand cmd = new SqlCommand(sql, con);
