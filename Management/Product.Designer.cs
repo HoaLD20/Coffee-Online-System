@@ -31,17 +31,36 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product));
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnAddEmp = new System.Windows.Forms.Button();
+            this.btnDeleteEmp = new System.Windows.Forms.Button();
+            this.btnUpdateEmp = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.tbEmployee = new System.Windows.Forms.DataGridView();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtFullname = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.txtIDEmp = new System.Windows.Forms.TextBox();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.productBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.cOFFEEDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cOFFEEDataSet2 = new Management.COFFEEDataSet2();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cOFFEEDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.productTableAdapter = new Management.COFFEEDataSet2TableAdapters.ProductTableAdapter();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.bntAdd = new System.Windows.Forms.Button();
@@ -84,8 +103,93 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtIDPro = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
+            this.tabControlProduct = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.productBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.cOFFEEDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cOFFEEDataSet2 = new Management.COFFEEDataSet2();
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cOFFEEDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.productTableAdapter = new Management.COFFEEDataSet2TableAdapters.ProductTableAdapter();
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeTableAdapter = new Management.COFFEEDataSet3TableAdapters.EmployeeTableAdapter();
+            this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cOFFEEDataSet4 = new Management.COFFEEDataSet4();
+            this.employeeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeTableAdapter1 = new Management.COFFEEDataSet4TableAdapters.EmployeeTableAdapter();
+            this.IDEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label33 = new System.Windows.Forms.Label();
+            this.radioMale = new System.Windows.Forms.RadioButton();
+            this.radioFemale = new System.Windows.Forms.RadioButton();
+            this.cbbPosition = new System.Windows.Forms.ComboBox();
+            this.dateDOB = new System.Windows.Forms.DateTimePicker();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btnRefreshCus = new System.Windows.Forms.Button();
+            this.btnDeleteCus = new System.Windows.Forms.Button();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.tbCustomer = new System.Windows.Forms.DataGridView();
+            this.panelCus = new System.Windows.Forms.GroupBox();
+            this.dateDOBCus = new System.Windows.Forms.DateTimePicker();
+            this.radioFemailCus = new System.Windows.Forms.RadioButton();
+            this.radioMaleCus = new System.Windows.Forms.RadioButton();
+            this.txtUsernameCus = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.txtPhoneCus = new System.Windows.Forms.TextBox();
+            this.txtEmailCus = new System.Windows.Forms.TextBox();
+            this.txtFullNameCus = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.txtIDCus = new System.Windows.Forms.TextBox();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTableAdapter = new Management.COFFEEDataSet4TableAdapters.CustomerTableAdapter();
+            this.cOFFEEDataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.customerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.IDCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage2.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbEmployee)).BeginInit();
+            this.groupBox6.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbProduct)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            this.tabControlProduct.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2)).BeginInit();
@@ -93,72 +197,370 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tbProduct)).BeginInit();
-            this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource2)).BeginInit();
+            this.groupBox7.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tbCustomer)).BeginInit();
+            this.panelCus.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
+            this.tabPage2.Controls.Add(this.groupBox4);
+            this.tabPage2.Controls.Add(this.groupBox5);
+            this.tabPage2.Controls.Add(this.groupBox6);
+            this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1676, 763);
+            this.tabPage2.Size = new System.Drawing.Size(1676, 760);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Employee";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnRefresh);
+            this.groupBox4.Controls.Add(this.btnAddEmp);
+            this.groupBox4.Controls.Add(this.btnDeleteEmp);
+            this.groupBox4.Controls.Add(this.btnUpdateEmp);
+            this.groupBox4.Location = new System.Drawing.Point(1395, 364);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(223, 361);
+            this.groupBox4.TabIndex = 51;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Option";
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefresh.Location = new System.Drawing.Point(21, 282);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(188, 52);
+            this.btnRefresh.TabIndex = 30;
+            this.btnRefresh.Text = "Refresh ";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            // 
+            // btnAddEmp
+            // 
+            this.btnAddEmp.Image = ((System.Drawing.Image)(resources.GetObject("btnAddEmp.Image")));
+            this.btnAddEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAddEmp.Location = new System.Drawing.Point(21, 35);
+            this.btnAddEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddEmp.Name = "btnAddEmp";
+            this.btnAddEmp.Size = new System.Drawing.Size(188, 50);
+            this.btnAddEmp.TabIndex = 16;
+            this.btnAddEmp.Text = "Add Employee";
+            this.btnAddEmp.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteEmp
+            // 
+            this.btnDeleteEmp.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteEmp.Image")));
+            this.btnDeleteEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteEmp.Location = new System.Drawing.Point(21, 205);
+            this.btnDeleteEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDeleteEmp.Name = "btnDeleteEmp";
+            this.btnDeleteEmp.Size = new System.Drawing.Size(188, 50);
+            this.btnDeleteEmp.TabIndex = 19;
+            this.btnDeleteEmp.Text = "Delete Customer";
+            this.btnDeleteEmp.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateEmp
+            // 
+            this.btnUpdateEmp.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateEmp.Image")));
+            this.btnUpdateEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdateEmp.Location = new System.Drawing.Point(21, 127);
+            this.btnUpdateEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdateEmp.Name = "btnUpdateEmp";
+            this.btnUpdateEmp.Size = new System.Drawing.Size(188, 44);
+            this.btnUpdateEmp.TabIndex = 20;
+            this.btnUpdateEmp.Text = "Update Customer";
+            this.btnUpdateEmp.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox5.Controls.Add(this.tbEmployee);
+            this.groupBox5.Location = new System.Drawing.Point(58, 343);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(1315, 352);
+            this.groupBox5.TabIndex = 52;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "List of employee";
+            // 
+            // tbEmployee
+            // 
+            this.tbEmployee.AllowUserToAddRows = false;
+            this.tbEmployee.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbEmployee.AutoGenerateColumns = false;
+            this.tbEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tbEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDEmployee,
+            this.fullname,
+            this.phone,
+            this.email,
+            this.DOB,
+            this.gender,
+            this.username,
+            this.position,
+            this.statusDataGridViewTextBoxColumn});
+            this.tbEmployee.DataSource = this.employeeBindingSource2;
+            this.tbEmployee.Location = new System.Drawing.Point(6, 21);
+            this.tbEmployee.Name = "tbEmployee";
+            this.tbEmployee.RowHeadersWidth = 51;
+            this.tbEmployee.RowTemplate.Height = 100;
+            this.tbEmployee.Size = new System.Drawing.Size(1282, 325);
+            this.tbEmployee.TabIndex = 0;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.dateDOB);
+            this.groupBox6.Controls.Add(this.cbbPosition);
+            this.groupBox6.Controls.Add(this.radioFemale);
+            this.groupBox6.Controls.Add(this.radioMale);
+            this.groupBox6.Controls.Add(this.label33);
+            this.groupBox6.Controls.Add(this.txtUsername);
+            this.groupBox6.Controls.Add(this.label17);
+            this.groupBox6.Controls.Add(this.txtPhone);
+            this.groupBox6.Controls.Add(this.txtEmail);
+            this.groupBox6.Controls.Add(this.txtFullname);
+            this.groupBox6.Controls.Add(this.label18);
+            this.groupBox6.Controls.Add(this.label19);
+            this.groupBox6.Controls.Add(this.label20);
+            this.groupBox6.Controls.Add(this.label21);
+            this.groupBox6.Controls.Add(this.label22);
+            this.groupBox6.Controls.Add(this.label23);
+            this.groupBox6.Controls.Add(this.label24);
+            this.groupBox6.Controls.Add(this.label25);
+            this.groupBox6.Controls.Add(this.label26);
+            this.groupBox6.Controls.Add(this.label27);
+            this.groupBox6.Controls.Add(this.label28);
+            this.groupBox6.Controls.Add(this.label29);
+            this.groupBox6.Controls.Add(this.label30);
+            this.groupBox6.Controls.Add(this.label31);
+            this.groupBox6.Controls.Add(this.label32);
+            this.groupBox6.Controls.Add(this.txtIDEmp);
+            this.groupBox6.Location = new System.Drawing.Point(58, 36);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(1560, 301);
+            this.groupBox6.TabIndex = 50;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Employee details";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(980, 144);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(308, 22);
+            this.txtUsername.TabIndex = 39;
+            // 
+            // label17
+            // 
+            this.label17.AutoEllipsis = true;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(864, 144);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(73, 17);
+            this.label17.TabIndex = 38;
+            this.label17.Text = "Username";
+            // 
+            // txtPhone
+            // 
+            this.txtPhone.Location = new System.Drawing.Point(386, 139);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(308, 22);
+            this.txtPhone.TabIndex = 37;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(386, 224);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(308, 22);
+            this.txtEmail.TabIndex = 33;
+            // 
+            // txtFullname
+            // 
+            this.txtFullname.Location = new System.Drawing.Point(386, 85);
+            this.txtFullname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFullname.Name = "txtFullname";
+            this.txtFullname.Size = new System.Drawing.Size(308, 22);
+            this.txtFullname.TabIndex = 14;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(253, 32);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(87, 17);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "ID Employee";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(904, 212);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(0, 17);
+            this.label19.TabIndex = 29;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(253, 82);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(71, 17);
+            this.label20.TabIndex = 1;
+            this.label20.Text = "Full Name";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.ForeColor = System.Drawing.Color.Red;
+            this.label21.Location = new System.Drawing.Point(1423, 0);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(0, 17);
+            this.label21.TabIndex = 28;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(275, 144);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(49, 17);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "Phone";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.ForeColor = System.Drawing.Color.Red;
+            this.label23.Location = new System.Drawing.Point(1199, 43);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(0, 17);
+            this.label23.TabIndex = 27;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(841, 109);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(0, 17);
+            this.label24.TabIndex = 3;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.Color.Red;
+            this.label25.Location = new System.Drawing.Point(1131, 95);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(0, 17);
+            this.label25.TabIndex = 26;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(859, 32);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(87, 17);
+            this.label26.TabIndex = 4;
+            this.label26.Text = "Date of Birth";
+            this.label26.Click += new System.EventHandler(this.label26_Click);
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.ForeColor = System.Drawing.Color.Red;
+            this.label27.Location = new System.Drawing.Point(1213, 139);
+            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(0, 17);
+            this.label27.TabIndex = 25;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(275, 229);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(42, 17);
+            this.label28.TabIndex = 5;
+            this.label28.Text = "Email";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.ForeColor = System.Drawing.Color.Red;
+            this.label29.Location = new System.Drawing.Point(1213, 191);
+            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(0, 17);
+            this.label29.TabIndex = 24;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(881, 85);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(56, 17);
+            this.label30.TabIndex = 6;
+            this.label30.Text = "Gender";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.ForeColor = System.Drawing.Color.Red;
+            this.label31.Location = new System.Drawing.Point(1213, 90);
+            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(0, 17);
+            this.label31.TabIndex = 23;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.ForeColor = System.Drawing.Color.Red;
+            this.label32.Location = new System.Drawing.Point(673, 40);
+            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(0, 17);
+            this.label32.TabIndex = 22;
+            // 
+            // txtIDEmp
+            // 
+            this.txtIDEmp.Location = new System.Drawing.Point(386, 32);
+            this.txtIDEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIDEmp.Name = "txtIDEmp";
+            this.txtIDEmp.Size = new System.Drawing.Size(308, 22);
+            this.txtIDEmp.TabIndex = 8;
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1676, 763);
+            this.tabPage1.Size = new System.Drawing.Size(1676, 760);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Product";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(12, 12);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1684, 792);
-            this.tabControl1.TabIndex = 0;
-            // 
-            // cOFFEEDataSet2
-            // 
-            this.cOFFEEDataSet2.DataSetName = "COFFEEDataSet2";
-            this.cOFFEEDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "Product";
-            // 
-            // productBindingSource1
-            // 
-            this.productBindingSource1.DataMember = "Product";
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "products";
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // productTableAdapter
-            // 
-            this.productTableAdapter.ClearBeforeFill = true;
             // 
             // groupBox2
             // 
@@ -232,13 +634,14 @@
             this.groupBox3.Controls.Add(this.tbProduct);
             this.groupBox3.Location = new System.Drawing.Point(58, 344);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1315, 355);
+            this.groupBox3.Size = new System.Drawing.Size(1315, 352);
             this.groupBox3.TabIndex = 49;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "List of products";
             // 
             // tbProduct
             // 
+            this.tbProduct.AllowUserToAddRows = false;
             this.tbProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -257,7 +660,7 @@
             this.tbProduct.Name = "tbProduct";
             this.tbProduct.RowHeadersWidth = 51;
             this.tbProduct.RowTemplate.Height = 100;
-            this.tbProduct.Size = new System.Drawing.Size(1282, 328);
+            this.tbProduct.Size = new System.Drawing.Size(1282, 325);
             this.tbProduct.TabIndex = 0;
             this.tbProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbProduct_CellClick_1);
             // 
@@ -365,7 +768,7 @@
             this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Location = new System.Drawing.Point(58, 37);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1393, 301);
+            this.groupBox1.Size = new System.Drawing.Size(1560, 301);
             this.groupBox1.TabIndex = 47;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Product details";
@@ -599,17 +1002,649 @@
             this.txtPrice.Size = new System.Drawing.Size(308, 22);
             this.txtPrice.TabIndex = 11;
             // 
+            // tabControlProduct
+            // 
+            this.tabControlProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlProduct.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabControlProduct.Controls.Add(this.tabPage1);
+            this.tabControlProduct.Controls.Add(this.tabPage2);
+            this.tabControlProduct.Controls.Add(this.tabPage3);
+            this.tabControlProduct.Controls.Add(this.tabPage4);
+            this.tabControlProduct.Location = new System.Drawing.Point(12, 12);
+            this.tabControlProduct.Name = "tabControlProduct";
+            this.tabControlProduct.SelectedIndex = 0;
+            this.tabControlProduct.Size = new System.Drawing.Size(1684, 792);
+            this.tabControlProduct.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox7);
+            this.tabPage3.Controls.Add(this.groupBox8);
+            this.tabPage3.Controls.Add(this.panelCus);
+            this.tabPage3.Location = new System.Drawing.Point(4, 28);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1676, 760);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Customer";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 28);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1676, 760);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Order ";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // cOFFEEDataSet2
+            // 
+            this.cOFFEEDataSet2.DataSetName = "COFFEEDataSet2";
+            this.cOFFEEDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "Product";
+            // 
+            // productBindingSource1
+            // 
+            this.productBindingSource1.DataMember = "Product";
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "products";
+            // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // productTableAdapter
+            // 
+            this.productTableAdapter.ClearBeforeFill = true;
+            // 
+            // employeeTableAdapter
+            // 
+            this.employeeTableAdapter.ClearBeforeFill = true;
+            // 
+            // cOFFEEDataSet4
+            // 
+            this.cOFFEEDataSet4.DataSetName = "COFFEEDataSet4";
+            this.cOFFEEDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeeBindingSource2
+            // 
+            this.employeeBindingSource2.DataMember = "Employee";
+            this.employeeBindingSource2.DataSource = this.cOFFEEDataSet4;
+            // 
+            // employeeTableAdapter1
+            // 
+            this.employeeTableAdapter1.ClearBeforeFill = true;
+            // 
+            // IDEmployee
+            // 
+            this.IDEmployee.DataPropertyName = "IDEmployee";
+            this.IDEmployee.HeaderText = "IDEmployee";
+            this.IDEmployee.MinimumWidth = 6;
+            this.IDEmployee.Name = "IDEmployee";
+            this.IDEmployee.Width = 125;
+            // 
+            // fullname
+            // 
+            this.fullname.DataPropertyName = "fullname";
+            this.fullname.HeaderText = "fullname";
+            this.fullname.MinimumWidth = 6;
+            this.fullname.Name = "fullname";
+            this.fullname.Width = 125;
+            // 
+            // phone
+            // 
+            this.phone.DataPropertyName = "phone";
+            this.phone.HeaderText = "phone";
+            this.phone.MinimumWidth = 6;
+            this.phone.Name = "phone";
+            this.phone.Width = 125;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "email";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.Width = 125;
+            // 
+            // DOB
+            // 
+            this.DOB.DataPropertyName = "DOB";
+            this.DOB.HeaderText = "DOB";
+            this.DOB.MinimumWidth = 6;
+            this.DOB.Name = "DOB";
+            this.DOB.Width = 125;
+            // 
+            // gender
+            // 
+            this.gender.DataPropertyName = "gender";
+            this.gender.HeaderText = "gender";
+            this.gender.MinimumWidth = 6;
+            this.gender.Name = "gender";
+            this.gender.Width = 125;
+            // 
+            // username
+            // 
+            this.username.DataPropertyName = "username";
+            this.username.HeaderText = "username";
+            this.username.MinimumWidth = 6;
+            this.username.Name = "username";
+            this.username.Width = 125;
+            // 
+            // position
+            // 
+            this.position.DataPropertyName = "position";
+            this.position.HeaderText = "position";
+            this.position.MinimumWidth = 6;
+            this.position.Name = "position";
+            this.position.Width = 125;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.Visible = false;
+            this.statusDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(879, 227);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(58, 17);
+            this.label33.TabIndex = 40;
+            this.label33.Text = "Position";
+            // 
+            // radioMale
+            // 
+            this.radioMale.AutoSize = true;
+            this.radioMale.Location = new System.Drawing.Point(980, 90);
+            this.radioMale.Name = "radioMale";
+            this.radioMale.Size = new System.Drawing.Size(59, 21);
+            this.radioMale.TabIndex = 41;
+            this.radioMale.TabStop = true;
+            this.radioMale.Text = "Male";
+            this.radioMale.UseVisualStyleBackColor = true;
+            // 
+            // radioFemale
+            // 
+            this.radioFemale.AutoSize = true;
+            this.radioFemale.Location = new System.Drawing.Point(1178, 88);
+            this.radioFemale.Name = "radioFemale";
+            this.radioFemale.Size = new System.Drawing.Size(75, 21);
+            this.radioFemale.TabIndex = 42;
+            this.radioFemale.TabStop = true;
+            this.radioFemale.Text = "Female";
+            this.radioFemale.UseVisualStyleBackColor = true;
+            // 
+            // cbbPosition
+            // 
+            this.cbbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbPosition.FormattingEnabled = true;
+            this.cbbPosition.Items.AddRange(new object[] {
+            "Ban hang",
+            "Tu van",
+            "Kiem kho",
+            "Giao hang"});
+            this.cbbPosition.Location = new System.Drawing.Point(980, 218);
+            this.cbbPosition.Name = "cbbPosition";
+            this.cbbPosition.Size = new System.Drawing.Size(308, 24);
+            this.cbbPosition.TabIndex = 43;
+            // 
+            // dateDOB
+            // 
+            this.dateDOB.Location = new System.Drawing.Point(980, 35);
+            this.dateDOB.Name = "dateDOB";
+            this.dateDOB.Size = new System.Drawing.Size(308, 22);
+            this.dateDOB.TabIndex = 44;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.btnRefreshCus);
+            this.groupBox7.Controls.Add(this.btnDeleteCus);
+            this.groupBox7.Location = new System.Drawing.Point(1395, 364);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(223, 361);
+            this.groupBox7.TabIndex = 54;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Option";
+            // 
+            // btnRefreshCus
+            // 
+            this.btnRefreshCus.Image = ((System.Drawing.Image)(resources.GetObject("btnRefreshCus.Image")));
+            this.btnRefreshCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRefreshCus.Location = new System.Drawing.Point(21, 184);
+            this.btnRefreshCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRefreshCus.Name = "btnRefreshCus";
+            this.btnRefreshCus.Size = new System.Drawing.Size(188, 52);
+            this.btnRefreshCus.TabIndex = 30;
+            this.btnRefreshCus.Text = "Refresh ";
+            this.btnRefreshCus.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteCus
+            // 
+            this.btnDeleteCus.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteCus.Image")));
+            this.btnDeleteCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDeleteCus.Location = new System.Drawing.Point(21, 82);
+            this.btnDeleteCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDeleteCus.Name = "btnDeleteCus";
+            this.btnDeleteCus.Size = new System.Drawing.Size(188, 50);
+            this.btnDeleteCus.TabIndex = 19;
+            this.btnDeleteCus.Text = "Delete Customer";
+            this.btnDeleteCus.UseVisualStyleBackColor = true;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox8.Controls.Add(this.tbCustomer);
+            this.groupBox8.Location = new System.Drawing.Point(58, 343);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(1315, 352);
+            this.groupBox8.TabIndex = 55;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "List of Customer";
+            // 
+            // tbCustomer
+            // 
+            this.tbCustomer.AllowUserToAddRows = false;
+            this.tbCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbCustomer.AutoGenerateColumns = false;
+            this.tbCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tbCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IDCustomer,
+            this.fullnameDataGridViewTextBoxColumn,
+            this.phoneDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn,
+            this.dOBDataGridViewTextBoxColumn,
+            this.genderDataGridViewTextBoxColumn,
+            this.usernameDataGridViewTextBoxColumn,
+            this.statusDataGridViewTextBoxColumn1});
+            this.tbCustomer.DataSource = this.customerBindingSource1;
+            this.tbCustomer.Location = new System.Drawing.Point(6, 21);
+            this.tbCustomer.Name = "tbCustomer";
+            this.tbCustomer.RowHeadersWidth = 51;
+            this.tbCustomer.RowTemplate.Height = 100;
+            this.tbCustomer.Size = new System.Drawing.Size(1282, 325);
+            this.tbCustomer.TabIndex = 0;
+            // 
+            // panelCus
+            // 
+            this.panelCus.Controls.Add(this.dateDOBCus);
+            this.panelCus.Controls.Add(this.radioFemailCus);
+            this.panelCus.Controls.Add(this.radioMaleCus);
+            this.panelCus.Controls.Add(this.txtUsernameCus);
+            this.panelCus.Controls.Add(this.label35);
+            this.panelCus.Controls.Add(this.txtPhoneCus);
+            this.panelCus.Controls.Add(this.txtEmailCus);
+            this.panelCus.Controls.Add(this.txtFullNameCus);
+            this.panelCus.Controls.Add(this.label36);
+            this.panelCus.Controls.Add(this.label37);
+            this.panelCus.Controls.Add(this.label38);
+            this.panelCus.Controls.Add(this.label39);
+            this.panelCus.Controls.Add(this.label40);
+            this.panelCus.Controls.Add(this.label41);
+            this.panelCus.Controls.Add(this.label42);
+            this.panelCus.Controls.Add(this.label43);
+            this.panelCus.Controls.Add(this.label44);
+            this.panelCus.Controls.Add(this.label45);
+            this.panelCus.Controls.Add(this.label46);
+            this.panelCus.Controls.Add(this.label47);
+            this.panelCus.Controls.Add(this.label48);
+            this.panelCus.Controls.Add(this.label49);
+            this.panelCus.Controls.Add(this.label50);
+            this.panelCus.Controls.Add(this.txtIDCus);
+            this.panelCus.Location = new System.Drawing.Point(58, 36);
+            this.panelCus.Name = "panelCus";
+            this.panelCus.Size = new System.Drawing.Size(1560, 301);
+            this.panelCus.TabIndex = 53;
+            this.panelCus.TabStop = false;
+            this.panelCus.Text = "Customer details";
+            // 
+            // dateDOBCus
+            // 
+            this.dateDOBCus.Location = new System.Drawing.Point(980, 35);
+            this.dateDOBCus.Name = "dateDOBCus";
+            this.dateDOBCus.Size = new System.Drawing.Size(308, 22);
+            this.dateDOBCus.TabIndex = 44;
+            // 
+            // radioFemailCus
+            // 
+            this.radioFemailCus.AutoSize = true;
+            this.radioFemailCus.Location = new System.Drawing.Point(1124, 142);
+            this.radioFemailCus.Name = "radioFemailCus";
+            this.radioFemailCus.Size = new System.Drawing.Size(75, 21);
+            this.radioFemailCus.TabIndex = 42;
+            this.radioFemailCus.TabStop = true;
+            this.radioFemailCus.Text = "Female";
+            this.radioFemailCus.UseVisualStyleBackColor = true;
+            // 
+            // radioMaleCus
+            // 
+            this.radioMaleCus.AutoSize = true;
+            this.radioMaleCus.Location = new System.Drawing.Point(1019, 142);
+            this.radioMaleCus.Name = "radioMaleCus";
+            this.radioMaleCus.Size = new System.Drawing.Size(59, 21);
+            this.radioMaleCus.TabIndex = 41;
+            this.radioMaleCus.TabStop = true;
+            this.radioMaleCus.Text = "Male";
+            this.radioMaleCus.UseVisualStyleBackColor = true;
+            // 
+            // txtUsernameCus
+            // 
+            this.txtUsernameCus.Location = new System.Drawing.Point(980, 229);
+            this.txtUsernameCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsernameCus.Name = "txtUsernameCus";
+            this.txtUsernameCus.Size = new System.Drawing.Size(308, 22);
+            this.txtUsernameCus.TabIndex = 39;
+            // 
+            // label35
+            // 
+            this.label35.AutoEllipsis = true;
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(864, 229);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(73, 17);
+            this.label35.TabIndex = 38;
+            this.label35.Text = "Username";
+            // 
+            // txtPhoneCus
+            // 
+            this.txtPhoneCus.Location = new System.Drawing.Point(386, 151);
+            this.txtPhoneCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhoneCus.Name = "txtPhoneCus";
+            this.txtPhoneCus.Size = new System.Drawing.Size(308, 22);
+            this.txtPhoneCus.TabIndex = 37;
+            // 
+            // txtEmailCus
+            // 
+            this.txtEmailCus.Location = new System.Drawing.Point(386, 224);
+            this.txtEmailCus.Name = "txtEmailCus";
+            this.txtEmailCus.Size = new System.Drawing.Size(308, 22);
+            this.txtEmailCus.TabIndex = 33;
+            // 
+            // txtFullNameCus
+            // 
+            this.txtFullNameCus.Location = new System.Drawing.Point(386, 85);
+            this.txtFullNameCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtFullNameCus.Name = "txtFullNameCus";
+            this.txtFullNameCus.Size = new System.Drawing.Size(308, 22);
+            this.txtFullNameCus.TabIndex = 14;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(253, 32);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(85, 17);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "ID Customer";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.ForeColor = System.Drawing.Color.Red;
+            this.label37.Location = new System.Drawing.Point(904, 212);
+            this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(0, 17);
+            this.label37.TabIndex = 29;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(253, 82);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(71, 17);
+            this.label38.TabIndex = 1;
+            this.label38.Text = "Full Name";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.ForeColor = System.Drawing.Color.Red;
+            this.label39.Location = new System.Drawing.Point(1423, 0);
+            this.label39.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(0, 17);
+            this.label39.TabIndex = 28;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(275, 144);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(49, 17);
+            this.label40.TabIndex = 2;
+            this.label40.Text = "Phone";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.ForeColor = System.Drawing.Color.Red;
+            this.label41.Location = new System.Drawing.Point(1199, 43);
+            this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(0, 17);
+            this.label41.TabIndex = 27;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(841, 109);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(0, 17);
+            this.label42.TabIndex = 3;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.ForeColor = System.Drawing.Color.Red;
+            this.label43.Location = new System.Drawing.Point(1130, 151);
+            this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(0, 17);
+            this.label43.TabIndex = 26;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(859, 32);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(87, 17);
+            this.label44.TabIndex = 4;
+            this.label44.Text = "Date of Birth";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.ForeColor = System.Drawing.Color.Red;
+            this.label45.Location = new System.Drawing.Point(1213, 139);
+            this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(0, 17);
+            this.label45.TabIndex = 25;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(275, 229);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(42, 17);
+            this.label46.TabIndex = 5;
+            this.label46.Text = "Email";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.ForeColor = System.Drawing.Color.Red;
+            this.label47.Location = new System.Drawing.Point(1213, 191);
+            this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(0, 17);
+            this.label47.TabIndex = 24;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(880, 141);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(56, 17);
+            this.label48.TabIndex = 6;
+            this.label48.Text = "Gender";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.ForeColor = System.Drawing.Color.Red;
+            this.label49.Location = new System.Drawing.Point(1212, 146);
+            this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(0, 17);
+            this.label49.TabIndex = 23;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.ForeColor = System.Drawing.Color.Red;
+            this.label50.Location = new System.Drawing.Point(673, 40);
+            this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(0, 17);
+            this.label50.TabIndex = 22;
+            // 
+            // txtIDCus
+            // 
+            this.txtIDCus.Location = new System.Drawing.Point(386, 32);
+            this.txtIDCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtIDCus.Name = "txtIDCus";
+            this.txtIDCus.Size = new System.Drawing.Size(308, 22);
+            this.txtIDCus.TabIndex = 8;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataMember = "Customer";
+            this.customerBindingSource.DataSource = this.cOFFEEDataSet4;
+            // 
+            // customerTableAdapter
+            // 
+            this.customerTableAdapter.ClearBeforeFill = true;
+            // 
+            // cOFFEEDataSet4BindingSource
+            // 
+            this.cOFFEEDataSet4BindingSource.DataSource = this.cOFFEEDataSet4;
+            this.cOFFEEDataSet4BindingSource.Position = 0;
+            // 
+            // customerBindingSource1
+            // 
+            this.customerBindingSource1.DataMember = "Customer";
+            this.customerBindingSource1.DataSource = this.cOFFEEDataSet4;
+            // 
+            // IDCustomer
+            // 
+            this.IDCustomer.DataPropertyName = "IDCustomer";
+            this.IDCustomer.HeaderText = "IDCustomer";
+            this.IDCustomer.MinimumWidth = 6;
+            this.IDCustomer.Name = "IDCustomer";
+            this.IDCustomer.ReadOnly = true;
+            this.IDCustomer.Width = 125;
+            // 
+            // fullnameDataGridViewTextBoxColumn
+            // 
+            this.fullnameDataGridViewTextBoxColumn.DataPropertyName = "fullname";
+            this.fullnameDataGridViewTextBoxColumn.HeaderText = "fullname";
+            this.fullnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fullnameDataGridViewTextBoxColumn.Name = "fullnameDataGridViewTextBoxColumn";
+            this.fullnameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "phone";
+            this.phoneDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dOBDataGridViewTextBoxColumn
+            // 
+            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
+            this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
+            this.dOBDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
+            this.dOBDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // genderDataGridViewTextBoxColumn
+            // 
+            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
+            this.genderDataGridViewTextBoxColumn.HeaderText = "gender";
+            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
+            this.genderDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // usernameDataGridViewTextBoxColumn
+            // 
+            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
+            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
+            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
+            this.usernameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // statusDataGridViewTextBoxColumn1
+            // 
+            this.statusDataGridViewTextBoxColumn1.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn1.HeaderText = "status";
+            this.statusDataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.statusDataGridViewTextBoxColumn1.Name = "statusDataGridViewTextBoxColumn1";
+            this.statusDataGridViewTextBoxColumn1.Visible = false;
+            this.statusDataGridViewTextBoxColumn1.Width = 125;
+            // 
             // Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1708, 816);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControlProduct);
             this.Name = "Product";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Product_Load);
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tbEmployee)).EndInit();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
             this.tabPage1.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tbProduct)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            this.tabControlProduct.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2)).EndInit();
@@ -617,12 +1652,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tbProduct)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource2)).EndInit();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox8.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tbCustomer)).EndInit();
+            this.panelCus.ResumeLayout(false);
+            this.panelCus.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -631,7 +1672,7 @@
 
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControlProduct;
         private System.Windows.Forms.BindingSource productBindingSource2;
         private System.Windows.Forms.BindingSource cOFFEEDataSet2BindingSource;
         private COFFEEDataSet2 cOFFEEDataSet2;
@@ -683,6 +1724,99 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtIDPro;
         private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.Button btnAddEmp;
+        private System.Windows.Forms.Button btnDeleteEmp;
+        private System.Windows.Forms.Button btnUpdateEmp;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.DataGridView tbEmployee;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtFullname;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox txtIDEmp;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
+        private COFFEEDataSet3TableAdapters.EmployeeTableAdapter employeeTableAdapter;
+        private System.Windows.Forms.BindingSource employeeBindingSource1;
+        private COFFEEDataSet4 cOFFEEDataSet4;
+        private System.Windows.Forms.BindingSource employeeBindingSource2;
+        private COFFEEDataSet4TableAdapters.EmployeeTableAdapter employeeTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDEmployee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DOB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn username;
+        private System.Windows.Forms.DataGridViewTextBoxColumn position;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox cbbPosition;
+        private System.Windows.Forms.RadioButton radioFemale;
+        private System.Windows.Forms.RadioButton radioMale;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.DateTimePicker dateDOB;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button btnRefreshCus;
+        private System.Windows.Forms.Button btnDeleteCus;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.DataGridView tbCustomer;
+        private System.Windows.Forms.GroupBox panelCus;
+        private System.Windows.Forms.DateTimePicker dateDOBCus;
+        private System.Windows.Forms.RadioButton radioFemailCus;
+        private System.Windows.Forms.RadioButton radioMaleCus;
+        private System.Windows.Forms.TextBox txtUsernameCus;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox txtPhoneCus;
+        private System.Windows.Forms.TextBox txtEmailCus;
+        private System.Windows.Forms.TextBox txtFullNameCus;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox txtIDCus;
+        private System.Windows.Forms.BindingSource customerBindingSource;
+        private COFFEEDataSet4TableAdapters.CustomerTableAdapter customerTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.BindingSource customerBindingSource1;
+        private System.Windows.Forms.BindingSource cOFFEEDataSet4BindingSource;
     }
 }
 

@@ -43,6 +43,10 @@ namespace Management
         //lay caegory vao combobox
         private void Product_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'cOFFEEDataSet4.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter.Fill(this.cOFFEEDataSet4.Customer);
+            // TODO: This line of code loads data into the 'cOFFEEDataSet4.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter1.Fill(this.cOFFEEDataSet4.Employee);
             // TODO: This line of code loads data into the 'cOFFEEDataSet2.Product' table. You can move, or remove it, as needed.
             this.productTableAdapter.Fill(this.cOFFEEDataSet2.Product);
             txtIDPro.Enabled = false;
@@ -201,11 +205,17 @@ namespace Management
             MessageBox.Show("Delete success!");
             conn.Close();
             showProduct();
+            refresh();
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             refresh();
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

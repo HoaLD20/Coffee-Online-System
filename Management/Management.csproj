@@ -61,6 +61,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COFFEEDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="COFFEEDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COFFEEDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="COFFEEDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>COFFEEDataSet4.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +125,28 @@
     </None>
     <None Include="COFFEEDataSet2.xss">
       <DependentUpon>COFFEEDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="COFFEEDataSet3.xsc">
+      <DependentUpon>COFFEEDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="COFFEEDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COFFEEDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="COFFEEDataSet3.xss">
+      <DependentUpon>COFFEEDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="COFFEEDataSet4.xsc">
+      <DependentUpon>COFFEEDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="COFFEEDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>COFFEEDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="COFFEEDataSet4.xss">
+      <DependentUpon>COFFEEDataSet4.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
