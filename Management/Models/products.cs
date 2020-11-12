@@ -73,13 +73,12 @@ namespace Management.Models
         {
             string sql;
             sql = "select * from Product where status = 1";
-            List<products> proList = new List<products>();
 
             SqlConnection con = db.GetConnection();
-            SqlDataAdapter da = new SqlDataAdapter(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);//SqldataAdapter thuc hien đở dữ liệu và data set, cập nhật database, SqlCommand thực thi câu lệnh sql insert update delete
             con.Open();
             DataTable dt = new DataTable();
-            da.Fill(dt);
+            da.Fill(dt);//Fill dung để đổ dữ liệu vào dataSet
             con.Close();
             return dt;
         }

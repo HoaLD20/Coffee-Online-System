@@ -22,6 +22,7 @@ namespace Management
         SqlConnection conn;
         int indexCategory;//lay ID của category
         DBConectionManager db;
+        SqlDataAdapter da;
 
         public Product()
         {
@@ -51,19 +52,31 @@ namespace Management
             // TODO: This line of code loads data into the 'cOFFEEDataSet1.Product' table. You can move, or remove it, as needed.
             this.productTableAdapter.Fill(this.cOFFEEDataSet2.Product);
             txtIDPro.Enabled = true;
-            conn = db.GetConnection();
-            conn.Open();
-            cmd = conn.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText="Select * from category";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach(DataRow dr in dt.Rows)
-            {
-                cbbCategory.Items.Add(dr["nameCategory"].ToString());
+            /* conn = db.GetConnection();
+             conn.Open();
+             cmd = conn.CreateCommand();
+             cmd.CommandType = CommandType.Text;
+             cmd.CommandText="Select * from category";
+             cmd.ExecuteNonQuery();
+             DataTable dt = new DataTable();
+             SqlDataAdapter da = new SqlDataAdapter(cmd);
+             da.Fill(dt);
+             foreach(DataRow dr in dt.Rows)
+             {
+                 cbbCategory.Items.Add(dr["nameCategory"].ToString());
 
+             }
+             conn.Close();*/
+            conn = db.GetConnection();
+            string sql = "select * from Category";
+            conn.Open();
+            da = new SqlDataAdapter(sql, conn);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                cbbCategory.Items.Add(dr["namecategory"]).ToString();
+                
             }
             conn.Close();
 
@@ -81,6 +94,7 @@ namespace Management
             txtURL.Text = "";
             cbbAvailable.Text = "";
             pictureBox.Image = null;
+            cbbCategory.SelectedIndex = -1;
             //panelImage
            
         }
@@ -145,7 +159,7 @@ namespace Management
             //tao ket noi toi sql
 
             cmd = new SqlCommand(sql, conn);
-            cmd.Parameters.Add("@nameProduct", txtNamePro.Text);
+            cmd.Parameters.Add("@nameProduct", txtNamePro.Text); //parameter này sẽ được thay thế bởi giá trị thực sự của parameter khi SqlCommand thực thi
             cmd.Parameters.Add("@available", cbbAvailable.Text);
             cmd.Parameters.Add("@imageUrl", txtURL.Text);
             cmd.Parameters.Add("@price", double.Parse(txtPrice.Text));
@@ -200,7 +214,7 @@ namespace Management
             cmd = new SqlCommand(sql, conn);
             cmd.Parameters.Add("@IDProduct", txtIDPro.Text);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Delete success!");
+            MessageBox.Show("Update success!");
             conn.Close();
             showProduct();
             refresh();

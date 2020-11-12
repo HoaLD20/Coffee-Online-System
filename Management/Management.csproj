@@ -71,7 +71,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>COFFEEDataSet4.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DBConectionManager .cs" />
+    <Compile Include="Models\Employee.cs" />
     <Compile Include="Product.cs">
       <SubType>Form</SubType>
     </Compile>

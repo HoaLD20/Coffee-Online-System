@@ -38,9 +38,23 @@
             this.btnUpdateEmp = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tbEmployee = new System.Windows.Forms.DataGridView();
+            this.IDEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.cOFFEEDataSet4 = new Management.COFFEEDataSet4();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.radioFemale = new System.Windows.Forms.RadioButton();
+            this.radioMale = new System.Windows.Forms.RadioButton();
             this.dateDOB = new System.Windows.Forms.DateTimePicker();
             this.cbbPosition = new System.Windows.Forms.ComboBox();
             this.label33 = new System.Windows.Forms.Label();
@@ -125,9 +139,10 @@
             this.statusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panelCus = new System.Windows.Forms.GroupBox();
-            this.dateDOBCus = new System.Windows.Forms.DateTimePicker();
-            this.radioFemailCus = new System.Windows.Forms.RadioButton();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.radioMaleCus = new System.Windows.Forms.RadioButton();
+            this.radioFemailCus = new System.Windows.Forms.RadioButton();
+            this.dateDOBCus = new System.Windows.Forms.DateTimePicker();
             this.txtUsernameCus = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.txtPhoneCus = new System.Windows.Forms.TextBox();
@@ -166,21 +181,6 @@
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerTableAdapter = new Management.COFFEEDataSet4TableAdapters.CustomerTableAdapter();
             this.cOFFEEDataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.radioMale = new System.Windows.Forms.RadioButton();
-            this.radioFemale = new System.Windows.Forms.RadioButton();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.IDEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label34 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -188,6 +188,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4)).BeginInit();
             this.groupBox6.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -201,6 +202,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).BeginInit();
             this.panelCus.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2)).BeginInit();
@@ -212,8 +214,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4BindingSource)).BeginInit();
-            this.groupBox9.SuspendLayout();
-            this.groupBox10.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -328,6 +328,80 @@
             this.tbEmployee.Size = new System.Drawing.Size(1282, 325);
             this.tbEmployee.TabIndex = 0;
             // 
+            // IDEmployee
+            // 
+            this.IDEmployee.DataPropertyName = "IDEmployee";
+            this.IDEmployee.HeaderText = "IDEmployee";
+            this.IDEmployee.MinimumWidth = 6;
+            this.IDEmployee.Name = "IDEmployee";
+            this.IDEmployee.ReadOnly = true;
+            this.IDEmployee.Width = 125;
+            // 
+            // username
+            // 
+            this.username.DataPropertyName = "username";
+            this.username.HeaderText = "username";
+            this.username.MinimumWidth = 6;
+            this.username.Name = "username";
+            this.username.Width = 125;
+            // 
+            // fullname
+            // 
+            this.fullname.DataPropertyName = "fullname";
+            this.fullname.HeaderText = "fullname";
+            this.fullname.MinimumWidth = 6;
+            this.fullname.Name = "fullname";
+            this.fullname.Width = 125;
+            // 
+            // phone
+            // 
+            this.phone.DataPropertyName = "phone";
+            this.phone.HeaderText = "phone";
+            this.phone.MinimumWidth = 6;
+            this.phone.Name = "phone";
+            this.phone.Width = 125;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "email";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.Width = 125;
+            // 
+            // DOB
+            // 
+            this.DOB.DataPropertyName = "DOB";
+            this.DOB.HeaderText = "DOB";
+            this.DOB.MinimumWidth = 6;
+            this.DOB.Name = "DOB";
+            this.DOB.Width = 125;
+            // 
+            // gender
+            // 
+            this.gender.DataPropertyName = "gender";
+            this.gender.HeaderText = "gender";
+            this.gender.MinimumWidth = 6;
+            this.gender.Name = "gender";
+            this.gender.Width = 125;
+            // 
+            // position
+            // 
+            this.position.DataPropertyName = "position";
+            this.position.HeaderText = "position";
+            this.position.MinimumWidth = 6;
+            this.position.Name = "position";
+            this.position.Width = 125;
+            // 
+            // statusDataGridViewTextBoxColumn
+            // 
+            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
+            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
+            this.statusDataGridViewTextBoxColumn.Visible = false;
+            this.statusDataGridViewTextBoxColumn.Width = 125;
+            // 
             // employeeBindingSource2
             // 
             this.employeeBindingSource2.DataMember = "Employee";
@@ -373,6 +447,56 @@
             this.groupBox6.TabIndex = 50;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Employee details";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(376, 118);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(308, 22);
+            this.textBox1.TabIndex = 47;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(243, 109);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(69, 17);
+            this.label34.TabIndex = 46;
+            this.label34.Text = "Password";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.radioFemale);
+            this.groupBox9.Controls.Add(this.radioMale);
+            this.groupBox9.Location = new System.Drawing.Point(964, 133);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(308, 62);
+            this.groupBox9.TabIndex = 45;
+            this.groupBox9.TabStop = false;
+            // 
+            // radioFemale
+            // 
+            this.radioFemale.AutoSize = true;
+            this.radioFemale.Location = new System.Drawing.Point(181, 27);
+            this.radioFemale.Name = "radioFemale";
+            this.radioFemale.Size = new System.Drawing.Size(75, 21);
+            this.radioFemale.TabIndex = 43;
+            this.radioFemale.TabStop = true;
+            this.radioFemale.Text = "Female";
+            this.radioFemale.UseVisualStyleBackColor = true;
+            // 
+            // radioMale
+            // 
+            this.radioMale.AutoSize = true;
+            this.radioMale.Location = new System.Drawing.Point(55, 21);
+            this.radioMale.Name = "radioMale";
+            this.radioMale.Size = new System.Drawing.Size(59, 21);
+            this.radioMale.TabIndex = 41;
+            this.radioMale.TabStop = true;
+            this.radioMale.Text = "Male";
+            this.radioMale.UseVisualStyleBackColor = true;
             // 
             // dateDOB
             // 
@@ -562,7 +686,7 @@
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(860, 160);
+            this.label30.Location = new System.Drawing.Point(874, 160);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(56, 17);
             this.label30.TabIndex = 6;
@@ -1253,12 +1377,26 @@
             this.panelCus.TabStop = false;
             this.panelCus.Text = "Customer details";
             // 
-            // dateDOBCus
+            // groupBox10
             // 
-            this.dateDOBCus.Location = new System.Drawing.Point(980, 35);
-            this.dateDOBCus.Name = "dateDOBCus";
-            this.dateDOBCus.Size = new System.Drawing.Size(308, 22);
-            this.dateDOBCus.TabIndex = 44;
+            this.groupBox10.Controls.Add(this.radioMaleCus);
+            this.groupBox10.Controls.Add(this.radioFemailCus);
+            this.groupBox10.Location = new System.Drawing.Point(980, 94);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(308, 79);
+            this.groupBox10.TabIndex = 45;
+            this.groupBox10.TabStop = false;
+            // 
+            // radioMaleCus
+            // 
+            this.radioMaleCus.AutoSize = true;
+            this.radioMaleCus.Location = new System.Drawing.Point(37, 31);
+            this.radioMaleCus.Name = "radioMaleCus";
+            this.radioMaleCus.Size = new System.Drawing.Size(59, 21);
+            this.radioMaleCus.TabIndex = 41;
+            this.radioMaleCus.TabStop = true;
+            this.radioMaleCus.Text = "Male";
+            this.radioMaleCus.UseVisualStyleBackColor = true;
             // 
             // radioFemailCus
             // 
@@ -1271,16 +1409,12 @@
             this.radioFemailCus.Text = "Female";
             this.radioFemailCus.UseVisualStyleBackColor = true;
             // 
-            // radioMaleCus
+            // dateDOBCus
             // 
-            this.radioMaleCus.AutoSize = true;
-            this.radioMaleCus.Location = new System.Drawing.Point(37, 31);
-            this.radioMaleCus.Name = "radioMaleCus";
-            this.radioMaleCus.Size = new System.Drawing.Size(59, 21);
-            this.radioMaleCus.TabIndex = 41;
-            this.radioMaleCus.TabStop = true;
-            this.radioMaleCus.Text = "Male";
-            this.radioMaleCus.UseVisualStyleBackColor = true;
+            this.dateDOBCus.Location = new System.Drawing.Point(980, 35);
+            this.dateDOBCus.Name = "dateDOBCus";
+            this.dateDOBCus.Size = new System.Drawing.Size(308, 22);
+            this.dateDOBCus.TabIndex = 44;
             // 
             // txtUsernameCus
             // 
@@ -1532,140 +1666,6 @@
             this.cOFFEEDataSet4BindingSource.DataSource = this.cOFFEEDataSet4;
             this.cOFFEEDataSet4BindingSource.Position = 0;
             // 
-            // radioMale
-            // 
-            this.radioMale.AutoSize = true;
-            this.radioMale.Location = new System.Drawing.Point(55, 21);
-            this.radioMale.Name = "radioMale";
-            this.radioMale.Size = new System.Drawing.Size(59, 21);
-            this.radioMale.TabIndex = 41;
-            this.radioMale.TabStop = true;
-            this.radioMale.Text = "Male";
-            this.radioMale.UseVisualStyleBackColor = true;
-            // 
-            // radioFemale
-            // 
-            this.radioFemale.AutoSize = true;
-            this.radioFemale.Location = new System.Drawing.Point(181, 27);
-            this.radioFemale.Name = "radioFemale";
-            this.radioFemale.Size = new System.Drawing.Size(75, 21);
-            this.radioFemale.TabIndex = 43;
-            this.radioFemale.TabStop = true;
-            this.radioFemale.Text = "Female";
-            this.radioFemale.UseVisualStyleBackColor = true;
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.radioFemale);
-            this.groupBox9.Controls.Add(this.radioMale);
-            this.groupBox9.Location = new System.Drawing.Point(964, 133);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(308, 62);
-            this.groupBox9.TabIndex = 45;
-            this.groupBox9.TabStop = false;
-            // 
-            // groupBox10
-            // 
-            this.groupBox10.Controls.Add(this.radioMaleCus);
-            this.groupBox10.Controls.Add(this.radioFemailCus);
-            this.groupBox10.Location = new System.Drawing.Point(980, 94);
-            this.groupBox10.Name = "groupBox10";
-            this.groupBox10.Size = new System.Drawing.Size(308, 79);
-            this.groupBox10.TabIndex = 45;
-            this.groupBox10.TabStop = false;
-            // 
-            // IDEmployee
-            // 
-            this.IDEmployee.DataPropertyName = "IDEmployee";
-            this.IDEmployee.HeaderText = "IDEmployee";
-            this.IDEmployee.MinimumWidth = 6;
-            this.IDEmployee.Name = "IDEmployee";
-            this.IDEmployee.ReadOnly = true;
-            this.IDEmployee.Width = 125;
-            // 
-            // username
-            // 
-            this.username.DataPropertyName = "username";
-            this.username.HeaderText = "username";
-            this.username.MinimumWidth = 6;
-            this.username.Name = "username";
-            this.username.Width = 125;
-            // 
-            // fullname
-            // 
-            this.fullname.DataPropertyName = "fullname";
-            this.fullname.HeaderText = "fullname";
-            this.fullname.MinimumWidth = 6;
-            this.fullname.Name = "fullname";
-            this.fullname.Width = 125;
-            // 
-            // phone
-            // 
-            this.phone.DataPropertyName = "phone";
-            this.phone.HeaderText = "phone";
-            this.phone.MinimumWidth = 6;
-            this.phone.Name = "phone";
-            this.phone.Width = 125;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "email";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.Width = 125;
-            // 
-            // DOB
-            // 
-            this.DOB.DataPropertyName = "DOB";
-            this.DOB.HeaderText = "DOB";
-            this.DOB.MinimumWidth = 6;
-            this.DOB.Name = "DOB";
-            this.DOB.Width = 125;
-            // 
-            // gender
-            // 
-            this.gender.DataPropertyName = "gender";
-            this.gender.HeaderText = "gender";
-            this.gender.MinimumWidth = 6;
-            this.gender.Name = "gender";
-            this.gender.Width = 125;
-            // 
-            // position
-            // 
-            this.position.DataPropertyName = "position";
-            this.position.HeaderText = "position";
-            this.position.MinimumWidth = 6;
-            this.position.Name = "position";
-            this.position.Width = 125;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.Visible = false;
-            this.statusDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(259, 109);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(69, 17);
-            this.label34.TabIndex = 46;
-            this.label34.Text = "Password";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(376, 118);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(308, 22);
-            this.textBox1.TabIndex = 47;
-            // 
             // Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1683,6 +1683,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4)).EndInit();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -1698,6 +1700,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).EndInit();
             this.panelCus.ResumeLayout(false);
             this.panelCus.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2)).EndInit();
@@ -1709,10 +1713,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4BindingSource)).EndInit();
-            this.groupBox9.ResumeLayout(false);
-            this.groupBox9.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
             this.ResumeLayout(false);
 
         }
