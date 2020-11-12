@@ -1,4 +1,4 @@
-﻿using CoffeeOnlineSystem.Models;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -62,12 +62,12 @@ namespace Management.Models
     }
     class productsList
     {
-        DBConection db;
+        DBConectionManager db;
         SqlCommand cmd;
         SqlConnection conn;
         public productsList()
         {
-            db = new DBConection();
+            db = new DBConectionManager();
         }
         public DataTable getProduct()
         {

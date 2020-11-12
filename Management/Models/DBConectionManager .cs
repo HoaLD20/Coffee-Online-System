@@ -4,13 +4,13 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
-namespace CoffeeOnlineSystem.Models
+namespace Management.Models
 {
-    public class DBConection
+    public class DBConectionManager
     {
         string conn;
 
-        public DBConection()
+        public DBConectionManager()
         {
             conn = "Data Source=LAPTOP-37MD59F0;Initial Catalog=COFFEE;Integrated Security=True";
         }

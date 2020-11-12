@@ -1,5 +1,4 @@
-﻿using CoffeeOnlineSystem.Models;
-using Management.Models;
+﻿using Management.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,17 +18,16 @@ namespace Management
         productsList pro;
         string imgUrl = null;
         products product;
-        DBConection db;
         SqlCommand cmd;
         SqlConnection conn;
         int indexCategory;//lay ID của category
-        
+        DBConectionManager db;
 
         public Product()
         {
             InitializeComponent();
             pro = new productsList();
-            db = new DBConection();
+            db = new DBConectionManager();
         }
 
         public void showProduct()
