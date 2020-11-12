@@ -49,13 +49,7 @@ namespace Management
             // TODO: This line of code loads data into the 'cOFFEEDataSet5.Product' table. You can move, or remove it, as needed.
             this.productTableAdapter1.Fill(this.cOFFEEDataSet5.Product);
            
-            // TODO: This line of code loads data into the 'cOFFEEDataSet4.Employee' table. You can move, or remove it, as needed.
-            this.employeeTableAdapter1.Fill(this.cOFFEEDataSet4.Employee);
-            // TODO: This line of code loads data into the 'cOFFEEDataSet2.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter.Fill(this.cOFFEEDataSet2.Product);
-            txtIDPro.Enabled = false;
-            // TODO: This line of code loads data into the 'cOFFEEDataSet1.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter.Fill(this.cOFFEEDataSet2.Product);
+           
             txtIDPro.Enabled = true;
             /* conn = db.GetConnection();
              conn.Open();
