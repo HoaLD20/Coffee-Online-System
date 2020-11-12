@@ -38,15 +38,6 @@
             this.btnUpdateEmp = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tbEmployee = new System.Windows.Forms.DataGridView();
-            this.IDEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.username = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DOB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.cOFFEEDataSet4 = new Management.COFFEEDataSet4();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -129,14 +120,6 @@
             this.btnDeleteCus = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.tbCustomer = new System.Windows.Forms.DataGridView();
-            this.IDCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dOBDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panelCus = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -165,22 +148,51 @@
             this.label50 = new System.Windows.Forms.Label();
             this.txtIDCus = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.productBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.cOFFEEDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cOFFEEDataSet2 = new Management.COFFEEDataSet2();
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cOFFEEDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.productTableAdapter = new Management.COFFEEDataSet2TableAdapters.ProductTableAdapter();
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter = new Management.COFFEEDataSet3TableAdapters.EmployeeTableAdapter();
             this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter1 = new Management.COFFEEDataSet4TableAdapters.EmployeeTableAdapter();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerTableAdapter = new Management.COFFEEDataSet4TableAdapters.CustomerTableAdapter();
             this.cOFFEEDataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cOFFEEDataSet2 = new Management.COFFEEDataSet2();
+            this.cOFFEEDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cOFFEEDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cOFFEEDataSet5 = new Management.COFFEEDataSet5();
+            this.productBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.productTableAdapter1 = new Management.COFFEEDataSet5TableAdapters.ProductTableAdapter();
+            this.employeeBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeTableAdapter2 = new Management.COFFEEDataSet5TableAdapters.EmployeeTableAdapter();
+            this.employeeBindingSource5 = new System.Windows.Forms.BindingSource(this.components);
+            this.customerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.customerTableAdapter1 = new Management.COFFEEDataSet5TableAdapters.CustomerTableAdapter();
+            this.customerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
+            this.IDEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullnameEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOBEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullnameCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOBCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -203,17 +215,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).BeginInit();
             this.panelCus.SuspendLayout();
             this.groupBox10.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource7)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -312,95 +333,21 @@
             this.tbEmployee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDEmployee,
-            this.username,
-            this.fullname,
-            this.phone,
-            this.email,
-            this.DOB,
-            this.gender,
+            this.fullnameEmp,
+            this.phoneEmp,
+            this.emailEmp,
+            this.DOBEmp,
+            this.genderEmp,
+            this.usernameEmp,
             this.position,
-            this.statusDataGridViewTextBoxColumn});
-            this.tbEmployee.DataSource = this.employeeBindingSource2;
+            this.statusEmp});
+            this.tbEmployee.DataSource = this.employeeBindingSource7;
             this.tbEmployee.Location = new System.Drawing.Point(16, 21);
             this.tbEmployee.Name = "tbEmployee";
             this.tbEmployee.RowHeadersWidth = 51;
             this.tbEmployee.RowTemplate.Height = 100;
             this.tbEmployee.Size = new System.Drawing.Size(1282, 325);
             this.tbEmployee.TabIndex = 0;
-            // 
-            // IDEmployee
-            // 
-            this.IDEmployee.DataPropertyName = "IDEmployee";
-            this.IDEmployee.HeaderText = "IDEmployee";
-            this.IDEmployee.MinimumWidth = 6;
-            this.IDEmployee.Name = "IDEmployee";
-            this.IDEmployee.ReadOnly = true;
-            this.IDEmployee.Width = 125;
-            // 
-            // username
-            // 
-            this.username.DataPropertyName = "username";
-            this.username.HeaderText = "username";
-            this.username.MinimumWidth = 6;
-            this.username.Name = "username";
-            this.username.Width = 125;
-            // 
-            // fullname
-            // 
-            this.fullname.DataPropertyName = "fullname";
-            this.fullname.HeaderText = "fullname";
-            this.fullname.MinimumWidth = 6;
-            this.fullname.Name = "fullname";
-            this.fullname.Width = 125;
-            // 
-            // phone
-            // 
-            this.phone.DataPropertyName = "phone";
-            this.phone.HeaderText = "phone";
-            this.phone.MinimumWidth = 6;
-            this.phone.Name = "phone";
-            this.phone.Width = 125;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "email";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.Width = 125;
-            // 
-            // DOB
-            // 
-            this.DOB.DataPropertyName = "DOB";
-            this.DOB.HeaderText = "DOB";
-            this.DOB.MinimumWidth = 6;
-            this.DOB.Name = "DOB";
-            this.DOB.Width = 125;
-            // 
-            // gender
-            // 
-            this.gender.DataPropertyName = "gender";
-            this.gender.HeaderText = "gender";
-            this.gender.MinimumWidth = 6;
-            this.gender.Name = "gender";
-            this.gender.Width = 125;
-            // 
-            // position
-            // 
-            this.position.DataPropertyName = "position";
-            this.position.HeaderText = "position";
-            this.position.MinimumWidth = 6;
-            this.position.Name = "position";
-            this.position.Width = 125;
-            // 
-            // statusDataGridViewTextBoxColumn
-            // 
-            this.statusDataGridViewTextBoxColumn.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.statusDataGridViewTextBoxColumn.Name = "statusDataGridViewTextBoxColumn";
-            this.statusDataGridViewTextBoxColumn.Visible = false;
-            this.statusDataGridViewTextBoxColumn.Width = 125;
             // 
             // employeeBindingSource2
             // 
@@ -816,6 +763,7 @@
             this.tbProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbProduct.AutoGenerateColumns = false;
             this.tbProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDProduct,
@@ -827,6 +775,7 @@
             this.status,
             this.imageUrl,
             this.photo});
+            this.tbProduct.DataSource = this.productBindingSource3;
             this.tbProduct.Location = new System.Drawing.Point(6, 21);
             this.tbProduct.Name = "tbProduct";
             this.tbProduct.RowHeadersWidth = 51;
@@ -1259,86 +1208,20 @@
             this.tbCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDCustomer,
-            this.fullnameDataGridViewTextBoxColumn,
-            this.phoneDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn,
-            this.dOBDataGridViewTextBoxColumn,
-            this.genderDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.statusDataGridViewTextBoxColumn1});
-            this.tbCustomer.DataSource = this.customerBindingSource1;
+            this.fullnameCus,
+            this.phoneCus,
+            this.emailCus,
+            this.DOBCus,
+            this.genderCus,
+            this.usernameCus,
+            this.statusCus});
+            this.tbCustomer.DataSource = this.customerBindingSource3;
             this.tbCustomer.Location = new System.Drawing.Point(6, 21);
             this.tbCustomer.Name = "tbCustomer";
             this.tbCustomer.RowHeadersWidth = 51;
             this.tbCustomer.RowTemplate.Height = 100;
             this.tbCustomer.Size = new System.Drawing.Size(1282, 325);
             this.tbCustomer.TabIndex = 0;
-            // 
-            // IDCustomer
-            // 
-            this.IDCustomer.DataPropertyName = "IDCustomer";
-            this.IDCustomer.HeaderText = "IDCustomer";
-            this.IDCustomer.MinimumWidth = 6;
-            this.IDCustomer.Name = "IDCustomer";
-            this.IDCustomer.ReadOnly = true;
-            this.IDCustomer.Width = 125;
-            // 
-            // fullnameDataGridViewTextBoxColumn
-            // 
-            this.fullnameDataGridViewTextBoxColumn.DataPropertyName = "fullname";
-            this.fullnameDataGridViewTextBoxColumn.HeaderText = "fullname";
-            this.fullnameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.fullnameDataGridViewTextBoxColumn.Name = "fullnameDataGridViewTextBoxColumn";
-            this.fullnameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // phoneDataGridViewTextBoxColumn
-            // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "phone";
-            this.phoneDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            this.phoneDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
-            this.emailDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // dOBDataGridViewTextBoxColumn
-            // 
-            this.dOBDataGridViewTextBoxColumn.DataPropertyName = "DOB";
-            this.dOBDataGridViewTextBoxColumn.HeaderText = "DOB";
-            this.dOBDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dOBDataGridViewTextBoxColumn.Name = "dOBDataGridViewTextBoxColumn";
-            this.dOBDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // genderDataGridViewTextBoxColumn
-            // 
-            this.genderDataGridViewTextBoxColumn.DataPropertyName = "gender";
-            this.genderDataGridViewTextBoxColumn.HeaderText = "gender";
-            this.genderDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.genderDataGridViewTextBoxColumn.Name = "genderDataGridViewTextBoxColumn";
-            this.genderDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "username";
-            this.usernameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            this.usernameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // statusDataGridViewTextBoxColumn1
-            // 
-            this.statusDataGridViewTextBoxColumn1.DataPropertyName = "status";
-            this.statusDataGridViewTextBoxColumn1.HeaderText = "status";
-            this.statusDataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.statusDataGridViewTextBoxColumn1.Name = "statusDataGridViewTextBoxColumn1";
-            this.statusDataGridViewTextBoxColumn1.Visible = false;
-            this.statusDataGridViewTextBoxColumn1.Width = 125;
             // 
             // customerBindingSource1
             // 
@@ -1617,23 +1500,6 @@
             this.tabPage4.Text = "Order ";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // cOFFEEDataSet2
-            // 
-            this.cOFFEEDataSet2.DataSetName = "COFFEEDataSet2";
-            this.cOFFEEDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "Product";
-            // 
-            // productBindingSource1
-            // 
-            this.productBindingSource1.DataMember = "Product";
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "products";
-            // 
             // imageList1
             // 
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
@@ -1665,6 +1531,220 @@
             // 
             this.cOFFEEDataSet4BindingSource.DataSource = this.cOFFEEDataSet4;
             this.cOFFEEDataSet4BindingSource.Position = 0;
+            // 
+            // productBindingSource
+            // 
+            this.productBindingSource.DataMember = "Product";
+            // 
+            // cOFFEEDataSet2
+            // 
+            this.cOFFEEDataSet2.DataSetName = "COFFEEDataSet2";
+            this.cOFFEEDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // employeeBindingSource3
+            // 
+            this.employeeBindingSource3.DataMember = "Employee";
+            this.employeeBindingSource3.DataSource = this.cOFFEEDataSet4;
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataMember = "products";
+            // 
+            // productBindingSource1
+            // 
+            this.productBindingSource1.DataMember = "Product";
+            // 
+            // cOFFEEDataSet5
+            // 
+            this.cOFFEEDataSet5.DataSetName = "COFFEEDataSet5";
+            this.cOFFEEDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // productBindingSource3
+            // 
+            this.productBindingSource3.DataMember = "Product";
+            this.productBindingSource3.DataSource = this.cOFFEEDataSet5;
+            // 
+            // productTableAdapter1
+            // 
+            this.productTableAdapter1.ClearBeforeFill = true;
+            // 
+            // employeeBindingSource4
+            // 
+            this.employeeBindingSource4.DataMember = "Employee";
+            this.employeeBindingSource4.DataSource = this.cOFFEEDataSet5;
+            // 
+            // employeeTableAdapter2
+            // 
+            this.employeeTableAdapter2.ClearBeforeFill = true;
+            // 
+            // employeeBindingSource5
+            // 
+            this.employeeBindingSource5.DataMember = "Employee";
+            this.employeeBindingSource5.DataSource = this.cOFFEEDataSet5;
+            // 
+            // customerBindingSource2
+            // 
+            this.customerBindingSource2.DataMember = "Customer";
+            this.customerBindingSource2.DataSource = this.cOFFEEDataSet5;
+            // 
+            // customerTableAdapter1
+            // 
+            this.customerTableAdapter1.ClearBeforeFill = true;
+            // 
+            // customerBindingSource3
+            // 
+            this.customerBindingSource3.DataMember = "Customer";
+            this.customerBindingSource3.DataSource = this.cOFFEEDataSet5;
+            // 
+            // employeeBindingSource6
+            // 
+            this.employeeBindingSource6.DataMember = "Employee";
+            this.employeeBindingSource6.DataSource = this.cOFFEEDataSet5;
+            // 
+            // employeeBindingSource7
+            // 
+            this.employeeBindingSource7.DataMember = "Employee";
+            this.employeeBindingSource7.DataSource = this.cOFFEEDataSet5;
+            // 
+            // IDEmployee
+            // 
+            this.IDEmployee.DataPropertyName = "IDEmployee";
+            this.IDEmployee.HeaderText = "IDEmployee";
+            this.IDEmployee.MinimumWidth = 6;
+            this.IDEmployee.Name = "IDEmployee";
+            this.IDEmployee.ReadOnly = true;
+            this.IDEmployee.Width = 125;
+            // 
+            // fullnameEmp
+            // 
+            this.fullnameEmp.DataPropertyName = "fullnameEmp";
+            this.fullnameEmp.HeaderText = "fullnameEmp";
+            this.fullnameEmp.MinimumWidth = 6;
+            this.fullnameEmp.Name = "fullnameEmp";
+            this.fullnameEmp.Width = 125;
+            // 
+            // phoneEmp
+            // 
+            this.phoneEmp.DataPropertyName = "phoneEmp";
+            this.phoneEmp.HeaderText = "phoneEmp";
+            this.phoneEmp.MinimumWidth = 6;
+            this.phoneEmp.Name = "phoneEmp";
+            this.phoneEmp.Width = 125;
+            // 
+            // emailEmp
+            // 
+            this.emailEmp.DataPropertyName = "emailEmp";
+            this.emailEmp.HeaderText = "emailEmp";
+            this.emailEmp.MinimumWidth = 6;
+            this.emailEmp.Name = "emailEmp";
+            this.emailEmp.Width = 125;
+            // 
+            // DOBEmp
+            // 
+            this.DOBEmp.DataPropertyName = "DOBEmp";
+            this.DOBEmp.HeaderText = "DOBEmp";
+            this.DOBEmp.MinimumWidth = 6;
+            this.DOBEmp.Name = "DOBEmp";
+            this.DOBEmp.Width = 125;
+            // 
+            // genderEmp
+            // 
+            this.genderEmp.DataPropertyName = "genderEmp";
+            this.genderEmp.HeaderText = "genderEmp";
+            this.genderEmp.MinimumWidth = 6;
+            this.genderEmp.Name = "genderEmp";
+            this.genderEmp.Width = 125;
+            // 
+            // usernameEmp
+            // 
+            this.usernameEmp.DataPropertyName = "usernameEmp";
+            this.usernameEmp.HeaderText = "usernameEmp";
+            this.usernameEmp.MinimumWidth = 6;
+            this.usernameEmp.Name = "usernameEmp";
+            this.usernameEmp.Width = 125;
+            // 
+            // position
+            // 
+            this.position.DataPropertyName = "position";
+            this.position.HeaderText = "position";
+            this.position.MinimumWidth = 6;
+            this.position.Name = "position";
+            this.position.Width = 125;
+            // 
+            // statusEmp
+            // 
+            this.statusEmp.DataPropertyName = "statusEmp";
+            this.statusEmp.HeaderText = "statusEmp";
+            this.statusEmp.MinimumWidth = 6;
+            this.statusEmp.Name = "statusEmp";
+            this.statusEmp.Visible = false;
+            this.statusEmp.Width = 125;
+            // 
+            // IDCustomer
+            // 
+            this.IDCustomer.DataPropertyName = "IDCustomer";
+            this.IDCustomer.HeaderText = "IDCustomer";
+            this.IDCustomer.MinimumWidth = 6;
+            this.IDCustomer.Name = "IDCustomer";
+            this.IDCustomer.ReadOnly = true;
+            this.IDCustomer.Width = 125;
+            // 
+            // fullnameCus
+            // 
+            this.fullnameCus.DataPropertyName = "fullnameCus";
+            this.fullnameCus.HeaderText = "fullnameCus";
+            this.fullnameCus.MinimumWidth = 6;
+            this.fullnameCus.Name = "fullnameCus";
+            this.fullnameCus.Width = 125;
+            // 
+            // phoneCus
+            // 
+            this.phoneCus.DataPropertyName = "phoneCus";
+            this.phoneCus.HeaderText = "phoneCus";
+            this.phoneCus.MinimumWidth = 6;
+            this.phoneCus.Name = "phoneCus";
+            this.phoneCus.Width = 125;
+            // 
+            // emailCus
+            // 
+            this.emailCus.DataPropertyName = "emailCus";
+            this.emailCus.HeaderText = "emailCus";
+            this.emailCus.MinimumWidth = 6;
+            this.emailCus.Name = "emailCus";
+            this.emailCus.Width = 125;
+            // 
+            // DOBCus
+            // 
+            this.DOBCus.DataPropertyName = "DOBCus";
+            this.DOBCus.HeaderText = "DOBCus";
+            this.DOBCus.MinimumWidth = 6;
+            this.DOBCus.Name = "DOBCus";
+            this.DOBCus.Width = 125;
+            // 
+            // genderCus
+            // 
+            this.genderCus.DataPropertyName = "genderCus";
+            this.genderCus.HeaderText = "genderCus";
+            this.genderCus.MinimumWidth = 6;
+            this.genderCus.Name = "genderCus";
+            this.genderCus.Width = 125;
+            // 
+            // usernameCus
+            // 
+            this.usernameCus.DataPropertyName = "usernameCus";
+            this.usernameCus.HeaderText = "usernameCus";
+            this.usernameCus.MinimumWidth = 6;
+            this.usernameCus.Name = "usernameCus";
+            this.usernameCus.Width = 125;
+            // 
+            // statusCus
+            // 
+            this.statusCus.DataPropertyName = "statusCus";
+            this.statusCus.HeaderText = "statusCus";
+            this.statusCus.MinimumWidth = 6;
+            this.statusCus.Name = "statusCus";
+            this.statusCus.Visible = false;
+            this.statusCus.Width = 125;
             // 
             // Product
             // 
@@ -1702,17 +1782,26 @@
             this.panelCus.PerformLayout();
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1722,13 +1811,6 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControlProduct;
-        private System.Windows.Forms.BindingSource productBindingSource2;
-        private System.Windows.Forms.BindingSource cOFFEEDataSet2BindingSource;
-        private COFFEEDataSet2 cOFFEEDataSet2;
-        private System.Windows.Forms.BindingSource productBindingSource;
-        private System.Windows.Forms.BindingSource productBindingSource1;
-        private System.Windows.Forms.BindingSource cOFFEEDataSet1BindingSource;
-        private System.Windows.Forms.BindingSource productsBindingSource;
         private System.Windows.Forms.ImageList imageList1;
         private COFFEEDataSet2TableAdapters.ProductTableAdapter productTableAdapter;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1804,7 +1886,6 @@
         private System.Windows.Forms.TextBox txtIDEmp;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.BindingSource employeeBindingSource;
         private COFFEEDataSet3TableAdapters.EmployeeTableAdapter employeeTableAdapter;
         private System.Windows.Forms.BindingSource employeeBindingSource1;
         private COFFEEDataSet4 cOFFEEDataSet4;
@@ -1845,31 +1926,51 @@
         private System.Windows.Forms.TextBox txtIDCus;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private COFFEEDataSet4TableAdapters.CustomerTableAdapter customerTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDCustomer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dOBDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn1;
         private System.Windows.Forms.BindingSource customerBindingSource1;
         private System.Windows.Forms.BindingSource cOFFEEDataSet4BindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDEmployee;
-        private System.Windows.Forms.DataGridViewTextBoxColumn username;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullname;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DOB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gender;
-        private System.Windows.Forms.DataGridViewTextBoxColumn position;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.RadioButton radioFemale;
         private System.Windows.Forms.RadioButton radioMale;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.BindingSource employeeBindingSource3;
+        private System.Windows.Forms.BindingSource productBindingSource;
+        private COFFEEDataSet2 cOFFEEDataSet2;
+        private System.Windows.Forms.BindingSource cOFFEEDataSet2BindingSource;
+        private System.Windows.Forms.BindingSource productBindingSource2;
+        private System.Windows.Forms.BindingSource employeeBindingSource;
+        private System.Windows.Forms.BindingSource productsBindingSource;
+        private System.Windows.Forms.BindingSource productBindingSource1;
+        private System.Windows.Forms.BindingSource cOFFEEDataSet1BindingSource;
+        private COFFEEDataSet5 cOFFEEDataSet5;
+        private System.Windows.Forms.BindingSource productBindingSource3;
+        private COFFEEDataSet5TableAdapters.ProductTableAdapter productTableAdapter1;
+        private System.Windows.Forms.BindingSource employeeBindingSource4;
+        private COFFEEDataSet5TableAdapters.EmployeeTableAdapter employeeTableAdapter2;
+        private System.Windows.Forms.BindingSource employeeBindingSource5;
+        private System.Windows.Forms.BindingSource customerBindingSource2;
+        private COFFEEDataSet5TableAdapters.CustomerTableAdapter customerTableAdapter1;
+        private System.Windows.Forms.BindingSource customerBindingSource3;
+        private System.Windows.Forms.BindingSource employeeBindingSource7;
+        private System.Windows.Forms.BindingSource employeeBindingSource6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDEmployee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DOBEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn position;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DOBCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusCus;
     }
 }
 

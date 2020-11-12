@@ -42,8 +42,13 @@ namespace Management
         //lay caegory vao combobox
         private void Product_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'cOFFEEDataSet4.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter.Fill(this.cOFFEEDataSet4.Customer);
+            // TODO: This line of code loads data into the 'cOFFEEDataSet5.Customer' table. You can move, or remove it, as needed.
+            this.customerTableAdapter1.Fill(this.cOFFEEDataSet5.Customer);
+            // TODO: This line of code loads data into the 'cOFFEEDataSet5.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter2.Fill(this.cOFFEEDataSet5.Employee);
+            // TODO: This line of code loads data into the 'cOFFEEDataSet5.Product' table. You can move, or remove it, as needed.
+            this.productTableAdapter1.Fill(this.cOFFEEDataSet5.Product);
+           
             // TODO: This line of code loads data into the 'cOFFEEDataSet4.Employee' table. You can move, or remove it, as needed.
             this.employeeTableAdapter1.Fill(this.cOFFEEDataSet4.Employee);
             // TODO: This line of code loads data into the 'cOFFEEDataSet2.Product' table. You can move, or remove it, as needed.
