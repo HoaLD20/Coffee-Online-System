@@ -50,6 +50,8 @@
             this.employeeBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
             this.cOFFEEDataSet5 = new Management.COFFEEDataSet5();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.lblPass = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -191,8 +193,8 @@
             this.customerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.customerTableAdapter1 = new Management.COFFEEDataSet5TableAdapters.CustomerTableAdapter();
             this.employeeBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtPassCus = new System.Windows.Forms.TextBox();
+            this.lblPasswordCus = new System.Windows.Forms.Label();
             this.tabPage2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -473,6 +475,24 @@
             this.groupBox6.TabIndex = 50;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Employee details";
+            // 
+            // label17
+            // 
+            this.label17.AutoEllipsis = true;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(243, 222);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(73, 17);
+            this.label17.TabIndex = 48;
+            this.label17.Text = "Username";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(376, 222);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(308, 22);
+            this.txtUsername.TabIndex = 49;
             // 
             // txtPass
             // 
@@ -1251,6 +1271,7 @@
             this.btnRefreshCus.TabIndex = 30;
             this.btnRefreshCus.Text = "Refresh ";
             this.btnRefreshCus.UseVisualStyleBackColor = true;
+            this.btnRefreshCus.Click += new System.EventHandler(this.btnRefreshCus_Click);
             // 
             // btnDeleteCus
             // 
@@ -1263,6 +1284,7 @@
             this.btnDeleteCus.TabIndex = 19;
             this.btnDeleteCus.Text = "Delete Customer";
             this.btnDeleteCus.UseVisualStyleBackColor = true;
+            this.btnDeleteCus.Click += new System.EventHandler(this.btnDeleteCus_Click);
             // 
             // groupBox8
             // 
@@ -1300,6 +1322,7 @@
             this.tbCustomer.RowTemplate.Height = 100;
             this.tbCustomer.Size = new System.Drawing.Size(1282, 325);
             this.tbCustomer.TabIndex = 0;
+            this.tbCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbCustomer_CellClick);
             // 
             // IDCustomer
             // 
@@ -1374,6 +1397,8 @@
             // 
             // panelCus
             // 
+            this.panelCus.Controls.Add(this.txtPassCus);
+            this.panelCus.Controls.Add(this.lblPasswordCus);
             this.panelCus.Controls.Add(this.groupBox10);
             this.panelCus.Controls.Add(this.dateDOBCus);
             this.panelCus.Controls.Add(this.txtUsernameCus);
@@ -1445,7 +1470,7 @@
             // 
             // txtUsernameCus
             // 
-            this.txtUsernameCus.Location = new System.Drawing.Point(980, 229);
+            this.txtUsernameCus.Location = new System.Drawing.Point(386, 191);
             this.txtUsernameCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsernameCus.Name = "txtUsernameCus";
             this.txtUsernameCus.Size = new System.Drawing.Size(308, 22);
@@ -1455,7 +1480,7 @@
             // 
             this.label35.AutoEllipsis = true;
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(864, 229);
+            this.label35.Location = new System.Drawing.Point(253, 211);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(73, 17);
             this.label35.TabIndex = 38;
@@ -1463,7 +1488,7 @@
             // 
             // txtPhoneCus
             // 
-            this.txtPhoneCus.Location = new System.Drawing.Point(386, 151);
+            this.txtPhoneCus.Location = new System.Drawing.Point(386, 136);
             this.txtPhoneCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneCus.Name = "txtPhoneCus";
             this.txtPhoneCus.Size = new System.Drawing.Size(308, 22);
@@ -1471,7 +1496,7 @@
             // 
             // txtEmailCus
             // 
-            this.txtEmailCus.Location = new System.Drawing.Point(386, 224);
+            this.txtEmailCus.Location = new System.Drawing.Point(980, 248);
             this.txtEmailCus.Name = "txtEmailCus";
             this.txtEmailCus.Size = new System.Drawing.Size(308, 22);
             this.txtEmailCus.TabIndex = 33;
@@ -1525,7 +1550,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(275, 144);
+            this.label40.Location = new System.Drawing.Point(273, 139);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(49, 17);
             this.label40.TabIndex = 2;
@@ -1581,7 +1606,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(275, 229);
+            this.label46.Location = new System.Drawing.Point(894, 248);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(42, 17);
             this.label46.TabIndex = 5;
@@ -1735,23 +1760,23 @@
             this.employeeBindingSource6.DataMember = "Employee";
             this.employeeBindingSource6.DataSource = this.cOFFEEDataSet5;
             // 
-            // label17
+            // txtPassCus
             // 
-            this.label17.AutoEllipsis = true;
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(243, 222);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(73, 17);
-            this.label17.TabIndex = 48;
-            this.label17.Text = "Username";
+            this.txtPassCus.Location = new System.Drawing.Point(386, 253);
+            this.txtPassCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassCus.Name = "txtPassCus";
+            this.txtPassCus.PasswordChar = '*';
+            this.txtPassCus.Size = new System.Drawing.Size(308, 22);
+            this.txtPassCus.TabIndex = 49;
             // 
-            // txtUsername
+            // lblPasswordCus
             // 
-            this.txtUsername.Location = new System.Drawing.Point(376, 222);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(308, 22);
-            this.txtUsername.TabIndex = 49;
+            this.lblPasswordCus.AutoSize = true;
+            this.lblPasswordCus.Location = new System.Drawing.Point(253, 253);
+            this.lblPasswordCus.Name = "lblPasswordCus";
+            this.lblPasswordCus.Size = new System.Drawing.Size(69, 17);
+            this.lblPasswordCus.TabIndex = 48;
+            this.lblPasswordCus.Text = "Password";
             // 
             // Product
             // 
@@ -1978,6 +2003,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn statusCus;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassCus;
+        private System.Windows.Forms.Label lblPasswordCus;
     }
 }
 
