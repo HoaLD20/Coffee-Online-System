@@ -97,7 +97,7 @@ namespace Management
             int index = e.RowIndex;
             if (index >= 0)
             {
-
+                //huhuhuhu
                 txtIDPro.Text = tbProduct.Rows[index].Cells["IDProduct"].Value.ToString().Trim();
                 txtIDPro.Enabled = false;
                 txtNamePro.Text = tbProduct.Rows[index].Cells["nameProduct"].Value.ToString().Trim();
