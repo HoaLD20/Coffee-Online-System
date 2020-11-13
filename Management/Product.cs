@@ -23,12 +23,15 @@ namespace Management
         int indexCategory;//lay ID của category
         DBConectionManager db;
         SqlDataAdapter da;
+        string checkgender = null;
+        EmployeeList empList;
 
         public Product()
         {
             InitializeComponent();
             pro = new productsList();
             db = new DBConectionManager();
+            empList = new EmployeeList();
         }
 
         public void showProduct()
@@ -36,7 +39,11 @@ namespace Management
             DataTable dt = pro.getProduct();
             tbProduct.DataSource = dt;
         }
-
+        public void showEmployee()
+        {
+            DataTable dt = empList.getEmployee();
+            tbEmployee.DataSource = dt;
+        }
 
 
         //lay caegory vao combobox
@@ -45,27 +52,12 @@ namespace Management
             // TODO: This line of code loads data into the 'cOFFEEDataSet5.Customer' table. You can move, or remove it, as needed.
             this.customerTableAdapter1.Fill(this.cOFFEEDataSet5.Customer);
             // TODO: This line of code loads data into the 'cOFFEEDataSet5.Employee' table. You can move, or remove it, as needed.
-            this.employeeTableAdapter2.Fill(this.cOFFEEDataSet5.Employee);
+            /*this.employeeTableAdapter2.Fill(this.cOFFEEDataSet5.Employee);
             // TODO: This line of code loads data into the 'cOFFEEDataSet5.Product' table. You can move, or remove it, as needed.
             this.productTableAdapter1.Fill(this.cOFFEEDataSet5.Product);
-           
-           
+*/
+            txtUsername.Enabled = true;
             txtIDPro.Enabled = true;
-            /* conn = db.GetConnection();
-             conn.Open();
-             cmd = conn.CreateCommand();
-             cmd.CommandType = CommandType.Text;
-             cmd.CommandText="Select * from category";
-             cmd.ExecuteNonQuery();
-             DataTable dt = new DataTable();
-             SqlDataAdapter da = new SqlDataAdapter(cmd);
-             da.Fill(dt);
-             foreach(DataRow dr in dt.Rows)
-             {
-                 cbbCategory.Items.Add(dr["nameCategory"].ToString());
-
-             }
-             conn.Close();*/
             conn = db.GetConnection();
             string sql = "select * from Category";
             conn.Open();
@@ -79,8 +71,9 @@ namespace Management
             }
             conn.Close();
 
-
             showProduct();
+            showEmployee();
+           
         }
         public void refresh()
         {
@@ -94,15 +87,22 @@ namespace Management
             cbbAvailable.Text = "";
             pictureBox.Image = null;
             cbbCategory.SelectedIndex = -1;
-            //panelImage
-           
+            //refresh employee
+            txtIDEmp.Text = "";
+            txtFullname.Text = "";
+            txtEmail.Text = "";
+            txtPhone.Text = "";
+            txtUsername.Text = "";
+            txtPass.Text = "";
+            cbbPosition.SelectedIndex = -1;
+            radioFemale.Checked = false;
+            radioMale.Checked = false;
+            lblPass.Visible = true;
+            txtPass.Visible = true;
+            txtIDEmp.Enabled = true;
+            txtUsername.Enabled = true;
+
         }
-
-        
-
-       
-
-       
         private void tbProduct_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -213,20 +213,137 @@ namespace Management
             cmd = new SqlCommand(sql, conn);
             cmd.Parameters.Add("@IDProduct", txtIDPro.Text);
             cmd.ExecuteNonQuery();
-            MessageBox.Show("Update success!");
+            MessageBox.Show("Delete success!");
             conn.Close();
             showProduct();
             refresh();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+
+        /*
+         * 
+         * EMPLOYEE
+         * 
+         * */
+     
+
+        private void tbEmployee_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtUsername.Enabled = false;
+            lblPass.Visible = false;
+            txtPass.Visible = false;
+            txtIDEmp.Enabled = false;
+            int index = e.RowIndex;
+            if (index >= 0)
+            {
+
+                txtIDEmp.Text = tbEmployee.Rows[index].Cells["IDEmployee"].Value.ToString().Trim();
+                txtIDEmp.Enabled = false;
+                txtFullname.Text = tbEmployee.Rows[index].Cells["fullNameEmp"].Value.ToString().Trim();
+                txtPhone.Text = tbEmployee.Rows[index].Cells["phoneEmp"].Value.ToString().Trim();
+                txtEmail.Text = tbEmployee.Rows[index].Cells["emailEmp"].Value.ToString().Trim();
+                dateDOB.Value =Convert.ToDateTime(tbEmployee.Rows[index].Cells["DOBEmp"].Value.ToString());
+                if (tbEmployee.Rows[index].Cells["genderEmp"].Value.ToString().Equals("Female"))
+                {
+                    radioFemale.Select();
+                }
+                else
+                {
+                    radioMale.Select();
+                }
+                txtUsername.Text = tbEmployee.Rows[index].Cells["usernameEmp"].Value.ToString().Trim();
+
+                cbbPosition.SelectedItem = tbEmployee.Rows[index].Cells["position"].Value.ToString().Trim();//-1 de lay dc dung vi tri trong combobox
+                
+             
+
+            }
+        }
+
+        private void radioMale_CheckedChanged(object sender, EventArgs e)
+        {
+            checkgender = "Male";
+        }
+
+        private void radioFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            checkgender = "Female";
+        }
+
+        private void btnAddEmp_Click(object sender, EventArgs e)
+        {
+           
+            conn = db.GetConnection();
+            conn.Open();
+            string sql = "insert into Employee( fullnameEmp, phoneEmp,emailEmp,DOBEmp, genderEmp, usernameEmp,position, statusEmp) values (@fullnameEmp,@phoneEmp,@emailEmp,@DOBEmp,@genderEmp,@usernameEmp,@position,1)";
+            //tao ket noi toi sql
+
+            cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.Add("@fullnameEmp", txtFullname.Text); //parameter này sẽ được thay thế bởi giá trị thực sự của parameter khi SqlCommand thực thi
+            cmd.Parameters.Add("@phoneEmp", txtPhone.Text);
+            cmd.Parameters.Add("@emailEmp", txtEmail.Text);
+            cmd.Parameters.Add("@DOBEmp", dateDOB.Value);
+            cmd.Parameters.Add("@genderEmp", checkgender);
+            cmd.Parameters.Add("@usernameEmp", txtUsername.Text);
+            cmd.Parameters.Add("@position", cbbPosition.SelectedItem);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Employee saved");
+            refresh();
+            string sqlAccount="insert into Account (username, password, role) values (@username,@password,1)";//role 1 la employee, role 0 la khach hang
+            cmd = new SqlCommand(sqlAccount, conn);
+            cmd.Parameters.Add("@username", txtUsername.Text);
+            cmd.Parameters.Add("@password", txtPass.Text);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            // TODO: This line of code loads data into the 'cOFFEEDataSet5.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter2.Fill(this.cOFFEEDataSet5.Employee);
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
         {
             refresh();
         }
 
-        private void label26_Click(object sender, EventArgs e)
+        private void btnUpdateEmp_Click(object sender, EventArgs e)
         {
+            conn = db.GetConnection();
+            conn.Open();
+            string sql = "update Employee set fullnameEmp = @fullnameEmp, phoneEmp = @phoneEmp, emailEmp = @emailEmp, DOBEmp = @DOBEmp, genderEmp = @genderEmp,  position = @position,statusEmp = 1 where IDEmployee = @IDEmployee";
+            cmd = new SqlCommand(sql, conn);
 
+            cmd.Parameters.Add("@fullnameEmp", txtFullname.Text); //parameter này sẽ được thay thế bởi giá trị thực sự của parameter khi SqlCommand thực thi
+            cmd.Parameters.Add("@phoneEmp", txtPhone.Text);
+            cmd.Parameters.Add("@emailEmp", txtEmail.Text);
+            cmd.Parameters.Add("@DOBEmp", dateDOB.Value);
+            cmd.Parameters.Add("@genderEmp", checkgender);
+            cmd.Parameters.Add("@position", cbbPosition.SelectedItem);
+            cmd.Parameters.Add("@IDEmployee", txtIDEmp.Text);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Employee Detail Updated...");
+            conn.Close();
+            // TODO: This line of code loads data into the 'cOFFEEDataSet5.Employee' table. You can move, or remove it, as needed.
+            this.employeeTableAdapter2.Fill(this.cOFFEEDataSet5.Employee);
+            refresh();
+        }
+
+        private void btnDeleteEmp_Click(object sender, EventArgs e)
+        {
+            conn = db.GetConnection();
+            conn.Open();
+            string sql = "update Employee set statusEmp = 0 where IDEmployee = @IDEmployee";
+            cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.Add("@IDEmployee", txtIDEmp.Text);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Update success!");
+            //xoa tai khoan cua remployee trong table account
+            string sqlDelete = "delete Account where username=@username";
+            cmd = new SqlCommand(sqlDelete, conn);
+            cmd.Parameters.Add("@username", txtUsername.Text);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            showEmployee();//load lai table sau khi xo thong tin
+            refresh();
         }
     }
 }
