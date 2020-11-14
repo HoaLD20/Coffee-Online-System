@@ -15,6 +15,7 @@ namespace Management
 {
     public partial class Product : Form
     {
+
         productsList pro;
         string imgUrl = null;
         products product;
@@ -25,39 +26,52 @@ namespace Management
         SqlDataAdapter da;
         string checkgender = null;
         EmployeeList empList;
+        CustomerList cusList;
 
         public Product()
         {
+            
             InitializeComponent();
             pro = new productsList();
             db = new DBConectionManager();
             empList = new EmployeeList();
+            cusList = new CustomerList();
         }
 
+        /**
+         * la thong tin cua san pham
+         * */
         public void showProduct()
         {
             DataTable dt = pro.getProduct();
             tbProduct.DataSource = dt;
         }
+        /**
+        * la thong tin cua employeee
+        * */
         public void showEmployee()
         {
             DataTable dt = empList.getEmployee();
             tbEmployee.DataSource = dt;
         }
-
+        /**
+        * la thong tin cua customer
+        * */
+        public void showCustomer()
+        {
+            DataTable dt = cusList.getCustomer();
+            tbCustomer.DataSource = dt;
+        }
 
         //lay caegory vao combobox
         private void Product_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'cOFFEEDataSet5.Customer' table. You can move, or remove it, as needed.
-            this.customerTableAdapter1.Fill(this.cOFFEEDataSet5.Customer);
-            // TODO: This line of code loads data into the 'cOFFEEDataSet5.Employee' table. You can move, or remove it, as needed.
-            /*this.employeeTableAdapter2.Fill(this.cOFFEEDataSet5.Employee);
-            // TODO: This line of code loads data into the 'cOFFEEDataSet5.Product' table. You can move, or remove it, as needed.
-            this.productTableAdapter1.Fill(this.cOFFEEDataSet5.Product);
-*/
+
+
             txtUsername.Enabled = true;
-            txtIDPro.Enabled = true;
+            txtIDCus.Enabled = false;                ;
+            txtIDEmp.Enabled = false;
+            txtIDPro.Enabled = false;
             conn = db.GetConnection();
             string sql = "select * from Category";
             conn.Open();
@@ -67,13 +81,13 @@ namespace Management
             foreach (DataRow dr in dt.Rows)
             {
                 cbbCategory.Items.Add(dr["namecategory"]).ToString();
-                
+
             }
             conn.Close();
 
-            showProduct();
-            showEmployee();
-           
+            showProduct();//lay toan bo thong tin cua san pham len(status=1) 
+            showEmployee();//lay toan bo thong tin cua Employee len(status =1) 
+            showCustomer();
         }
         public void refresh()
         {
@@ -99,11 +113,37 @@ namespace Management
             radioMale.Checked = false;
             lblPass.Visible = true;
             txtPass.Visible = true;
-            txtIDEmp.Enabled = true;
             txtUsername.Enabled = true;
+            //refresh customer
+            txtIDCus.Text = "";
+            txtFullNameCus.Text = "";
+            txtEmailCus.Text = "";
+            txtPhoneCus.Text = "";
+            txtUsernameCus.Text = "";
+            txtPassCus.Text = "";
+            lblPasswordCus.Visible = true;
+            txtPassCus.Visible = true;
+            txtUsernameCus.Enabled = true;
+            radioFemailCus.Checked = false;
+            radioMaleCus.Checked = false;
 
         }
-        private void tbProduct_CellClick_1(object sender, DataGridViewCellEventArgs e)
+
+        /**
+         * PRODUCT MANAGEMENT ============================================================================
+         * 
+         * */
+        private void button1_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
+
+        private void cbbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            indexCategory = cbbCategory.SelectedIndex + 1;//lay chi so cua category khi chon vào combobox
+        }
+
+        private void tbProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             txtIDPro.Enabled = false;
@@ -111,16 +151,16 @@ namespace Management
             if (index >= 0)
             {
 
-                txtIDPro.Text = tbProduct.Rows[index].Cells["IDProduct"].Value.ToString().Trim();
+                txtIDPro.Text = tbProduct.Rows[index].Cells["IDProduct1"].Value.ToString().Trim();
                 txtIDPro.Enabled = false;
-                txtNamePro.Text = tbProduct.Rows[index].Cells["nameProduct"].Value.ToString().Trim();
-                cbbAvailable.Text = tbProduct.Rows[index].Cells["available"].Value.ToString().Trim();
-                txtPrice.Text = tbProduct.Rows[index].Cells["price"].Value.ToString().Trim();
-                txtDescripton.Text = tbProduct.Rows[index].Cells["description"].Value.ToString().Trim();
-                cbbCategory.SelectedIndex = int.Parse(tbProduct.Rows[index].Cells["IDCategory"].Value.ToString().Trim()) - 1;//-1 de lay dc dung vi tri trong combobox
-                txtURL.Text = tbProduct.Rows[index].Cells["imageUrl"].Value.ToString().Trim();
+                txtNamePro.Text = tbProduct.Rows[index].Cells["nameProduct1"].Value.ToString().Trim();
+                cbbAvailable.Text = tbProduct.Rows[index].Cells["available1"].Value.ToString().Trim();
+                txtPrice.Text = tbProduct.Rows[index].Cells["price1"].Value.ToString().Trim();
+                txtDescripton.Text = tbProduct.Rows[index].Cells["description1"].Value.ToString().Trim();
+                cbbCategory.SelectedIndex = int.Parse(tbProduct.Rows[index].Cells["IDCategory1"].Value.ToString().Trim()) - 1;//-1 de lay dc dung vi tri trong combobox
+                txtURL.Text = tbProduct.Rows[index].Cells["imageUrl1"].Value.ToString().Trim();
                 Byte[] imgData = new Byte[0];
-                imgData = (Byte[])tbProduct.Rows[index].Cells["photo"].Value;
+                imgData = (Byte[])tbProduct.Rows[index].Cells["photo1"].Value;
                 MemoryStream ms = new MemoryStream(imgData);
                 pictureBox.Image = Image.FromStream(ms);
 
@@ -141,11 +181,7 @@ namespace Management
             }
         }
 
-        private void cbbCategory_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            indexCategory = cbbCategory.SelectedIndex + 1;//lay chi so cua category khi chon vào combobox
-        }
-
+       
         private void bntAdd_Click_1(object sender, EventArgs e)
         {
             Image img = pictureBox.Image;
@@ -168,13 +204,8 @@ namespace Management
             cmd.ExecuteNonQuery();
 
             MessageBox.Show("Product saved");
-
-            SqlCommand loadAgain = new SqlCommand("select * from Product where status = 1 ", conn);
-            DataTable dt = new DataTable();
-            dt.Load(loadAgain.ExecuteReader());
-            tbProduct.DataSource = dt;
             conn.Close();
-
+            showProduct();
         }
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
@@ -222,10 +253,10 @@ namespace Management
 
         /*
          * 
-         * EMPLOYEE
+         * EMPLOYEE MANAGEMENT ============================================================================
          * 
          * */
-     
+
 
         private void tbEmployee_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -242,7 +273,7 @@ namespace Management
                 txtFullname.Text = tbEmployee.Rows[index].Cells["fullNameEmp"].Value.ToString().Trim();
                 txtPhone.Text = tbEmployee.Rows[index].Cells["phoneEmp"].Value.ToString().Trim();
                 txtEmail.Text = tbEmployee.Rows[index].Cells["emailEmp"].Value.ToString().Trim();
-                dateDOB.Value =Convert.ToDateTime(tbEmployee.Rows[index].Cells["DOBEmp"].Value.ToString());
+                dateDOB.Value = Convert.ToDateTime(tbEmployee.Rows[index].Cells["DOBEmp"].Value.ToString());
                 if (tbEmployee.Rows[index].Cells["genderEmp"].Value.ToString().Equals("Female"))
                 {
                     radioFemale.Select();
@@ -254,8 +285,8 @@ namespace Management
                 txtUsername.Text = tbEmployee.Rows[index].Cells["usernameEmp"].Value.ToString().Trim();
 
                 cbbPosition.SelectedItem = tbEmployee.Rows[index].Cells["position"].Value.ToString().Trim();//-1 de lay dc dung vi tri trong combobox
-                
-             
+
+
 
             }
         }
@@ -272,7 +303,7 @@ namespace Management
 
         private void btnAddEmp_Click(object sender, EventArgs e)
         {
-           
+
             conn = db.GetConnection();
             conn.Open();
             string sql = "insert into Employee( fullnameEmp, phoneEmp,emailEmp,DOBEmp, genderEmp, usernameEmp,position, statusEmp) values (@fullnameEmp,@phoneEmp,@emailEmp,@DOBEmp,@genderEmp,@usernameEmp,@position,1)";
@@ -288,15 +319,16 @@ namespace Management
             cmd.Parameters.Add("@position", cbbPosition.SelectedItem);
             cmd.ExecuteNonQuery();
             MessageBox.Show("Employee saved");
-            refresh();
-            string sqlAccount="insert into Account (username, password, role) values (@username,@password,1)";//role 1 la employee, role 0 la khach hang
+            //role 1 la employee, role 0 la khach hang
+            string sqlAccount = "insert into Account (username, password, role) values (@username,@password,1)";
             cmd = new SqlCommand(sqlAccount, conn);
             cmd.Parameters.Add("@username", txtUsername.Text);
             cmd.Parameters.Add("@password", txtPass.Text);
             cmd.ExecuteNonQuery();
             conn.Close();
-            // TODO: This line of code loads data into the 'cOFFEEDataSet5.Employee' table. You can move, or remove it, as needed.
-            this.employeeTableAdapter2.Fill(this.cOFFEEDataSet5.Employee);
+            refresh();
+            showEmployee();
+
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -321,8 +353,7 @@ namespace Management
             cmd.ExecuteNonQuery();
             MessageBox.Show("Employee Detail Updated...");
             conn.Close();
-            // TODO: This line of code loads data into the 'cOFFEEDataSet5.Employee' table. You can move, or remove it, as needed.
-            this.employeeTableAdapter2.Fill(this.cOFFEEDataSet5.Employee);
+            showEmployee();
             refresh();
         }
 
@@ -345,5 +376,69 @@ namespace Management
             showEmployee();//load lai table sau khi xo thong tin
             refresh();
         }
+
+
+        /**
+        * CUSTOMER MANAGEMENT ======================================================================================================
+        * 
+        * */
+
+        private void btnRefreshCus_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
+
+        private void tbCustomer_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            lblPasswordCus.Visible = false;
+            txtPassCus.Visible = false;
+            txtUsernameCus.Enabled = false;           
+            txtIDCus.Enabled = false;
+            int index = e.RowIndex;
+            if (index >= 0)
+            {
+
+                txtIDCus.Text = tbCustomer.Rows[index].Cells["IDCustomer"].Value.ToString().Trim();
+                txtFullNameCus.Text = tbCustomer.Rows[index].Cells["fullnameCus"].Value.ToString().Trim();
+                txtPhoneCus.Text = tbCustomer.Rows[index].Cells["phoneCus"].Value.ToString().Trim();
+                txtEmailCus.Text = tbCustomer.Rows[index].Cells["emailCus"].Value.ToString().Trim();
+                dateDOBCus.Value = Convert.ToDateTime(tbCustomer.Rows[index].Cells["DOBCus"].Value.ToString());
+                if (tbCustomer.Rows[index].Cells["genderCus"].Value.ToString().Equals("Female"))
+                {
+                    radioFemailCus.Select();
+                }
+                else
+                {
+                    radioMaleCus.Select();
+                }
+                txtUsernameCus.Text = tbCustomer.Rows[index].Cells["usernameCus"].Value.ToString().Trim();
+
+              
+
+            }
+
+        }
+
+        private void btnDeleteCus_Click(object sender, EventArgs e)
+        {
+            conn = db.GetConnection();
+            conn.Open();
+            string sql = "update Customer set statusCus = 0 where IDCustomer = @IDCustomer";
+            cmd = new SqlCommand(sql, conn);
+            cmd.Parameters.Add("@IDCustomer", txtIDCus.Text);
+            cmd.ExecuteNonQuery();
+            MessageBox.Show("Delete success!");
+            //xoa tai khoan cua remployee trong table account
+            string sqlDelete = "delete Account where username=@username";
+            cmd = new SqlCommand(sqlDelete, conn);
+            cmd.Parameters.Add("@username", txtUsernameCus.Text);
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
+            showCustomer();//load lai table sau khi xo thong tin
+            refresh();
+        }
+
+       
     }
 }

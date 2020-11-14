@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product));
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label51 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnAddEmp = new System.Windows.Forms.Button();
@@ -50,6 +52,8 @@
             this.employeeBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
             this.cOFFEEDataSet5 = new Management.COFFEEDataSet5();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.lblPass = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
@@ -79,24 +83,20 @@
             this.txtIDEmp = new System.Windows.Forms.TextBox();
             this.employeeBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.cOFFEEDataSet4 = new Management.COFFEEDataSet4();
+            this.productBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.tabControlProduct = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.bntAdd = new System.Windows.Forms.Button();
-            this.bntDelete = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tbProduct = new System.Windows.Forms.DataGridView();
-            this.IDProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IDCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.available = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.imageUrl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.photo = new System.Windows.Forms.DataGridViewImageColumn();
-            this.productBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.IDProduct1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDCategory1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameProduct1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.available1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imageUrl1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.photo1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtURL = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -123,8 +123,16 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtIDPro = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
-            this.tabControlProduct = new System.Windows.Forms.TabControl();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label53 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.bntAdd = new System.Windows.Forms.Button();
+            this.bntDelete = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label34 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.btnRefreshCus = new System.Windows.Forms.Button();
             this.btnDeleteCus = new System.Windows.Forms.Button();
@@ -140,6 +148,8 @@
             this.statusCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.panelCus = new System.Windows.Forms.GroupBox();
+            this.txtPassCus = new System.Windows.Forms.TextBox();
+            this.lblPasswordCus = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.radioMaleCus = new System.Windows.Forms.RadioButton();
             this.radioFemailCus = new System.Windows.Forms.RadioButton();
@@ -165,7 +175,6 @@
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.txtIDCus = new System.Windows.Forms.TextBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.customerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.productTableAdapter = new Management.COFFEEDataSet2TableAdapters.ProductTableAdapter();
@@ -191,9 +200,19 @@
             this.customerBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.customerTableAdapter1 = new Management.COFFEEDataSet5TableAdapters.CustomerTableAdapter();
             this.employeeBindingSource6 = new System.Windows.Forms.BindingSource(this.components);
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.photo = new System.Windows.Forms.DataGridViewImageColumn();
+            this.imageUrl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.description = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.available = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label52 = new System.Windows.Forms.Label();
+            this.productBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbEmployee)).BeginInit();
@@ -203,15 +222,17 @@
             this.groupBox9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource3)).BeginInit();
+            this.tabControlProduct.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbProduct)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource3)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
-            this.tabControlProduct.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbCustomer)).BeginInit();
@@ -235,36 +256,62 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource4)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.groupBox6);
             this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1676, 760);
+            this.tabPage2.Size = new System.Drawing.Size(1691, 829);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Employee";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.Moccasin;
+            this.panel2.Controls.Add(this.label51);
+            this.panel2.Location = new System.Drawing.Point(20, 20);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1654, 100);
+            this.panel2.TabIndex = 57;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label51.Location = new System.Drawing.Point(508, 24);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(599, 51);
+            this.label51.TabIndex = 50;
+            this.label51.Text = "EMPLOYEE MANAGEMENT";
+            // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox4.Controls.Add(this.btnRefresh);
             this.groupBox4.Controls.Add(this.btnAddEmp);
             this.groupBox4.Controls.Add(this.btnDeleteEmp);
             this.groupBox4.Controls.Add(this.btnUpdateEmp);
-            this.groupBox4.Location = new System.Drawing.Point(1395, 364);
+            this.groupBox4.Location = new System.Drawing.Point(1451, 469);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(223, 361);
+            this.groupBox4.Size = new System.Drawing.Size(223, 357);
             this.groupBox4.TabIndex = 51;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Option";
             // 
             // btnRefresh
             // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRefresh.Location = new System.Drawing.Point(21, 282);
@@ -278,9 +325,10 @@
             // 
             // btnAddEmp
             // 
+            this.btnAddEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddEmp.Image = ((System.Drawing.Image)(resources.GetObject("btnAddEmp.Image")));
             this.btnAddEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEmp.Location = new System.Drawing.Point(21, 35);
+            this.btnAddEmp.Location = new System.Drawing.Point(21, 37);
             this.btnAddEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddEmp.Name = "btnAddEmp";
             this.btnAddEmp.Size = new System.Drawing.Size(188, 50);
@@ -291,6 +339,7 @@
             // 
             // btnDeleteEmp
             // 
+            this.btnDeleteEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteEmp.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteEmp.Image")));
             this.btnDeleteEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteEmp.Location = new System.Drawing.Point(21, 205);
@@ -304,6 +353,7 @@
             // 
             // btnUpdateEmp
             // 
+            this.btnUpdateEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdateEmp.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateEmp.Image")));
             this.btnUpdateEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUpdateEmp.Location = new System.Drawing.Point(21, 127);
@@ -317,12 +367,13 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.tbEmployee);
-            this.groupBox5.Location = new System.Drawing.Point(58, 343);
+            this.groupBox5.Location = new System.Drawing.Point(20, 469);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1315, 352);
+            this.groupBox5.Size = new System.Drawing.Size(1415, 352);
             this.groupBox5.TabIndex = 52;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "List of employee";
@@ -346,11 +397,11 @@
             this.position,
             this.statusEmp});
             this.tbEmployee.DataSource = this.employeeBindingSource7;
-            this.tbEmployee.Location = new System.Drawing.Point(16, 21);
+            this.tbEmployee.Location = new System.Drawing.Point(18, 21);
             this.tbEmployee.Name = "tbEmployee";
             this.tbEmployee.RowHeadersWidth = 51;
             this.tbEmployee.RowTemplate.Height = 100;
-            this.tbEmployee.Size = new System.Drawing.Size(1282, 325);
+            this.tbEmployee.Size = new System.Drawing.Size(1377, 310);
             this.tbEmployee.TabIndex = 0;
             this.tbEmployee.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbEmployee_CellClick);
             // 
@@ -369,7 +420,7 @@
             this.fullnameEmp.HeaderText = "fullnameEmp";
             this.fullnameEmp.MinimumWidth = 6;
             this.fullnameEmp.Name = "fullnameEmp";
-            this.fullnameEmp.Width = 125;
+            this.fullnameEmp.Width = 200;
             // 
             // phoneEmp
             // 
@@ -377,7 +428,7 @@
             this.phoneEmp.HeaderText = "phoneEmp";
             this.phoneEmp.MinimumWidth = 6;
             this.phoneEmp.Name = "phoneEmp";
-            this.phoneEmp.Width = 125;
+            this.phoneEmp.Width = 200;
             // 
             // emailEmp
             // 
@@ -385,7 +436,7 @@
             this.emailEmp.HeaderText = "emailEmp";
             this.emailEmp.MinimumWidth = 6;
             this.emailEmp.Name = "emailEmp";
-            this.emailEmp.Width = 125;
+            this.emailEmp.Width = 200;
             // 
             // DOBEmp
             // 
@@ -393,7 +444,7 @@
             this.DOBEmp.HeaderText = "DOBEmp";
             this.DOBEmp.MinimumWidth = 6;
             this.DOBEmp.Name = "DOBEmp";
-            this.DOBEmp.Width = 125;
+            this.DOBEmp.Width = 200;
             // 
             // genderEmp
             // 
@@ -401,7 +452,7 @@
             this.genderEmp.HeaderText = "genderEmp";
             this.genderEmp.MinimumWidth = 6;
             this.genderEmp.Name = "genderEmp";
-            this.genderEmp.Width = 125;
+            this.genderEmp.Width = 200;
             // 
             // usernameEmp
             // 
@@ -409,7 +460,7 @@
             this.usernameEmp.HeaderText = "usernameEmp";
             this.usernameEmp.MinimumWidth = 6;
             this.usernameEmp.Name = "usernameEmp";
-            this.usernameEmp.Width = 125;
+            this.usernameEmp.Width = 200;
             // 
             // position
             // 
@@ -417,7 +468,7 @@
             this.position.HeaderText = "position";
             this.position.MinimumWidth = 6;
             this.position.Name = "position";
-            this.position.Width = 125;
+            this.position.Width = 200;
             // 
             // statusEmp
             // 
@@ -440,6 +491,8 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox6.Controls.Add(this.label17);
             this.groupBox6.Controls.Add(this.txtUsername);
             this.groupBox6.Controls.Add(this.txtPass);
@@ -467,16 +520,34 @@
             this.groupBox6.Controls.Add(this.label31);
             this.groupBox6.Controls.Add(this.label32);
             this.groupBox6.Controls.Add(this.txtIDEmp);
-            this.groupBox6.Location = new System.Drawing.Point(58, 6);
+            this.groupBox6.Location = new System.Drawing.Point(20, 139);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(1465, 331);
+            this.groupBox6.Size = new System.Drawing.Size(1654, 300);
             this.groupBox6.TabIndex = 50;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Employee details";
             // 
+            // label17
+            // 
+            this.label17.AutoEllipsis = true;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(261, 196);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(73, 17);
+            this.label17.TabIndex = 48;
+            this.label17.Text = "Username";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(387, 191);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(308, 22);
+            this.txtUsername.TabIndex = 49;
+            // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(376, 274);
+            this.txtPass.Location = new System.Drawing.Point(387, 248);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
@@ -486,7 +557,7 @@
             // lblPass
             // 
             this.lblPass.AutoSize = true;
-            this.lblPass.Location = new System.Drawing.Point(243, 274);
+            this.lblPass.Location = new System.Drawing.Point(261, 253);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(69, 17);
             this.lblPass.TabIndex = 46;
@@ -494,11 +565,12 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox9.Controls.Add(this.radioFemale);
             this.groupBox9.Controls.Add(this.radioMale);
-            this.groupBox9.Location = new System.Drawing.Point(964, 133);
+            this.groupBox9.Location = new System.Drawing.Point(1100, 155);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(308, 62);
+            this.groupBox9.Size = new System.Drawing.Size(308, 60);
             this.groupBox9.TabIndex = 45;
             this.groupBox9.TabStop = false;
             // 
@@ -528,15 +600,17 @@
             // 
             // dateDOB
             // 
+            this.dateDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateDOB.CustomFormat = "dd-MM-yyyy";
             this.dateDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateDOB.Location = new System.Drawing.Point(964, 86);
+            this.dateDOB.Location = new System.Drawing.Point(1100, 95);
             this.dateDOB.Name = "dateDOB";
             this.dateDOB.Size = new System.Drawing.Size(308, 22);
             this.dateDOB.TabIndex = 44;
             // 
             // cbbPosition
             // 
+            this.cbbPosition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbbPosition.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbPosition.FormattingEnabled = true;
             this.cbbPosition.Items.AddRange(new object[] {
@@ -544,15 +618,16 @@
             "Tu van",
             "Kiem kho",
             "Giao hang"});
-            this.cbbPosition.Location = new System.Drawing.Point(964, 227);
+            this.cbbPosition.Location = new System.Drawing.Point(1100, 253);
             this.cbbPosition.Name = "cbbPosition";
             this.cbbPosition.Size = new System.Drawing.Size(308, 24);
             this.cbbPosition.TabIndex = 43;
             // 
             // label33
             // 
+            this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(879, 227);
+            this.label33.Location = new System.Drawing.Point(986, 260);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(58, 17);
             this.label33.TabIndex = 40;
@@ -560,7 +635,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(376, 148);
+            this.txtPhone.Location = new System.Drawing.Point(387, 144);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(308, 22);
@@ -568,14 +643,15 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(964, 27);
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmail.Location = new System.Drawing.Point(1100, 33);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(308, 22);
             this.txtEmail.TabIndex = 33;
             // 
             // txtFullname
             // 
-            this.txtFullname.Location = new System.Drawing.Point(376, 86);
+            this.txtFullname.Location = new System.Drawing.Point(387, 97);
             this.txtFullname.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullname.Name = "txtFullname";
             this.txtFullname.Size = new System.Drawing.Size(308, 22);
@@ -584,7 +660,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(229, 32);
+            this.label18.Location = new System.Drawing.Point(247, 38);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(87, 17);
             this.label18.TabIndex = 0;
@@ -592,9 +668,10 @@
             // 
             // label19
             // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(904, 212);
+            this.label19.Location = new System.Drawing.Point(986, 212);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(0, 17);
@@ -603,7 +680,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(241, 88);
+            this.label20.Location = new System.Drawing.Point(263, 100);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(71, 17);
             this.label20.TabIndex = 1;
@@ -622,7 +699,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(263, 148);
+            this.label22.Location = new System.Drawing.Point(267, 154);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 17);
             this.label22.TabIndex = 2;
@@ -630,9 +707,10 @@
             // 
             // label23
             // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(1183, 102);
+            this.label23.Location = new System.Drawing.Point(1265, 102);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(0, 17);
@@ -648,9 +726,10 @@
             // 
             // label25
             // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.Red;
-            this.label25.Location = new System.Drawing.Point(1115, 154);
+            this.label25.Location = new System.Drawing.Point(1197, 154);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(0, 17);
@@ -658,8 +737,9 @@
             // 
             // label26
             // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(843, 91);
+            this.label26.Location = new System.Drawing.Point(957, 109);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(87, 17);
             this.label26.TabIndex = 4;
@@ -667,9 +747,10 @@
             // 
             // label27
             // 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(1197, 198);
+            this.label27.Location = new System.Drawing.Point(1279, 198);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(0, 17);
@@ -677,8 +758,9 @@
             // 
             // label28
             // 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(879, 27);
+            this.label28.Location = new System.Drawing.Point(1000, 40);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(42, 17);
             this.label28.TabIndex = 5;
@@ -686,9 +768,10 @@
             // 
             // label29
             // 
+            this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
             this.label29.ForeColor = System.Drawing.Color.Red;
-            this.label29.Location = new System.Drawing.Point(1213, 191);
+            this.label29.Location = new System.Drawing.Point(1295, 191);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(0, 17);
@@ -696,8 +779,9 @@
             // 
             // label30
             // 
+            this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(874, 160);
+            this.label30.Location = new System.Drawing.Point(986, 186);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(56, 17);
             this.label30.TabIndex = 6;
@@ -705,9 +789,10 @@
             // 
             // label31
             // 
+            this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label31.AutoSize = true;
             this.label31.ForeColor = System.Drawing.Color.Red;
-            this.label31.Location = new System.Drawing.Point(1197, 149);
+            this.label31.Location = new System.Drawing.Point(1279, 149);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(0, 17);
@@ -725,7 +810,7 @@
             // 
             // txtIDEmp
             // 
-            this.txtIDEmp.Location = new System.Drawing.Point(376, 32);
+            this.txtIDEmp.Location = new System.Drawing.Point(387, 35);
             this.txtIDEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIDEmp.Name = "txtIDEmp";
             this.txtIDEmp.Size = new System.Drawing.Size(308, 22);
@@ -741,92 +826,49 @@
             this.cOFFEEDataSet4.DataSetName = "COFFEEDataSet4";
             this.cOFFEEDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // productBindingSource3
+            // 
+            this.productBindingSource3.DataMember = "Product";
+            this.productBindingSource3.DataSource = this.cOFFEEDataSet5;
+            // 
+            // tabControlProduct
+            // 
+            this.tabControlProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlProduct.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
+            this.tabControlProduct.Controls.Add(this.tabPage1);
+            this.tabControlProduct.Controls.Add(this.tabPage2);
+            this.tabControlProduct.Controls.Add(this.tabPage3);
+            this.tabControlProduct.Location = new System.Drawing.Point(12, 12);
+            this.tabControlProduct.Name = "tabControlProduct";
+            this.tabControlProduct.SelectedIndex = 0;
+            this.tabControlProduct.Size = new System.Drawing.Size(1699, 861);
+            this.tabControlProduct.TabIndex = 0;
+            // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.panel3);
+            this.tabPage1.Controls.Add(this.groupBox2);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1676, 760);
+            this.tabPage1.Size = new System.Drawing.Size(1691, 829);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Product";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.button1);
-            this.groupBox2.Controls.Add(this.bntAdd);
-            this.groupBox2.Controls.Add(this.bntDelete);
-            this.groupBox2.Controls.Add(this.btnUpdate);
-            this.groupBox2.Location = new System.Drawing.Point(1395, 365);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(223, 361);
-            this.groupBox2.TabIndex = 48;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Option";
-            // 
-            // button1
-            // 
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(21, 282);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(188, 52);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Refresh ";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // bntAdd
-            // 
-            this.bntAdd.Image = ((System.Drawing.Image)(resources.GetObject("bntAdd.Image")));
-            this.bntAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntAdd.Location = new System.Drawing.Point(21, 35);
-            this.bntAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bntAdd.Name = "bntAdd";
-            this.bntAdd.Size = new System.Drawing.Size(188, 50);
-            this.bntAdd.TabIndex = 16;
-            this.bntAdd.Text = "Add Product ";
-            this.bntAdd.UseVisualStyleBackColor = true;
-            this.bntAdd.Click += new System.EventHandler(this.bntAdd_Click_1);
-            // 
-            // bntDelete
-            // 
-            this.bntDelete.Image = ((System.Drawing.Image)(resources.GetObject("bntDelete.Image")));
-            this.bntDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bntDelete.Location = new System.Drawing.Point(21, 205);
-            this.bntDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bntDelete.Name = "bntDelete";
-            this.bntDelete.Size = new System.Drawing.Size(188, 50);
-            this.bntDelete.TabIndex = 19;
-            this.bntDelete.Text = "Delete Product";
-            this.bntDelete.UseVisualStyleBackColor = true;
-            this.bntDelete.Click += new System.EventHandler(this.bntDelete_Click_1);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
-            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdate.Location = new System.Drawing.Point(21, 127);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(188, 44);
-            this.btnUpdate.TabIndex = 20;
-            this.btnUpdate.Text = "Update Product";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
-            // 
             // groupBox3
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.tbProduct);
-            this.groupBox3.Location = new System.Drawing.Point(58, 344);
+            this.groupBox3.Location = new System.Drawing.Point(38, 457);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1315, 371);
-            this.groupBox3.TabIndex = 49;
+            this.groupBox3.Size = new System.Drawing.Size(1386, 371);
+            this.groupBox3.TabIndex = 50;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "List of products";
             // 
@@ -839,106 +881,103 @@
             this.tbProduct.AutoGenerateColumns = false;
             this.tbProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDProduct,
-            this.IDCategory,
-            this.nameProduct,
-            this.available,
-            this.price,
-            this.description,
-            this.status,
-            this.imageUrl,
-            this.photo});
+            this.IDProduct1,
+            this.IDCategory1,
+            this.nameProduct1,
+            this.available1,
+            this.price1,
+            this.description1,
+            this.dataGridViewTextBoxColumn7,
+            this.imageUrl1,
+            this.photo1});
             this.tbProduct.DataSource = this.productBindingSource3;
             this.tbProduct.Location = new System.Drawing.Point(6, 21);
             this.tbProduct.Name = "tbProduct";
             this.tbProduct.RowHeadersWidth = 51;
             this.tbProduct.RowTemplate.Height = 100;
-            this.tbProduct.Size = new System.Drawing.Size(1282, 363);
+            this.tbProduct.Size = new System.Drawing.Size(1353, 363);
             this.tbProduct.TabIndex = 0;
-            this.tbProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbProduct_CellClick_1);
+            this.tbProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbProduct_CellClick);
             // 
-            // IDProduct
+            // IDProduct1
             // 
-            this.IDProduct.DataPropertyName = "IDProduct";
-            this.IDProduct.HeaderText = "IDProduct";
-            this.IDProduct.MinimumWidth = 6;
-            this.IDProduct.Name = "IDProduct";
-            this.IDProduct.ReadOnly = true;
-            this.IDProduct.Width = 125;
+            this.IDProduct1.DataPropertyName = "IDProduct";
+            this.IDProduct1.HeaderText = "IDProduct";
+            this.IDProduct1.MinimumWidth = 6;
+            this.IDProduct1.Name = "IDProduct1";
+            this.IDProduct1.ReadOnly = true;
+            this.IDProduct1.Width = 125;
             // 
-            // IDCategory
+            // IDCategory1
             // 
-            this.IDCategory.DataPropertyName = "IDCategory";
-            this.IDCategory.HeaderText = "IDCategory";
-            this.IDCategory.MinimumWidth = 6;
-            this.IDCategory.Name = "IDCategory";
-            this.IDCategory.Width = 125;
+            this.IDCategory1.DataPropertyName = "IDCategory";
+            this.IDCategory1.HeaderText = "IDCategory";
+            this.IDCategory1.MinimumWidth = 6;
+            this.IDCategory1.Name = "IDCategory1";
+            this.IDCategory1.Width = 125;
             // 
-            // nameProduct
+            // nameProduct1
             // 
-            this.nameProduct.DataPropertyName = "nameProduct";
-            this.nameProduct.HeaderText = "nameProduct";
-            this.nameProduct.MinimumWidth = 6;
-            this.nameProduct.Name = "nameProduct";
-            this.nameProduct.Width = 125;
+            this.nameProduct1.DataPropertyName = "nameProduct";
+            this.nameProduct1.HeaderText = "nameProduct";
+            this.nameProduct1.MinimumWidth = 6;
+            this.nameProduct1.Name = "nameProduct1";
+            this.nameProduct1.Width = 125;
             // 
-            // available
+            // available1
             // 
-            this.available.DataPropertyName = "available";
-            this.available.HeaderText = "available";
-            this.available.MinimumWidth = 6;
-            this.available.Name = "available";
-            this.available.Width = 125;
+            this.available1.DataPropertyName = "available";
+            this.available1.HeaderText = "available";
+            this.available1.MinimumWidth = 6;
+            this.available1.Name = "available1";
+            this.available1.Width = 125;
             // 
-            // price
+            // price1
             // 
-            this.price.DataPropertyName = "price";
-            this.price.HeaderText = "price";
-            this.price.MinimumWidth = 6;
-            this.price.Name = "price";
-            this.price.Width = 125;
+            this.price1.DataPropertyName = "price";
+            this.price1.HeaderText = "price";
+            this.price1.MinimumWidth = 6;
+            this.price1.Name = "price1";
+            this.price1.Width = 125;
             // 
-            // description
+            // description1
             // 
-            this.description.DataPropertyName = "description";
-            this.description.HeaderText = "description";
-            this.description.MinimumWidth = 6;
-            this.description.Name = "description";
-            this.description.Width = 125;
+            this.description1.DataPropertyName = "description";
+            this.description1.HeaderText = "description";
+            this.description1.MinimumWidth = 6;
+            this.description1.Name = "description1";
+            this.description1.Width = 125;
             // 
-            // status
+            // dataGridViewTextBoxColumn7
             // 
-            this.status.DataPropertyName = "status";
-            this.status.HeaderText = "status";
-            this.status.MinimumWidth = 6;
-            this.status.Name = "status";
-            this.status.Visible = false;
-            this.status.Width = 125;
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "status";
+            this.dataGridViewTextBoxColumn7.HeaderText = "status";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.Visible = false;
+            this.dataGridViewTextBoxColumn7.Width = 125;
             // 
-            // imageUrl
+            // imageUrl1
             // 
-            this.imageUrl.DataPropertyName = "imageUrl";
-            this.imageUrl.HeaderText = "imageUrl";
-            this.imageUrl.MinimumWidth = 6;
-            this.imageUrl.Name = "imageUrl";
-            this.imageUrl.Width = 125;
+            this.imageUrl1.DataPropertyName = "imageUrl";
+            this.imageUrl1.HeaderText = "imageUrl";
+            this.imageUrl1.MinimumWidth = 6;
+            this.imageUrl1.Name = "imageUrl1";
+            this.imageUrl1.Width = 200;
             // 
-            // photo
+            // photo1
             // 
-            this.photo.DataPropertyName = "photo";
-            this.photo.HeaderText = "photo";
-            this.photo.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
-            this.photo.MinimumWidth = 6;
-            this.photo.Name = "photo";
-            this.photo.Width = 250;
-            // 
-            // productBindingSource3
-            // 
-            this.productBindingSource3.DataMember = "Product";
-            this.productBindingSource3.DataSource = this.cOFFEEDataSet5;
+            this.photo1.DataPropertyName = "photo";
+            this.photo1.HeaderText = "photo";
+            this.photo1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.photo1.MinimumWidth = 6;
+            this.photo1.Name = "photo1";
+            this.photo1.Width = 250;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.txtURL);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.cbbAvailable);
@@ -964,15 +1003,16 @@
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtIDPro);
             this.groupBox1.Controls.Add(this.txtPrice);
-            this.groupBox1.Location = new System.Drawing.Point(58, 37);
+            this.groupBox1.Location = new System.Drawing.Point(38, 137);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1560, 301);
-            this.groupBox1.TabIndex = 47;
+            this.groupBox1.Size = new System.Drawing.Size(1637, 301);
+            this.groupBox1.TabIndex = 58;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Product details";
             // 
             // txtURL
             // 
+            this.txtURL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtURL.Location = new System.Drawing.Point(943, 250);
             this.txtURL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtURL.Name = "txtURL";
@@ -981,6 +1021,7 @@
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoEllipsis = true;
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(813, 255);
@@ -999,6 +1040,7 @@
             // 
             // pictureBox
             // 
+            this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox.Location = new System.Drawing.Point(943, 95);
             this.pictureBox.Name = "pictureBox";
@@ -1015,10 +1057,11 @@
             this.cbbCategory.Name = "cbbCategory";
             this.cbbCategory.Size = new System.Drawing.Size(308, 24);
             this.cbbCategory.TabIndex = 34;
-            this.cbbCategory.SelectedIndexChanged += new System.EventHandler(this.cbbCategory_SelectedIndexChanged_1);
+            this.cbbCategory.SelectedIndexChanged += new System.EventHandler(this.cbbCategory_SelectedIndexChanged);
             // 
             // txtDescripton
             // 
+            this.txtDescripton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescripton.Location = new System.Drawing.Point(943, 14);
             this.txtDescripton.Name = "txtDescripton";
             this.txtDescripton.Size = new System.Drawing.Size(308, 22);
@@ -1026,6 +1069,7 @@
             // 
             // btnImage
             // 
+            this.btnImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnImage.Location = new System.Drawing.Point(1267, 139);
             this.btnImage.Name = "btnImage";
             this.btnImage.Size = new System.Drawing.Size(119, 43);
@@ -1053,6 +1097,7 @@
             // 
             // label13
             // 
+            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.Red;
             this.label13.Location = new System.Drawing.Point(904, 212);
@@ -1072,6 +1117,7 @@
             // 
             // label14
             // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.Red;
             this.label14.Location = new System.Drawing.Point(1423, 0);
@@ -1091,6 +1137,7 @@
             // 
             // label15
             // 
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.Red;
             this.label15.Location = new System.Drawing.Point(1199, 43);
@@ -1101,6 +1148,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(841, 109);
             this.label4.Name = "label4";
@@ -1109,6 +1157,7 @@
             // 
             // label16
             // 
+            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.Red;
             this.label16.Location = new System.Drawing.Point(1131, 95);
@@ -1119,6 +1168,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(847, 62);
             this.label5.Name = "label5";
@@ -1128,6 +1178,7 @@
             // 
             // label11
             // 
+            this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.Red;
             this.label11.Location = new System.Drawing.Point(1213, 139);
@@ -1138,6 +1189,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(808, 12);
             this.label6.Name = "label6";
@@ -1147,6 +1199,7 @@
             // 
             // label12
             // 
+            this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Red;
             this.label12.Location = new System.Drawing.Point(1213, 191);
@@ -1166,6 +1219,7 @@
             // 
             // label10
             // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Red;
             this.label10.Location = new System.Drawing.Point(1213, 90);
@@ -1194,66 +1248,170 @@
             // 
             // txtPrice
             // 
+            this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrice.Location = new System.Drawing.Point(943, 62);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(308, 22);
             this.txtPrice.TabIndex = 11;
             // 
-            // tabControlProduct
+            // panel3
             // 
-            this.tabControlProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlProduct.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
-            this.tabControlProduct.Controls.Add(this.tabPage1);
-            this.tabControlProduct.Controls.Add(this.tabPage2);
-            this.tabControlProduct.Controls.Add(this.tabPage3);
-            this.tabControlProduct.Controls.Add(this.tabPage4);
-            this.tabControlProduct.Location = new System.Drawing.Point(12, 12);
-            this.tabControlProduct.Name = "tabControlProduct";
-            this.tabControlProduct.SelectedIndex = 0;
-            this.tabControlProduct.Size = new System.Drawing.Size(1684, 792);
-            this.tabControlProduct.TabIndex = 0;
+            this.panel3.BackColor = System.Drawing.Color.Moccasin;
+            this.panel3.Controls.Add(this.label53);
+            this.panel3.Location = new System.Drawing.Point(31, 23);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1654, 100);
+            this.panel3.TabIndex = 57;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(547, 25);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(572, 51);
+            this.label53.TabIndex = 51;
+            this.label53.Text = "PRODUCT MANAGEMENT";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.bntAdd);
+            this.groupBox2.Controls.Add(this.bntDelete);
+            this.groupBox2.Controls.Add(this.btnUpdate);
+            this.groupBox2.Location = new System.Drawing.Point(1452, 457);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(223, 365);
+            this.groupBox2.TabIndex = 48;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Option";
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(21, 282);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(188, 52);
+            this.button1.TabIndex = 30;
+            this.button1.Text = "Refresh ";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // bntAdd
+            // 
+            this.bntAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bntAdd.Image = ((System.Drawing.Image)(resources.GetObject("bntAdd.Image")));
+            this.bntAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntAdd.Location = new System.Drawing.Point(21, 35);
+            this.bntAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bntAdd.Name = "bntAdd";
+            this.bntAdd.Size = new System.Drawing.Size(188, 50);
+            this.bntAdd.TabIndex = 16;
+            this.bntAdd.Text = "Add Product ";
+            this.bntAdd.UseVisualStyleBackColor = true;
+            this.bntAdd.Click += new System.EventHandler(this.bntAdd_Click_1);
+            // 
+            // bntDelete
+            // 
+            this.bntDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bntDelete.Image = ((System.Drawing.Image)(resources.GetObject("bntDelete.Image")));
+            this.bntDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bntDelete.Location = new System.Drawing.Point(21, 205);
+            this.bntDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bntDelete.Name = "bntDelete";
+            this.bntDelete.Size = new System.Drawing.Size(188, 50);
+            this.bntDelete.TabIndex = 19;
+            this.bntDelete.Text = "Delete Product";
+            this.bntDelete.UseVisualStyleBackColor = true;
+            this.bntDelete.Click += new System.EventHandler(this.bntDelete_Click_1);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdate.Image")));
+            this.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUpdate.Location = new System.Drawing.Point(21, 127);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(188, 44);
+            this.btnUpdate.TabIndex = 20;
+            this.btnUpdate.Text = "Update Product";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click_1);
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox8);
             this.tabPage3.Controls.Add(this.panelCus);
             this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1676, 760);
+            this.tabPage3.Size = new System.Drawing.Size(1691, 829);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Customer";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.Moccasin;
+            this.panel1.Controls.Add(this.label34);
+            this.panel1.Location = new System.Drawing.Point(20, 18);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1654, 100);
+            this.panel1.TabIndex = 56;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label34.Location = new System.Drawing.Point(507, 24);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(607, 51);
+            this.label34.TabIndex = 50;
+            this.label34.Text = "CUSTOMER MANAGEMENT";
+            // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.btnRefreshCus);
             this.groupBox7.Controls.Add(this.btnDeleteCus);
-            this.groupBox7.Location = new System.Drawing.Point(1395, 364);
+            this.groupBox7.Location = new System.Drawing.Point(1451, 459);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(223, 361);
+            this.groupBox7.Size = new System.Drawing.Size(223, 364);
             this.groupBox7.TabIndex = 54;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Option";
             // 
             // btnRefreshCus
             // 
+            this.btnRefreshCus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefreshCus.Image = ((System.Drawing.Image)(resources.GetObject("btnRefreshCus.Image")));
             this.btnRefreshCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefreshCus.Location = new System.Drawing.Point(21, 184);
+            this.btnRefreshCus.Location = new System.Drawing.Point(21, 207);
             this.btnRefreshCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRefreshCus.Name = "btnRefreshCus";
             this.btnRefreshCus.Size = new System.Drawing.Size(188, 52);
             this.btnRefreshCus.TabIndex = 30;
             this.btnRefreshCus.Text = "Refresh ";
             this.btnRefreshCus.UseVisualStyleBackColor = true;
+            this.btnRefreshCus.Click += new System.EventHandler(this.btnRefreshCus_Click);
             // 
             // btnDeleteCus
             // 
+            this.btnDeleteCus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteCus.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteCus.Image")));
             this.btnDeleteCus.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeleteCus.Location = new System.Drawing.Point(21, 82);
@@ -1263,15 +1421,17 @@
             this.btnDeleteCus.TabIndex = 19;
             this.btnDeleteCus.Text = "Delete Customer";
             this.btnDeleteCus.UseVisualStyleBackColor = true;
+            this.btnDeleteCus.Click += new System.EventHandler(this.btnDeleteCus_Click);
             // 
             // groupBox8
             // 
-            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox8.Controls.Add(this.tbCustomer);
-            this.groupBox8.Location = new System.Drawing.Point(58, 343);
+            this.groupBox8.Location = new System.Drawing.Point(20, 459);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(1315, 352);
+            this.groupBox8.Size = new System.Drawing.Size(1413, 364);
             this.groupBox8.TabIndex = 55;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "List of Customer";
@@ -1294,12 +1454,13 @@
             this.usernameCus,
             this.statusCus});
             this.tbCustomer.DataSource = this.customerBindingSource3;
-            this.tbCustomer.Location = new System.Drawing.Point(6, 21);
+            this.tbCustomer.Location = new System.Drawing.Point(18, 21);
             this.tbCustomer.Name = "tbCustomer";
             this.tbCustomer.RowHeadersWidth = 51;
             this.tbCustomer.RowTemplate.Height = 100;
-            this.tbCustomer.Size = new System.Drawing.Size(1282, 325);
+            this.tbCustomer.Size = new System.Drawing.Size(1380, 325);
             this.tbCustomer.TabIndex = 0;
+            this.tbCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbCustomer_CellClick);
             // 
             // IDCustomer
             // 
@@ -1316,7 +1477,7 @@
             this.fullnameCus.HeaderText = "fullnameCus";
             this.fullnameCus.MinimumWidth = 6;
             this.fullnameCus.Name = "fullnameCus";
-            this.fullnameCus.Width = 125;
+            this.fullnameCus.Width = 200;
             // 
             // phoneCus
             // 
@@ -1324,7 +1485,7 @@
             this.phoneCus.HeaderText = "phoneCus";
             this.phoneCus.MinimumWidth = 6;
             this.phoneCus.Name = "phoneCus";
-            this.phoneCus.Width = 125;
+            this.phoneCus.Width = 200;
             // 
             // emailCus
             // 
@@ -1332,7 +1493,7 @@
             this.emailCus.HeaderText = "emailCus";
             this.emailCus.MinimumWidth = 6;
             this.emailCus.Name = "emailCus";
-            this.emailCus.Width = 125;
+            this.emailCus.Width = 200;
             // 
             // DOBCus
             // 
@@ -1340,7 +1501,7 @@
             this.DOBCus.HeaderText = "DOBCus";
             this.DOBCus.MinimumWidth = 6;
             this.DOBCus.Name = "DOBCus";
-            this.DOBCus.Width = 125;
+            this.DOBCus.Width = 200;
             // 
             // genderCus
             // 
@@ -1348,7 +1509,7 @@
             this.genderCus.HeaderText = "genderCus";
             this.genderCus.MinimumWidth = 6;
             this.genderCus.Name = "genderCus";
-            this.genderCus.Width = 125;
+            this.genderCus.Width = 200;
             // 
             // usernameCus
             // 
@@ -1356,7 +1517,7 @@
             this.usernameCus.HeaderText = "usernameCus";
             this.usernameCus.MinimumWidth = 6;
             this.usernameCus.Name = "usernameCus";
-            this.usernameCus.Width = 125;
+            this.usernameCus.Width = 200;
             // 
             // statusCus
             // 
@@ -1374,6 +1535,10 @@
             // 
             // panelCus
             // 
+            this.panelCus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelCus.Controls.Add(this.txtPassCus);
+            this.panelCus.Controls.Add(this.lblPasswordCus);
             this.panelCus.Controls.Add(this.groupBox10);
             this.panelCus.Controls.Add(this.dateDOBCus);
             this.panelCus.Controls.Add(this.txtUsernameCus);
@@ -1397,18 +1562,37 @@
             this.panelCus.Controls.Add(this.label49);
             this.panelCus.Controls.Add(this.label50);
             this.panelCus.Controls.Add(this.txtIDCus);
-            this.panelCus.Location = new System.Drawing.Point(58, 36);
+            this.panelCus.Location = new System.Drawing.Point(20, 140);
             this.panelCus.Name = "panelCus";
-            this.panelCus.Size = new System.Drawing.Size(1560, 301);
+            this.panelCus.Size = new System.Drawing.Size(1654, 301);
             this.panelCus.TabIndex = 53;
             this.panelCus.TabStop = false;
             this.panelCus.Text = "Customer details";
             // 
+            // txtPassCus
+            // 
+            this.txtPassCus.Location = new System.Drawing.Point(386, 253);
+            this.txtPassCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPassCus.Name = "txtPassCus";
+            this.txtPassCus.PasswordChar = '*';
+            this.txtPassCus.Size = new System.Drawing.Size(308, 22);
+            this.txtPassCus.TabIndex = 49;
+            // 
+            // lblPasswordCus
+            // 
+            this.lblPasswordCus.AutoSize = true;
+            this.lblPasswordCus.Location = new System.Drawing.Point(255, 253);
+            this.lblPasswordCus.Name = "lblPasswordCus";
+            this.lblPasswordCus.Size = new System.Drawing.Size(69, 17);
+            this.lblPasswordCus.TabIndex = 48;
+            this.lblPasswordCus.Text = "Password";
+            // 
             // groupBox10
             // 
+            this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox10.Controls.Add(this.radioMaleCus);
             this.groupBox10.Controls.Add(this.radioFemailCus);
-            this.groupBox10.Location = new System.Drawing.Point(980, 94);
+            this.groupBox10.Location = new System.Drawing.Point(1033, 94);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(308, 79);
             this.groupBox10.TabIndex = 45;
@@ -1438,14 +1622,15 @@
             // 
             // dateDOBCus
             // 
-            this.dateDOBCus.Location = new System.Drawing.Point(980, 35);
+            this.dateDOBCus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateDOBCus.Location = new System.Drawing.Point(1033, 35);
             this.dateDOBCus.Name = "dateDOBCus";
             this.dateDOBCus.Size = new System.Drawing.Size(308, 22);
             this.dateDOBCus.TabIndex = 44;
             // 
             // txtUsernameCus
             // 
-            this.txtUsernameCus.Location = new System.Drawing.Point(980, 229);
+            this.txtUsernameCus.Location = new System.Drawing.Point(386, 191);
             this.txtUsernameCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsernameCus.Name = "txtUsernameCus";
             this.txtUsernameCus.Size = new System.Drawing.Size(308, 22);
@@ -1455,7 +1640,7 @@
             // 
             this.label35.AutoEllipsis = true;
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(864, 229);
+            this.label35.Location = new System.Drawing.Point(255, 196);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(73, 17);
             this.label35.TabIndex = 38;
@@ -1463,7 +1648,7 @@
             // 
             // txtPhoneCus
             // 
-            this.txtPhoneCus.Location = new System.Drawing.Point(386, 151);
+            this.txtPhoneCus.Location = new System.Drawing.Point(386, 136);
             this.txtPhoneCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneCus.Name = "txtPhoneCus";
             this.txtPhoneCus.Size = new System.Drawing.Size(308, 22);
@@ -1471,7 +1656,8 @@
             // 
             // txtEmailCus
             // 
-            this.txtEmailCus.Location = new System.Drawing.Point(386, 224);
+            this.txtEmailCus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEmailCus.Location = new System.Drawing.Point(1033, 248);
             this.txtEmailCus.Name = "txtEmailCus";
             this.txtEmailCus.Size = new System.Drawing.Size(308, 22);
             this.txtEmailCus.TabIndex = 33;
@@ -1495,9 +1681,10 @@
             // 
             // label37
             // 
+            this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label37.AutoSize = true;
             this.label37.ForeColor = System.Drawing.Color.Red;
-            this.label37.Location = new System.Drawing.Point(904, 212);
+            this.label37.Location = new System.Drawing.Point(919, 212);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(0, 17);
@@ -1506,7 +1693,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(253, 82);
+            this.label38.Location = new System.Drawing.Point(255, 85);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(71, 17);
             this.label38.TabIndex = 1;
@@ -1525,7 +1712,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(275, 144);
+            this.label40.Location = new System.Drawing.Point(273, 139);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(49, 17);
             this.label40.TabIndex = 2;
@@ -1533,9 +1720,10 @@
             // 
             // label41
             // 
+            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label41.AutoSize = true;
             this.label41.ForeColor = System.Drawing.Color.Red;
-            this.label41.Location = new System.Drawing.Point(1199, 43);
+            this.label41.Location = new System.Drawing.Point(1252, 43);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(0, 17);
@@ -1543,17 +1731,19 @@
             // 
             // label42
             // 
+            this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(841, 109);
+            this.label42.Location = new System.Drawing.Point(894, 109);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(0, 17);
             this.label42.TabIndex = 3;
             // 
             // label43
             // 
+            this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label43.AutoSize = true;
             this.label43.ForeColor = System.Drawing.Color.Red;
-            this.label43.Location = new System.Drawing.Point(1130, 151);
+            this.label43.Location = new System.Drawing.Point(1183, 151);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(0, 17);
@@ -1561,8 +1751,9 @@
             // 
             // label44
             // 
+            this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(859, 32);
+            this.label44.Location = new System.Drawing.Point(912, 32);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(87, 17);
             this.label44.TabIndex = 4;
@@ -1570,9 +1761,10 @@
             // 
             // label45
             // 
+            this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label45.AutoSize = true;
             this.label45.ForeColor = System.Drawing.Color.Red;
-            this.label45.Location = new System.Drawing.Point(1213, 139);
+            this.label45.Location = new System.Drawing.Point(1266, 139);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(0, 17);
@@ -1580,8 +1772,9 @@
             // 
             // label46
             // 
+            this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(275, 229);
+            this.label46.Location = new System.Drawing.Point(947, 248);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(42, 17);
             this.label46.TabIndex = 5;
@@ -1589,9 +1782,10 @@
             // 
             // label47
             // 
+            this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label47.AutoSize = true;
             this.label47.ForeColor = System.Drawing.Color.Red;
-            this.label47.Location = new System.Drawing.Point(1213, 191);
+            this.label47.Location = new System.Drawing.Point(1266, 191);
             this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(0, 17);
@@ -1599,8 +1793,9 @@
             // 
             // label48
             // 
+            this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(880, 141);
+            this.label48.Location = new System.Drawing.Point(933, 136);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(56, 17);
             this.label48.TabIndex = 6;
@@ -1608,9 +1803,10 @@
             // 
             // label49
             // 
+            this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label49.AutoSize = true;
             this.label49.ForeColor = System.Drawing.Color.Red;
-            this.label49.Location = new System.Drawing.Point(1212, 146);
+            this.label49.Location = new System.Drawing.Point(1265, 146);
             this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(0, 17);
@@ -1633,16 +1829,6 @@
             this.txtIDCus.Name = "txtIDCus";
             this.txtIDCus.Size = new System.Drawing.Size(308, 22);
             this.txtIDCus.TabIndex = 8;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 28);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1676, 760);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Order ";
-            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // customerBindingSource1
             // 
@@ -1695,14 +1881,6 @@
             this.employeeBindingSource3.DataMember = "Employee";
             this.employeeBindingSource3.DataSource = this.cOFFEEDataSet4;
             // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataMember = "products";
-            // 
-            // productBindingSource1
-            // 
-            this.productBindingSource1.DataMember = "Product";
-            // 
             // productTableAdapter1
             // 
             this.productTableAdapter1.ClearBeforeFill = true;
@@ -1735,34 +1913,110 @@
             this.employeeBindingSource6.DataMember = "Employee";
             this.employeeBindingSource6.DataSource = this.cOFFEEDataSet5;
             // 
-            // label17
+            // photo
             // 
-            this.label17.AutoEllipsis = true;
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(243, 222);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(73, 17);
-            this.label17.TabIndex = 48;
-            this.label17.Text = "Username";
+            this.photo.DataPropertyName = "photo";
+            this.photo.HeaderText = "photo";
+            this.photo.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.photo.MinimumWidth = 6;
+            this.photo.Name = "photo";
+            this.photo.Width = 250;
             // 
-            // txtUsername
+            // imageUrl
             // 
-            this.txtUsername.Location = new System.Drawing.Point(376, 222);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(308, 22);
-            this.txtUsername.TabIndex = 49;
+            this.imageUrl.DataPropertyName = "imageUrl";
+            this.imageUrl.HeaderText = "imageUrl";
+            this.imageUrl.MinimumWidth = 6;
+            this.imageUrl.Name = "imageUrl";
+            this.imageUrl.Width = 200;
+            // 
+            // status
+            // 
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "status";
+            this.status.MinimumWidth = 6;
+            this.status.Name = "status";
+            this.status.Visible = false;
+            this.status.Width = 125;
+            // 
+            // description
+            // 
+            this.description.DataPropertyName = "description";
+            this.description.HeaderText = "description";
+            this.description.MinimumWidth = 6;
+            this.description.Name = "description";
+            this.description.Width = 125;
+            // 
+            // price
+            // 
+            this.price.DataPropertyName = "price";
+            this.price.HeaderText = "price";
+            this.price.MinimumWidth = 6;
+            this.price.Name = "price";
+            this.price.Width = 125;
+            // 
+            // available
+            // 
+            this.available.DataPropertyName = "available";
+            this.available.HeaderText = "available";
+            this.available.MinimumWidth = 6;
+            this.available.Name = "available";
+            this.available.Width = 125;
+            // 
+            // nameProduct
+            // 
+            this.nameProduct.DataPropertyName = "nameProduct";
+            this.nameProduct.HeaderText = "nameProduct";
+            this.nameProduct.MinimumWidth = 6;
+            this.nameProduct.Name = "nameProduct";
+            this.nameProduct.Width = 125;
+            // 
+            // IDCategory
+            // 
+            this.IDCategory.DataPropertyName = "IDCategory";
+            this.IDCategory.HeaderText = "IDCategory";
+            this.IDCategory.MinimumWidth = 6;
+            this.IDCategory.Name = "IDCategory";
+            this.IDCategory.Width = 125;
+            // 
+            // IDProduct
+            // 
+            this.IDProduct.DataPropertyName = "IDProduct";
+            this.IDProduct.HeaderText = "IDProduct";
+            this.IDProduct.MinimumWidth = 6;
+            this.IDProduct.Name = "IDProduct";
+            this.IDProduct.ReadOnly = true;
+            this.IDProduct.Width = 125;
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label52.Location = new System.Drawing.Point(460, 24);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(586, 52);
+            this.label52.TabIndex = 50;
+            this.label52.Text = "CUSTOMER MANAGEMENT";
+            // 
+            // productBindingSource4
+            // 
+            this.productBindingSource4.DataMember = "Product";
+            this.productBindingSource4.DataSource = this.cOFFEEDataSet5;
             // 
             // Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1708, 816);
+            this.ClientSize = new System.Drawing.Size(1723, 876);
             this.Controls.Add(this.tabControlProduct);
             this.Name = "Product";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Product_Load);
             this.tabPage2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbEmployee)).EndInit();
@@ -1774,16 +2028,20 @@
             this.groupBox9.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource3)).EndInit();
+            this.tabControlProduct.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbProduct)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource3)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
-            this.tabControlProduct.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbCustomer)).EndInit();
@@ -1809,6 +2067,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1816,52 +2075,9 @@
         #endregion
 
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabControl tabControlProduct;
         private System.Windows.Forms.ImageList imageList1;
         private COFFEEDataSet2TableAdapters.ProductTableAdapter productTableAdapter;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button bntAdd;
-        private System.Windows.Forms.Button bntDelete;
-        private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView tbProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDCategory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn available;
-        private System.Windows.Forms.DataGridViewTextBoxColumn price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.DataGridViewTextBoxColumn imageUrl;
-        private System.Windows.Forms.DataGridViewImageColumn photo;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.TextBox txtURL;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox cbbAvailable;
-        private System.Windows.Forms.PictureBox pictureBox;
-        private System.Windows.Forms.ComboBox cbbCategory;
-        private System.Windows.Forms.TextBox txtDescripton;
-        private System.Windows.Forms.Button btnImage;
-        private System.Windows.Forms.TextBox txtNamePro;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox txtIDPro;
-        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnAddEmp;
@@ -1890,7 +2106,6 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.TextBox txtIDEmp;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private COFFEEDataSet3TableAdapters.EmployeeTableAdapter employeeTableAdapter;
         private System.Windows.Forms.BindingSource employeeBindingSource1;
         private COFFEEDataSet4 cOFFEEDataSet4;
@@ -1959,6 +2174,69 @@
         private System.Windows.Forms.BindingSource customerBindingSource3;
         private System.Windows.Forms.BindingSource employeeBindingSource7;
         private System.Windows.Forms.BindingSource employeeBindingSource6;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtPassCus;
+        private System.Windows.Forms.Label lblPasswordCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DOBCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusCus;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridViewImageColumn photo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imageUrl;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.DataGridViewTextBoxColumn description;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
+        private System.Windows.Forms.DataGridViewTextBoxColumn available;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameProduct;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDProduct;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Button bntDelete;
+        private System.Windows.Forms.Button bntAdd;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtURL;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox cbbAvailable;
+        private System.Windows.Forms.PictureBox pictureBox;
+        private System.Windows.Forms.ComboBox cbbCategory;
+        private System.Windows.Forms.TextBox txtDescripton;
+        private System.Windows.Forms.Button btnImage;
+        private System.Windows.Forms.TextBox txtNamePro;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtIDPro;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView tbProduct;
+        private System.Windows.Forms.BindingSource productBindingSource4;
+        private System.Windows.Forms.Label label53;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDEmployee;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullnameEmp;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneEmp;
@@ -1968,16 +2246,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn usernameEmp;
         private System.Windows.Forms.DataGridViewTextBoxColumn position;
         private System.Windows.Forms.DataGridViewTextBoxColumn statusEmp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDCustomer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameCus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneCus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailCus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DOBCus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderCus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameCus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusCus;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDProduct1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDCategory1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameProduct1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn available1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn description1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imageUrl1;
+        private System.Windows.Forms.DataGridViewImageColumn photo1;
     }
 }
 
