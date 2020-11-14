@@ -15,6 +15,7 @@ namespace Management
 {
     public partial class Product : Form
     {
+
         productsList pro;
         string imgUrl = null;
         products product;
@@ -29,6 +30,7 @@ namespace Management
 
         public Product()
         {
+            
             InitializeComponent();
             pro = new productsList();
             db = new DBConectionManager();
@@ -67,7 +69,9 @@ namespace Management
 
 
             txtUsername.Enabled = true;
-            txtIDPro.Enabled = true;
+            txtIDCus.Enabled = false;                ;
+            txtIDEmp.Enabled = false;
+            txtIDPro.Enabled = false;
             conn = db.GetConnection();
             string sql = "select * from Category";
             conn.Open();
@@ -109,7 +113,6 @@ namespace Management
             radioMale.Checked = false;
             lblPass.Visible = true;
             txtPass.Visible = true;
-            txtIDEmp.Enabled = true;
             txtUsername.Enabled = true;
             //refresh customer
             txtIDCus.Text = "";
@@ -120,9 +123,9 @@ namespace Management
             txtPassCus.Text = "";
             lblPasswordCus.Visible = true;
             txtPassCus.Visible = true;
-            txtIDCus.Enabled = true;
             txtUsernameCus.Enabled = true;
-
+            radioFemailCus.Checked = false;
+            radioMaleCus.Checked = false;
 
         }
 
@@ -130,7 +133,17 @@ namespace Management
          * PRODUCT MANAGEMENT ============================================================================
          * 
          * */
-        private void tbProduct_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            refresh();
+        }
+
+        private void cbbCategory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            indexCategory = cbbCategory.SelectedIndex + 1;//lay chi so cua category khi chon vào combobox
+        }
+
+        private void tbProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
 
             txtIDPro.Enabled = false;
@@ -138,16 +151,16 @@ namespace Management
             if (index >= 0)
             {
 
-                txtIDPro.Text = tbProduct.Rows[index].Cells["IDProduct"].Value.ToString().Trim();
+                txtIDPro.Text = tbProduct.Rows[index].Cells["IDProduct1"].Value.ToString().Trim();
                 txtIDPro.Enabled = false;
-                txtNamePro.Text = tbProduct.Rows[index].Cells["nameProduct"].Value.ToString().Trim();
-                cbbAvailable.Text = tbProduct.Rows[index].Cells["available"].Value.ToString().Trim();
-                txtPrice.Text = tbProduct.Rows[index].Cells["price"].Value.ToString().Trim();
-                txtDescripton.Text = tbProduct.Rows[index].Cells["description"].Value.ToString().Trim();
-                cbbCategory.SelectedIndex = int.Parse(tbProduct.Rows[index].Cells["IDCategory"].Value.ToString().Trim()) - 1;//-1 de lay dc dung vi tri trong combobox
-                txtURL.Text = tbProduct.Rows[index].Cells["imageUrl"].Value.ToString().Trim();
+                txtNamePro.Text = tbProduct.Rows[index].Cells["nameProduct1"].Value.ToString().Trim();
+                cbbAvailable.Text = tbProduct.Rows[index].Cells["available1"].Value.ToString().Trim();
+                txtPrice.Text = tbProduct.Rows[index].Cells["price1"].Value.ToString().Trim();
+                txtDescripton.Text = tbProduct.Rows[index].Cells["description1"].Value.ToString().Trim();
+                cbbCategory.SelectedIndex = int.Parse(tbProduct.Rows[index].Cells["IDCategory1"].Value.ToString().Trim()) - 1;//-1 de lay dc dung vi tri trong combobox
+                txtURL.Text = tbProduct.Rows[index].Cells["imageUrl1"].Value.ToString().Trim();
                 Byte[] imgData = new Byte[0];
-                imgData = (Byte[])tbProduct.Rows[index].Cells["photo"].Value;
+                imgData = (Byte[])tbProduct.Rows[index].Cells["photo1"].Value;
                 MemoryStream ms = new MemoryStream(imgData);
                 pictureBox.Image = Image.FromStream(ms);
 
@@ -168,11 +181,7 @@ namespace Management
             }
         }
 
-        private void cbbCategory_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            indexCategory = cbbCategory.SelectedIndex + 1;//lay chi so cua category khi chon vào combobox
-        }
-
+       
         private void bntAdd_Click_1(object sender, EventArgs e)
         {
             Image img = pictureBox.Image;
@@ -196,7 +205,7 @@ namespace Management
 
             MessageBox.Show("Product saved");
             conn.Close();
-            showEmployee();
+            showProduct();
         }
 
         private void btnUpdate_Click_1(object sender, EventArgs e)
@@ -429,5 +438,7 @@ namespace Management
             showCustomer();//load lai table sau khi xo thong tin
             refresh();
         }
+
+       
     }
 }
