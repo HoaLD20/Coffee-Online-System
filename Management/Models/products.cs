@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Management.Models
@@ -83,69 +84,6 @@ namespace Management.Models
             return dt;
         }
 
-
-        public bool addProduct(products pro)
-        {
-
-
-            string sql = "insert into Product(nameProduct, available,imageUrl, price,description,IDCategory, photo) values (@nameProduct,@available,@imageUrl,@price,@description,@IDCategory,@photo)";
-            //tao ket noi toi sql
-            conn = db.GetConnection();
-
-            try
-            {
-                cmd = new SqlCommand(sql, conn);
-                conn.Open();
-                cmd.Parameters.Add("@nameProduct", SqlDbType.NVarChar).Value = pro.NameProduct;
-                cmd.Parameters.Add("@available", SqlDbType.NVarChar).Value = pro.InventoryProduct;
-                cmd.Parameters.Add("@imageUrl", SqlDbType.NVarChar).Value = pro.Image;
-                cmd.Parameters.Add("@price", SqlDbType.Float).Value = pro.Price;
-                cmd.Parameters.Add("@description", SqlDbType.Float).Value = pro.Description;
-                cmd.Parameters.Add("@IDCategory", SqlDbType.Int).Value = pro.IdCatogory;
-                cmd.Parameters.Add("@photo", SqlDbType.Image).Value = pro.Photo;
-                cmd.ExecuteNonQuery();
-                conn.Close();
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
-            return true;
-
-        }
-
-        public bool delete(products pro)
-        {
-            string sql = "delete Product where IDProduct=@IDProduct";
-            cmd = new SqlCommand(sql, conn);
-            
-            SqlConnection con = db.GetConnection();
-            try
-            {                
-                conn.Open();
-                cmd.Parameters.Add("@IDProduct", SqlDbType.Int).Value = pro.IdProduct;
-                cmd.ExecuteNonQuery();
-                conn.Close();
-            }
-
-            catch (Exception e)
-            {
-                return false;
-            }
-            return true;
-
-        }
-        public void update(products pro)
-        {
-            string sql = "update Product set nameProduct=@nameProduct, available=@available,imageUrl=@imageUrl, price=@price,description=@description,IDCategory=@IDCategory,photo=@photo where IDProduct=@IDProduct";
-            //tao ket noi toi sql
-            SqlConnection con = db.GetConnection();
-            SqlCommand cmd = new SqlCommand(sql, con);
-            con.Open();
-            cmd.ExecuteNonQuery();
-            cmd.Dispose();
-            con.Close();
-
-        }
+        
     }
 }

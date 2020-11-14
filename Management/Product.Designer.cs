@@ -52,6 +52,9 @@
             this.employeeBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
             this.cOFFEEDataSet5 = new Management.COFFEEDataSet5();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblCheckPhone = new System.Windows.Forms.Label();
+            this.lblCheckUsername = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPass = new System.Windows.Forms.TextBox();
@@ -98,9 +101,10 @@
             this.imageUrl1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.photo1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.numericPrice = new System.Windows.Forms.NumericUpDown();
+            this.numericAvalable = new System.Windows.Forms.NumericUpDown();
             this.txtURL = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cbbAvailable = new System.Windows.Forms.TextBox();
             this.pictureBox = new System.Windows.Forms.PictureBox();
             this.cbbCategory = new System.Windows.Forms.ComboBox();
             this.txtDescripton = new System.Windows.Forms.TextBox();
@@ -122,7 +126,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtIDPro = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label53 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -148,8 +151,6 @@
             this.statusCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.panelCus = new System.Windows.Forms.GroupBox();
-            this.txtPassCus = new System.Windows.Forms.TextBox();
-            this.lblPasswordCus = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.radioMaleCus = new System.Windows.Forms.RadioButton();
             this.radioFemailCus = new System.Windows.Forms.RadioButton();
@@ -228,6 +229,8 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbProduct)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPrice)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericAvalable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).BeginInit();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -347,7 +350,7 @@
             this.btnDeleteEmp.Name = "btnDeleteEmp";
             this.btnDeleteEmp.Size = new System.Drawing.Size(188, 50);
             this.btnDeleteEmp.TabIndex = 19;
-            this.btnDeleteEmp.Text = "Delete Customer";
+            this.btnDeleteEmp.Text = "Delete Employee";
             this.btnDeleteEmp.UseVisualStyleBackColor = true;
             this.btnDeleteEmp.Click += new System.EventHandler(this.btnDeleteEmp_Click);
             // 
@@ -361,7 +364,7 @@
             this.btnUpdateEmp.Name = "btnUpdateEmp";
             this.btnUpdateEmp.Size = new System.Drawing.Size(188, 44);
             this.btnUpdateEmp.TabIndex = 20;
-            this.btnUpdateEmp.Text = "Update Customer";
+            this.btnUpdateEmp.Text = "Update Employee";
             this.btnUpdateEmp.UseVisualStyleBackColor = true;
             this.btnUpdateEmp.Click += new System.EventHandler(this.btnUpdateEmp_Click);
             // 
@@ -493,6 +496,9 @@
             // 
             this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox6.Controls.Add(this.lblEmail);
+            this.groupBox6.Controls.Add(this.lblCheckPhone);
+            this.groupBox6.Controls.Add(this.lblCheckUsername);
             this.groupBox6.Controls.Add(this.label17);
             this.groupBox6.Controls.Add(this.txtUsername);
             this.groupBox6.Controls.Add(this.txtPass);
@@ -522,10 +528,38 @@
             this.groupBox6.Controls.Add(this.txtIDEmp);
             this.groupBox6.Location = new System.Drawing.Point(20, 139);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(1654, 300);
+            this.groupBox6.Size = new System.Drawing.Size(1654, 324);
             this.groupBox6.TabIndex = 50;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Employee details";
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblEmail.AutoEllipsis = true;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Location = new System.Drawing.Point(1350, 36);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(0, 17);
+            this.lblEmail.TabIndex = 52;
+            // 
+            // lblCheckPhone
+            // 
+            this.lblCheckPhone.AutoEllipsis = true;
+            this.lblCheckPhone.AutoSize = true;
+            this.lblCheckPhone.Location = new System.Drawing.Point(713, 147);
+            this.lblCheckPhone.Name = "lblCheckPhone";
+            this.lblCheckPhone.Size = new System.Drawing.Size(0, 17);
+            this.lblCheckPhone.TabIndex = 51;
+            // 
+            // lblCheckUsername
+            // 
+            this.lblCheckUsername.AutoEllipsis = true;
+            this.lblCheckUsername.AutoSize = true;
+            this.lblCheckUsername.Location = new System.Drawing.Point(713, 195);
+            this.lblCheckUsername.Name = "lblCheckUsername";
+            this.lblCheckUsername.Size = new System.Drawing.Size(0, 17);
+            this.lblCheckUsername.TabIndex = 50;
             // 
             // label17
             // 
@@ -544,10 +578,11 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(308, 22);
             this.txtUsername.TabIndex = 49;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(387, 248);
+            this.txtPass.Location = new System.Drawing.Point(385, 255);
             this.txtPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
@@ -557,7 +592,7 @@
             // lblPass
             // 
             this.lblPass.AutoSize = true;
-            this.lblPass.Location = new System.Drawing.Point(261, 253);
+            this.lblPass.Location = new System.Drawing.Point(262, 256);
             this.lblPass.Name = "lblPass";
             this.lblPass.Size = new System.Drawing.Size(69, 17);
             this.lblPass.TabIndex = 46;
@@ -568,7 +603,7 @@
             this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox9.Controls.Add(this.radioFemale);
             this.groupBox9.Controls.Add(this.radioMale);
-            this.groupBox9.Location = new System.Drawing.Point(1100, 155);
+            this.groupBox9.Location = new System.Drawing.Point(1021, 155);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(308, 60);
             this.groupBox9.TabIndex = 45;
@@ -603,7 +638,7 @@
             this.dateDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateDOB.CustomFormat = "dd-MM-yyyy";
             this.dateDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateDOB.Location = new System.Drawing.Point(1100, 95);
+            this.dateDOB.Location = new System.Drawing.Point(1021, 95);
             this.dateDOB.Name = "dateDOB";
             this.dateDOB.Size = new System.Drawing.Size(308, 22);
             this.dateDOB.TabIndex = 44;
@@ -618,7 +653,7 @@
             "Tu van",
             "Kiem kho",
             "Giao hang"});
-            this.cbbPosition.Location = new System.Drawing.Point(1100, 253);
+            this.cbbPosition.Location = new System.Drawing.Point(1021, 253);
             this.cbbPosition.Name = "cbbPosition";
             this.cbbPosition.Size = new System.Drawing.Size(308, 24);
             this.cbbPosition.TabIndex = 43;
@@ -627,7 +662,7 @@
             // 
             this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(986, 260);
+            this.label33.Location = new System.Drawing.Point(907, 260);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(58, 17);
             this.label33.TabIndex = 40;
@@ -640,14 +675,16 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(308, 22);
             this.txtPhone.TabIndex = 37;
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
             // 
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(1100, 33);
+            this.txtEmail.Location = new System.Drawing.Point(1021, 33);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(308, 22);
             this.txtEmail.TabIndex = 33;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // txtFullname
             // 
@@ -671,7 +708,7 @@
             this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(986, 212);
+            this.label19.Location = new System.Drawing.Point(907, 212);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(0, 17);
@@ -699,7 +736,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(267, 154);
+            this.label22.Location = new System.Drawing.Point(267, 145);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(49, 17);
             this.label22.TabIndex = 2;
@@ -710,7 +747,7 @@
             this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(1265, 102);
+            this.label23.Location = new System.Drawing.Point(1186, 102);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(0, 17);
@@ -729,7 +766,7 @@
             this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.Red;
-            this.label25.Location = new System.Drawing.Point(1197, 154);
+            this.label25.Location = new System.Drawing.Point(1118, 154);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(0, 17);
@@ -739,7 +776,7 @@
             // 
             this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(957, 109);
+            this.label26.Location = new System.Drawing.Point(878, 109);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(87, 17);
             this.label26.TabIndex = 4;
@@ -750,7 +787,7 @@
             this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(1279, 198);
+            this.label27.Location = new System.Drawing.Point(1200, 198);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(0, 17);
@@ -760,7 +797,7 @@
             // 
             this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(1000, 40);
+            this.label28.Location = new System.Drawing.Point(921, 40);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(42, 17);
             this.label28.TabIndex = 5;
@@ -771,7 +808,7 @@
             this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
             this.label29.ForeColor = System.Drawing.Color.Red;
-            this.label29.Location = new System.Drawing.Point(1295, 191);
+            this.label29.Location = new System.Drawing.Point(1216, 191);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(0, 17);
@@ -781,7 +818,7 @@
             // 
             this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(986, 186);
+            this.label30.Location = new System.Drawing.Point(907, 186);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(56, 17);
             this.label30.TabIndex = 6;
@@ -792,7 +829,7 @@
             this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label31.AutoSize = true;
             this.label31.ForeColor = System.Drawing.Color.Red;
-            this.label31.Location = new System.Drawing.Point(1279, 149);
+            this.label31.Location = new System.Drawing.Point(1200, 149);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(0, 17);
@@ -978,9 +1015,10 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.numericPrice);
+            this.groupBox1.Controls.Add(this.numericAvalable);
             this.groupBox1.Controls.Add(this.txtURL);
             this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.cbbAvailable);
             this.groupBox1.Controls.Add(this.pictureBox);
             this.groupBox1.Controls.Add(this.cbbCategory);
             this.groupBox1.Controls.Add(this.txtDescripton);
@@ -1002,7 +1040,6 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtIDPro);
-            this.groupBox1.Controls.Add(this.txtPrice);
             this.groupBox1.Location = new System.Drawing.Point(38, 137);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1637, 301);
@@ -1010,10 +1047,25 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Product details";
             // 
+            // numericPrice
+            // 
+            this.numericPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericPrice.Location = new System.Drawing.Point(943, 58);
+            this.numericPrice.Name = "numericPrice";
+            this.numericPrice.Size = new System.Drawing.Size(308, 22);
+            this.numericPrice.TabIndex = 41;
+            // 
+            // numericAvalable
+            // 
+            this.numericAvalable.Location = new System.Drawing.Point(386, 186);
+            this.numericAvalable.Name = "numericAvalable";
+            this.numericAvalable.Size = new System.Drawing.Size(308, 22);
+            this.numericAvalable.TabIndex = 40;
+            // 
             // txtURL
             // 
             this.txtURL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtURL.Location = new System.Drawing.Point(943, 250);
+            this.txtURL.Location = new System.Drawing.Point(943, 266);
             this.txtURL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(308, 22);
@@ -1024,25 +1076,17 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoEllipsis = true;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(813, 255);
+            this.label8.Location = new System.Drawing.Point(813, 271);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 17);
             this.label8.TabIndex = 38;
             this.label8.Text = "URL image";
             // 
-            // cbbAvailable
-            // 
-            this.cbbAvailable.Location = new System.Drawing.Point(386, 171);
-            this.cbbAvailable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.cbbAvailable.Name = "cbbAvailable";
-            this.cbbAvailable.Size = new System.Drawing.Size(308, 22);
-            this.cbbAvailable.TabIndex = 37;
-            // 
             // pictureBox
             // 
             this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.Location = new System.Drawing.Point(943, 95);
+            this.pictureBox.Location = new System.Drawing.Point(943, 111);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(308, 140);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1070,7 +1114,7 @@
             // btnImage
             // 
             this.btnImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImage.Location = new System.Drawing.Point(1267, 139);
+            this.btnImage.Location = new System.Drawing.Point(1267, 155);
             this.btnImage.Name = "btnImage";
             this.btnImage.Size = new System.Drawing.Size(119, 43);
             this.btnImage.TabIndex = 31;
@@ -1100,7 +1144,7 @@
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(904, 212);
+            this.label13.Location = new System.Drawing.Point(904, 228);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(0, 17);
@@ -1140,7 +1184,7 @@
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(1199, 43);
+            this.label15.Location = new System.Drawing.Point(1199, 59);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(0, 17);
@@ -1150,7 +1194,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(841, 109);
+            this.label4.Location = new System.Drawing.Point(841, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 17);
             this.label4.TabIndex = 3;
@@ -1160,7 +1204,7 @@
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(1131, 95);
+            this.label16.Location = new System.Drawing.Point(1131, 111);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(0, 17);
@@ -1170,7 +1214,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(847, 62);
+            this.label5.Location = new System.Drawing.Point(841, 57);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 17);
             this.label5.TabIndex = 4;
@@ -1181,7 +1225,7 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(1213, 139);
+            this.label11.Location = new System.Drawing.Point(1213, 155);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(0, 17);
@@ -1202,7 +1246,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(1213, 191);
+            this.label12.Location = new System.Drawing.Point(1213, 207);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(0, 17);
@@ -1222,7 +1266,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(1213, 90);
+            this.label10.Location = new System.Drawing.Point(1213, 106);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(0, 17);
@@ -1245,15 +1289,6 @@
             this.txtIDPro.Name = "txtIDPro";
             this.txtIDPro.Size = new System.Drawing.Size(308, 22);
             this.txtIDPro.TabIndex = 8;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPrice.Location = new System.Drawing.Point(943, 62);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(308, 22);
-            this.txtPrice.TabIndex = 11;
             // 
             // panel3
             // 
@@ -1537,8 +1572,6 @@
             // 
             this.panelCus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelCus.Controls.Add(this.txtPassCus);
-            this.panelCus.Controls.Add(this.lblPasswordCus);
             this.panelCus.Controls.Add(this.groupBox10);
             this.panelCus.Controls.Add(this.dateDOBCus);
             this.panelCus.Controls.Add(this.txtUsernameCus);
@@ -1569,24 +1602,6 @@
             this.panelCus.TabStop = false;
             this.panelCus.Text = "Customer details";
             // 
-            // txtPassCus
-            // 
-            this.txtPassCus.Location = new System.Drawing.Point(386, 253);
-            this.txtPassCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPassCus.Name = "txtPassCus";
-            this.txtPassCus.PasswordChar = '*';
-            this.txtPassCus.Size = new System.Drawing.Size(308, 22);
-            this.txtPassCus.TabIndex = 49;
-            // 
-            // lblPasswordCus
-            // 
-            this.lblPasswordCus.AutoSize = true;
-            this.lblPasswordCus.Location = new System.Drawing.Point(255, 253);
-            this.lblPasswordCus.Name = "lblPasswordCus";
-            this.lblPasswordCus.Size = new System.Drawing.Size(69, 17);
-            this.lblPasswordCus.TabIndex = 48;
-            this.lblPasswordCus.Text = "Password";
-            // 
             // groupBox10
             // 
             this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -1605,7 +1620,6 @@
             this.radioMaleCus.Name = "radioMaleCus";
             this.radioMaleCus.Size = new System.Drawing.Size(59, 21);
             this.radioMaleCus.TabIndex = 41;
-            this.radioMaleCus.TabStop = true;
             this.radioMaleCus.Text = "Male";
             this.radioMaleCus.UseVisualStyleBackColor = true;
             // 
@@ -1616,7 +1630,6 @@
             this.radioFemailCus.Name = "radioFemailCus";
             this.radioFemailCus.Size = new System.Drawing.Size(75, 21);
             this.radioFemailCus.TabIndex = 42;
-            this.radioFemailCus.TabStop = true;
             this.radioFemailCus.Text = "Female";
             this.radioFemailCus.UseVisualStyleBackColor = true;
             // 
@@ -1630,9 +1643,10 @@
             // 
             // txtUsernameCus
             // 
-            this.txtUsernameCus.Location = new System.Drawing.Point(386, 191);
+            this.txtUsernameCus.Location = new System.Drawing.Point(386, 214);
             this.txtUsernameCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtUsernameCus.Name = "txtUsernameCus";
+            this.txtUsernameCus.ReadOnly = true;
             this.txtUsernameCus.Size = new System.Drawing.Size(308, 22);
             this.txtUsernameCus.TabIndex = 39;
             // 
@@ -1640,7 +1654,7 @@
             // 
             this.label35.AutoEllipsis = true;
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(255, 196);
+            this.label35.Location = new System.Drawing.Point(255, 219);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(73, 17);
             this.label35.TabIndex = 38;
@@ -1648,32 +1662,35 @@
             // 
             // txtPhoneCus
             // 
-            this.txtPhoneCus.Location = new System.Drawing.Point(386, 136);
+            this.txtPhoneCus.Location = new System.Drawing.Point(386, 159);
             this.txtPhoneCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtPhoneCus.Name = "txtPhoneCus";
+            this.txtPhoneCus.ReadOnly = true;
             this.txtPhoneCus.Size = new System.Drawing.Size(308, 22);
             this.txtPhoneCus.TabIndex = 37;
             // 
             // txtEmailCus
             // 
             this.txtEmailCus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmailCus.Location = new System.Drawing.Point(1033, 248);
+            this.txtEmailCus.Location = new System.Drawing.Point(1033, 232);
             this.txtEmailCus.Name = "txtEmailCus";
+            this.txtEmailCus.ReadOnly = true;
             this.txtEmailCus.Size = new System.Drawing.Size(308, 22);
             this.txtEmailCus.TabIndex = 33;
             // 
             // txtFullNameCus
             // 
-            this.txtFullNameCus.Location = new System.Drawing.Point(386, 85);
+            this.txtFullNameCus.Location = new System.Drawing.Point(386, 108);
             this.txtFullNameCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtFullNameCus.Name = "txtFullNameCus";
+            this.txtFullNameCus.ReadOnly = true;
             this.txtFullNameCus.Size = new System.Drawing.Size(308, 22);
             this.txtFullNameCus.TabIndex = 14;
             // 
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(253, 32);
+            this.label36.Location = new System.Drawing.Point(253, 55);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(85, 17);
             this.label36.TabIndex = 0;
@@ -1693,7 +1710,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(255, 85);
+            this.label38.Location = new System.Drawing.Point(255, 108);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(71, 17);
             this.label38.TabIndex = 1;
@@ -1712,7 +1729,7 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(273, 139);
+            this.label40.Location = new System.Drawing.Point(273, 162);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(49, 17);
             this.label40.TabIndex = 2;
@@ -1774,7 +1791,7 @@
             // 
             this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(947, 248);
+            this.label46.Location = new System.Drawing.Point(947, 232);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(42, 17);
             this.label46.TabIndex = 5;
@@ -1816,7 +1833,7 @@
             // 
             this.label50.AutoSize = true;
             this.label50.ForeColor = System.Drawing.Color.Red;
-            this.label50.Location = new System.Drawing.Point(673, 40);
+            this.label50.Location = new System.Drawing.Point(673, 63);
             this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(0, 17);
@@ -1824,9 +1841,10 @@
             // 
             // txtIDCus
             // 
-            this.txtIDCus.Location = new System.Drawing.Point(386, 32);
+            this.txtIDCus.Location = new System.Drawing.Point(386, 55);
             this.txtIDCus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtIDCus.Name = "txtIDCus";
+            this.txtIDCus.ReadOnly = true;
             this.txtIDCus.Size = new System.Drawing.Size(308, 22);
             this.txtIDCus.TabIndex = 8;
             // 
@@ -2035,6 +2053,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbProduct)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericPrice)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericAvalable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -2176,8 +2196,6 @@
         private System.Windows.Forms.BindingSource employeeBindingSource6;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.TextBox txtPassCus;
-        private System.Windows.Forms.Label lblPasswordCus;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDCustomer;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullnameCus;
         private System.Windows.Forms.DataGridViewTextBoxColumn phoneCus;
@@ -2210,7 +2228,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtURL;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox cbbAvailable;
         private System.Windows.Forms.PictureBox pictureBox;
         private System.Windows.Forms.ComboBox cbbCategory;
         private System.Windows.Forms.TextBox txtDescripton;
@@ -2232,7 +2249,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtIDPro;
-        private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView tbProduct;
         private System.Windows.Forms.BindingSource productBindingSource4;
@@ -2255,6 +2271,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn imageUrl1;
         private System.Windows.Forms.DataGridViewImageColumn photo1;
+        private System.Windows.Forms.NumericUpDown numericAvalable;
+        private System.Windows.Forms.NumericUpDown numericPrice;
+        private System.Windows.Forms.Label lblCheckUsername;
+        private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblCheckPhone;
     }
 }
 
