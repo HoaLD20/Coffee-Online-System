@@ -86,6 +86,7 @@ namespace Management
             foreach (DataRow dr in dt.Rows)
             {
                 cbbCategory.Items.Add(dr["namecategory"]).ToString();
+                cbbSearchCategory.Items.Add(dr["nameCategory"]).ToString();//load data vao cbbsearch
 
             }
             conn.Close();
@@ -264,6 +265,29 @@ namespace Management
             refresh();
         }
 
+        /**
+         * search by name product
+         * */
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            tbProduct.DataSource = pro.searchByNameProduct(txtSearchName.Text);
+        }
+
+        /**
+         * search by category
+         * */
+        private void btnSearchCategory_Click(object sender, EventArgs e)
+        {
+            tbProduct.DataSource = pro.searchByCategory(cbbSearchCategory.SelectedIndex+1);//lay index cua cbb +1 thi moi ra dc idcategory dung (vi cbb co chi so dau tien la 0)
+        }
+
+        /**
+         * show lai toan bo thong tin sau khi search xong
+         * */
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            showProduct();
+        }
 
         /*
          * 
@@ -484,8 +508,21 @@ namespace Management
                 lblEmail.ForeColor = System.Drawing.Color.Red;
                 excuteEmail = false;
             }
+        }
+        /**
+         * search by fullname emp
+         * */
+        private void btnSearchFullname_Click(object sender, EventArgs e)
+        {
+            tbEmployee.DataSource = empList.searchByFullnameEmp(txtsSearchFullname.Text);
+        }
 
-
+        /**
+         * reload lai trang emp sau khi search or sort
+         * */
+        private void btnReloadEmp_Click(object sender, EventArgs e)
+        {
+            showEmployee();
         }
 
         /**
@@ -547,7 +584,19 @@ namespace Management
             showCustomer();//load lai table sau khi xo thong tin
             refresh();
         }
-
-
+        /**
+         * reload lai trang cus sau khi search or sort
+         * */
+        private void btnReloadCus_Click(object sender, EventArgs e)
+        {
+            showCustomer();
+        }
+        /**
+         * search username fullname customer
+         * */
+        private void btnSearrchFullnameCus_Click(object sender, EventArgs e)
+        {
+            tbCustomer.DataSource = cusList.searchByFullnameCus(txtSearchFullnameCus.Text);
+        }
     }
 }

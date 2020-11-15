@@ -125,7 +125,22 @@ namespace Management.Models
 
                 return strBuilder.ToString();
             }
-        
 
+        /**
+        * search by fullname Employee
+        * 
+        * */
+        public DataTable searchByFullnameEmp(string name) 
+        { 
+            string sql;
+            sql = "select * from Employee where fullnameEmp like'%" + name + "%' or usernameEmp like '%"+name+"%'";
+            SqlConnection con = db.GetConnection();
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);//SqldataAdapter thuc hien đở dữ liệu và data set, cập nhật database, SqlCommand thực thi câu lệnh sql insert update delete
+            con.Open();
+            DataTable dt = new DataTable();
+            da.Fill(dt);//Fill dung để đổ dữ liệu vào dataSet
+            con.Close();
+            return dt;
+        }
     }
 }

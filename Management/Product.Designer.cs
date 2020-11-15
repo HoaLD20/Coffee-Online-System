@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product));
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.label56 = new System.Windows.Forms.Label();
+            this.btnSearchFullname = new System.Windows.Forms.Button();
+            this.txtsSearchFullname = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label51 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -40,15 +44,6 @@
             this.btnUpdateEmp = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.tbEmployee = new System.Windows.Forms.DataGridView();
-            this.IDEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullnameEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DOBEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeeBindingSource7 = new System.Windows.Forms.BindingSource(this.components);
             this.cOFFEEDataSet5 = new Management.COFFEEDataSet5();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -89,6 +84,13 @@
             this.productBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.tabControlProduct = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Search = new System.Windows.Forms.GroupBox();
+            this.cbbSearchCategory = new System.Windows.Forms.ComboBox();
+            this.btnSearchCategory = new System.Windows.Forms.Button();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.btnSearch = new System.Windows.Forms.Button();
+            this.txtSearchName = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tbProduct = new System.Windows.Forms.DataGridView();
             this.IDProduct1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -134,6 +136,10 @@
             this.bntDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox13 = new System.Windows.Forms.GroupBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.btnSearrchFullnameCus = new System.Windows.Forms.Button();
+            this.txtSearchFullnameCus = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label34 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -141,14 +147,6 @@
             this.btnDeleteCus = new System.Windows.Forms.Button();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.tbCustomer = new System.Windows.Forms.DataGridView();
-            this.IDCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullnameCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.phoneCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DOBCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.genderCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.panelCus = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -212,7 +210,28 @@
             this.IDProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label52 = new System.Windows.Forms.Label();
             this.productBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnReloadEmp = new System.Windows.Forms.Button();
+            this.btnReloadCus = new System.Windows.Forms.Button();
+            this.btnReload = new System.Windows.Forms.Button();
+            this.IDEmployee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullnameEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOBEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.position = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusEmp = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDCustomer = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullnameCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.usernameCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DOBCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.genderCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2.SuspendLayout();
+            this.groupBox12.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -226,6 +245,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource3)).BeginInit();
             this.tabControlProduct.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.Search.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbProduct)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -235,6 +255,7 @@
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.groupBox13.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -264,17 +285,59 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.groupBox12);
             this.tabPage2.Controls.Add(this.panel2);
             this.tabPage2.Controls.Add(this.groupBox4);
             this.tabPage2.Controls.Add(this.groupBox5);
             this.tabPage2.Controls.Add(this.groupBox6);
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
+            this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1691, 829);
+            this.tabPage2.Size = new System.Drawing.Size(1694, 1044);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Employee";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox12.Controls.Add(this.btnReloadEmp);
+            this.groupBox12.Controls.Add(this.label56);
+            this.groupBox12.Controls.Add(this.btnSearchFullname);
+            this.groupBox12.Controls.Add(this.txtsSearchFullname);
+            this.groupBox12.Location = new System.Drawing.Point(26, 121);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(1648, 99);
+            this.groupBox12.TabIndex = 58;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "Search";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(232, 44);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(57, 17);
+            this.label56.TabIndex = 45;
+            this.label56.Text = "Search ";
+            // 
+            // btnSearchFullname
+            // 
+            this.btnSearchFullname.Location = new System.Drawing.Point(693, 29);
+            this.btnSearchFullname.Name = "btnSearchFullname";
+            this.btnSearchFullname.Size = new System.Drawing.Size(147, 42);
+            this.btnSearchFullname.TabIndex = 44;
+            this.btnSearchFullname.Text = "Search";
+            this.btnSearchFullname.UseVisualStyleBackColor = true;
+            this.btnSearchFullname.Click += new System.EventHandler(this.btnSearchFullname_Click);
+            // 
+            // txtsSearchFullname
+            // 
+            this.txtsSearchFullname.Location = new System.Drawing.Point(381, 39);
+            this.txtsSearchFullname.Name = "txtsSearchFullname";
+            this.txtsSearchFullname.Size = new System.Drawing.Size(306, 22);
+            this.txtsSearchFullname.TabIndex = 43;
             // 
             // panel2
             // 
@@ -282,16 +345,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Moccasin;
             this.panel2.Controls.Add(this.label51);
-            this.panel2.Location = new System.Drawing.Point(20, 20);
+            this.panel2.Location = new System.Drawing.Point(20, 10);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1654, 100);
+            this.panel2.Size = new System.Drawing.Size(1657, 100);
             this.panel2.TabIndex = 57;
             // 
             // label51
             // 
+            this.label51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label51.AutoSize = true;
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label51.Location = new System.Drawing.Point(508, 24);
+            this.label51.Location = new System.Drawing.Point(582, 24);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(599, 51);
             this.label51.TabIndex = 50;
@@ -305,9 +370,9 @@
             this.groupBox4.Controls.Add(this.btnAddEmp);
             this.groupBox4.Controls.Add(this.btnDeleteEmp);
             this.groupBox4.Controls.Add(this.btnUpdateEmp);
-            this.groupBox4.Location = new System.Drawing.Point(1451, 469);
+            this.groupBox4.Location = new System.Drawing.Point(1465, 582);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(223, 357);
+            this.groupBox4.Size = new System.Drawing.Size(223, 334);
             this.groupBox4.TabIndex = 51;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Option";
@@ -317,7 +382,7 @@
             this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
             this.btnRefresh.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefresh.Location = new System.Drawing.Point(21, 282);
+            this.btnRefresh.Location = new System.Drawing.Point(23, 253);
             this.btnRefresh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(188, 52);
@@ -331,7 +396,7 @@
             this.btnAddEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddEmp.Image = ((System.Drawing.Image)(resources.GetObject("btnAddEmp.Image")));
             this.btnAddEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAddEmp.Location = new System.Drawing.Point(21, 37);
+            this.btnAddEmp.Location = new System.Drawing.Point(21, 35);
             this.btnAddEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddEmp.Name = "btnAddEmp";
             this.btnAddEmp.Size = new System.Drawing.Size(188, 50);
@@ -345,7 +410,7 @@
             this.btnDeleteEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnDeleteEmp.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteEmp.Image")));
             this.btnDeleteEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDeleteEmp.Location = new System.Drawing.Point(21, 205);
+            this.btnDeleteEmp.Location = new System.Drawing.Point(21, 172);
             this.btnDeleteEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDeleteEmp.Name = "btnDeleteEmp";
             this.btnDeleteEmp.Size = new System.Drawing.Size(188, 50);
@@ -359,7 +424,7 @@
             this.btnUpdateEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUpdateEmp.Image = ((System.Drawing.Image)(resources.GetObject("btnUpdateEmp.Image")));
             this.btnUpdateEmp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUpdateEmp.Location = new System.Drawing.Point(21, 127);
+            this.btnUpdateEmp.Location = new System.Drawing.Point(21, 106);
             this.btnUpdateEmp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdateEmp.Name = "btnUpdateEmp";
             this.btnUpdateEmp.Size = new System.Drawing.Size(188, 44);
@@ -374,9 +439,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.tbEmployee);
-            this.groupBox5.Location = new System.Drawing.Point(20, 469);
+            this.groupBox5.Location = new System.Drawing.Point(25, 561);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(1415, 352);
+            this.groupBox5.Size = new System.Drawing.Size(1418, 355);
             this.groupBox5.TabIndex = 52;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "List of employee";
@@ -392,95 +457,21 @@
             this.tbEmployee.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDEmployee,
             this.fullnameEmp,
+            this.usernameEmp,
             this.phoneEmp,
             this.emailEmp,
             this.DOBEmp,
             this.genderEmp,
-            this.usernameEmp,
             this.position,
             this.statusEmp});
             this.tbEmployee.DataSource = this.employeeBindingSource7;
-            this.tbEmployee.Location = new System.Drawing.Point(18, 21);
+            this.tbEmployee.Location = new System.Drawing.Point(19, 21);
             this.tbEmployee.Name = "tbEmployee";
             this.tbEmployee.RowHeadersWidth = 51;
             this.tbEmployee.RowTemplate.Height = 100;
-            this.tbEmployee.Size = new System.Drawing.Size(1377, 310);
+            this.tbEmployee.Size = new System.Drawing.Size(1380, 328);
             this.tbEmployee.TabIndex = 0;
             this.tbEmployee.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbEmployee_CellClick);
-            // 
-            // IDEmployee
-            // 
-            this.IDEmployee.DataPropertyName = "IDEmployee";
-            this.IDEmployee.HeaderText = "IDEmployee";
-            this.IDEmployee.MinimumWidth = 6;
-            this.IDEmployee.Name = "IDEmployee";
-            this.IDEmployee.ReadOnly = true;
-            this.IDEmployee.Width = 125;
-            // 
-            // fullnameEmp
-            // 
-            this.fullnameEmp.DataPropertyName = "fullnameEmp";
-            this.fullnameEmp.HeaderText = "fullnameEmp";
-            this.fullnameEmp.MinimumWidth = 6;
-            this.fullnameEmp.Name = "fullnameEmp";
-            this.fullnameEmp.Width = 200;
-            // 
-            // phoneEmp
-            // 
-            this.phoneEmp.DataPropertyName = "phoneEmp";
-            this.phoneEmp.HeaderText = "phoneEmp";
-            this.phoneEmp.MinimumWidth = 6;
-            this.phoneEmp.Name = "phoneEmp";
-            this.phoneEmp.Width = 200;
-            // 
-            // emailEmp
-            // 
-            this.emailEmp.DataPropertyName = "emailEmp";
-            this.emailEmp.HeaderText = "emailEmp";
-            this.emailEmp.MinimumWidth = 6;
-            this.emailEmp.Name = "emailEmp";
-            this.emailEmp.Width = 200;
-            // 
-            // DOBEmp
-            // 
-            this.DOBEmp.DataPropertyName = "DOBEmp";
-            this.DOBEmp.HeaderText = "DOBEmp";
-            this.DOBEmp.MinimumWidth = 6;
-            this.DOBEmp.Name = "DOBEmp";
-            this.DOBEmp.Width = 200;
-            // 
-            // genderEmp
-            // 
-            this.genderEmp.DataPropertyName = "genderEmp";
-            this.genderEmp.HeaderText = "genderEmp";
-            this.genderEmp.MinimumWidth = 6;
-            this.genderEmp.Name = "genderEmp";
-            this.genderEmp.Width = 200;
-            // 
-            // usernameEmp
-            // 
-            this.usernameEmp.DataPropertyName = "usernameEmp";
-            this.usernameEmp.HeaderText = "usernameEmp";
-            this.usernameEmp.MinimumWidth = 6;
-            this.usernameEmp.Name = "usernameEmp";
-            this.usernameEmp.Width = 200;
-            // 
-            // position
-            // 
-            this.position.DataPropertyName = "position";
-            this.position.HeaderText = "position";
-            this.position.MinimumWidth = 6;
-            this.position.Name = "position";
-            this.position.Width = 200;
-            // 
-            // statusEmp
-            // 
-            this.statusEmp.DataPropertyName = "statusEmp";
-            this.statusEmp.HeaderText = "statusEmp";
-            this.statusEmp.MinimumWidth = 6;
-            this.statusEmp.Name = "statusEmp";
-            this.statusEmp.Visible = false;
-            this.statusEmp.Width = 125;
             // 
             // employeeBindingSource7
             // 
@@ -526,9 +517,9 @@
             this.groupBox6.Controls.Add(this.label31);
             this.groupBox6.Controls.Add(this.label32);
             this.groupBox6.Controls.Add(this.txtIDEmp);
-            this.groupBox6.Location = new System.Drawing.Point(20, 139);
+            this.groupBox6.Location = new System.Drawing.Point(20, 228);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(1654, 324);
+            this.groupBox6.Size = new System.Drawing.Size(1657, 324);
             this.groupBox6.TabIndex = 50;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Employee details";
@@ -538,7 +529,7 @@
             this.lblEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmail.AutoEllipsis = true;
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(1350, 36);
+            this.lblEmail.Location = new System.Drawing.Point(1353, 36);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(0, 17);
             this.lblEmail.TabIndex = 52;
@@ -603,7 +594,7 @@
             this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox9.Controls.Add(this.radioFemale);
             this.groupBox9.Controls.Add(this.radioMale);
-            this.groupBox9.Location = new System.Drawing.Point(1021, 155);
+            this.groupBox9.Location = new System.Drawing.Point(1024, 155);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(308, 60);
             this.groupBox9.TabIndex = 45;
@@ -638,7 +629,7 @@
             this.dateDOB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateDOB.CustomFormat = "dd-MM-yyyy";
             this.dateDOB.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateDOB.Location = new System.Drawing.Point(1021, 95);
+            this.dateDOB.Location = new System.Drawing.Point(1024, 95);
             this.dateDOB.Name = "dateDOB";
             this.dateDOB.Size = new System.Drawing.Size(308, 22);
             this.dateDOB.TabIndex = 44;
@@ -653,7 +644,7 @@
             "Tu van",
             "Kiem kho",
             "Giao hang"});
-            this.cbbPosition.Location = new System.Drawing.Point(1021, 253);
+            this.cbbPosition.Location = new System.Drawing.Point(1024, 253);
             this.cbbPosition.Name = "cbbPosition";
             this.cbbPosition.Size = new System.Drawing.Size(308, 24);
             this.cbbPosition.TabIndex = 43;
@@ -662,7 +653,7 @@
             // 
             this.label33.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(907, 260);
+            this.label33.Location = new System.Drawing.Point(910, 260);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(58, 17);
             this.label33.TabIndex = 40;
@@ -680,7 +671,7 @@
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(1021, 33);
+            this.txtEmail.Location = new System.Drawing.Point(1024, 33);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(308, 22);
             this.txtEmail.TabIndex = 33;
@@ -708,7 +699,7 @@
             this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.Red;
-            this.label19.Location = new System.Drawing.Point(907, 212);
+            this.label19.Location = new System.Drawing.Point(910, 212);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(0, 17);
@@ -747,7 +738,7 @@
             this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label23.AutoSize = true;
             this.label23.ForeColor = System.Drawing.Color.Red;
-            this.label23.Location = new System.Drawing.Point(1186, 102);
+            this.label23.Location = new System.Drawing.Point(1189, 102);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(0, 17);
@@ -766,7 +757,7 @@
             this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.Red;
-            this.label25.Location = new System.Drawing.Point(1118, 154);
+            this.label25.Location = new System.Drawing.Point(1121, 154);
             this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(0, 17);
@@ -776,7 +767,7 @@
             // 
             this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(878, 109);
+            this.label26.Location = new System.Drawing.Point(881, 109);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(87, 17);
             this.label26.TabIndex = 4;
@@ -787,7 +778,7 @@
             this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
             this.label27.ForeColor = System.Drawing.Color.Red;
-            this.label27.Location = new System.Drawing.Point(1200, 198);
+            this.label27.Location = new System.Drawing.Point(1203, 198);
             this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(0, 17);
@@ -797,7 +788,7 @@
             // 
             this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(921, 40);
+            this.label28.Location = new System.Drawing.Point(924, 40);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(42, 17);
             this.label28.TabIndex = 5;
@@ -808,7 +799,7 @@
             this.label29.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label29.AutoSize = true;
             this.label29.ForeColor = System.Drawing.Color.Red;
-            this.label29.Location = new System.Drawing.Point(1216, 191);
+            this.label29.Location = new System.Drawing.Point(1219, 191);
             this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(0, 17);
@@ -818,7 +809,7 @@
             // 
             this.label30.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(907, 186);
+            this.label30.Location = new System.Drawing.Point(910, 186);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(56, 17);
             this.label30.TabIndex = 6;
@@ -829,7 +820,7 @@
             this.label31.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label31.AutoSize = true;
             this.label31.ForeColor = System.Drawing.Color.Red;
-            this.label31.Location = new System.Drawing.Point(1200, 149);
+            this.label31.Location = new System.Drawing.Point(1203, 149);
             this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(0, 17);
@@ -872,29 +863,104 @@
             // 
             this.tabControlProduct.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlProduct.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.tabControlProduct.Controls.Add(this.tabPage1);
             this.tabControlProduct.Controls.Add(this.tabPage2);
             this.tabControlProduct.Controls.Add(this.tabPage3);
             this.tabControlProduct.Location = new System.Drawing.Point(12, 12);
             this.tabControlProduct.Name = "tabControlProduct";
             this.tabControlProduct.SelectedIndex = 0;
-            this.tabControlProduct.Size = new System.Drawing.Size(1699, 861);
+            this.tabControlProduct.Size = new System.Drawing.Size(1702, 1073);
             this.tabControlProduct.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.Search);
             this.tabPage1.Controls.Add(this.groupBox3);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.groupBox2);
-            this.tabPage1.Location = new System.Drawing.Point(4, 28);
+            this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1691, 829);
+            this.tabPage1.Size = new System.Drawing.Size(1694, 1044);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Product";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // Search
+            // 
+            this.Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.Search.Controls.Add(this.btnReload);
+            this.Search.Controls.Add(this.cbbSearchCategory);
+            this.Search.Controls.Add(this.btnSearchCategory);
+            this.Search.Controls.Add(this.label55);
+            this.Search.Controls.Add(this.label54);
+            this.Search.Controls.Add(this.btnSearch);
+            this.Search.Controls.Add(this.txtSearchName);
+            this.Search.Location = new System.Drawing.Point(28, 137);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(1637, 100);
+            this.Search.TabIndex = 59;
+            this.Search.TabStop = false;
+            this.Search.Text = "Search";
+            // 
+            // cbbSearchCategory
+            // 
+            this.cbbSearchCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbbSearchCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbbSearchCategory.FormattingEnabled = true;
+            this.cbbSearchCategory.Location = new System.Drawing.Point(954, 48);
+            this.cbbSearchCategory.Name = "cbbSearchCategory";
+            this.cbbSearchCategory.Size = new System.Drawing.Size(308, 24);
+            this.cbbSearchCategory.TabIndex = 42;
+            // 
+            // btnSearchCategory
+            // 
+            this.btnSearchCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearchCategory.Location = new System.Drawing.Point(1268, 38);
+            this.btnSearchCategory.Name = "btnSearchCategory";
+            this.btnSearchCategory.Size = new System.Drawing.Size(147, 42);
+            this.btnSearchCategory.TabIndex = 45;
+            this.btnSearchCategory.Text = "Search";
+            this.btnSearchCategory.UseVisualStyleBackColor = true;
+            this.btnSearchCategory.Click += new System.EventHandler(this.btnSearchCategory_Click);
+            // 
+            // label55
+            // 
+            this.label55.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(808, 48);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(131, 17);
+            this.label55.TabIndex = 43;
+            this.label55.Text = "Search by category";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(98, 44);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(163, 17);
+            this.label54.TabIndex = 42;
+            this.label54.Text = "Search by name product";
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(609, 35);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(147, 42);
+            this.btnSearch.TabIndex = 1;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // txtSearchName
+            // 
+            this.txtSearchName.Location = new System.Drawing.Point(285, 45);
+            this.txtSearchName.Name = "txtSearchName";
+            this.txtSearchName.Size = new System.Drawing.Size(318, 22);
+            this.txtSearchName.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -902,9 +968,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox3.Controls.Add(this.tbProduct);
-            this.groupBox3.Location = new System.Drawing.Point(38, 457);
+            this.groupBox3.Location = new System.Drawing.Point(29, 580);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(1386, 371);
+            this.groupBox3.Size = new System.Drawing.Size(1392, 344);
             this.groupBox3.TabIndex = 50;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "List of products";
@@ -932,7 +998,7 @@
             this.tbProduct.Name = "tbProduct";
             this.tbProduct.RowHeadersWidth = 51;
             this.tbProduct.RowTemplate.Height = 100;
-            this.tbProduct.Size = new System.Drawing.Size(1353, 363);
+            this.tbProduct.Size = new System.Drawing.Size(1359, 336);
             this.tbProduct.TabIndex = 0;
             this.tbProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbProduct_CellClick);
             // 
@@ -1040,9 +1106,9 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.txtIDPro);
-            this.groupBox1.Location = new System.Drawing.Point(38, 137);
+            this.groupBox1.Location = new System.Drawing.Point(30, 269);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1637, 301);
+            this.groupBox1.Size = new System.Drawing.Size(1643, 301);
             this.groupBox1.TabIndex = 58;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Product details";
@@ -1050,7 +1116,7 @@
             // numericPrice
             // 
             this.numericPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericPrice.Location = new System.Drawing.Point(943, 58);
+            this.numericPrice.Location = new System.Drawing.Point(949, 58);
             this.numericPrice.Name = "numericPrice";
             this.numericPrice.Size = new System.Drawing.Size(308, 22);
             this.numericPrice.TabIndex = 41;
@@ -1065,7 +1131,7 @@
             // txtURL
             // 
             this.txtURL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtURL.Location = new System.Drawing.Point(943, 266);
+            this.txtURL.Location = new System.Drawing.Point(949, 266);
             this.txtURL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtURL.Name = "txtURL";
             this.txtURL.Size = new System.Drawing.Size(308, 22);
@@ -1076,7 +1142,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoEllipsis = true;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(813, 271);
+            this.label8.Location = new System.Drawing.Point(819, 271);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 17);
             this.label8.TabIndex = 38;
@@ -1086,7 +1152,7 @@
             // 
             this.pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox.Location = new System.Drawing.Point(943, 111);
+            this.pictureBox.Location = new System.Drawing.Point(949, 111);
             this.pictureBox.Name = "pictureBox";
             this.pictureBox.Size = new System.Drawing.Size(308, 140);
             this.pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -1106,7 +1172,7 @@
             // txtDescripton
             // 
             this.txtDescripton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescripton.Location = new System.Drawing.Point(943, 14);
+            this.txtDescripton.Location = new System.Drawing.Point(949, 14);
             this.txtDescripton.Name = "txtDescripton";
             this.txtDescripton.Size = new System.Drawing.Size(308, 22);
             this.txtDescripton.TabIndex = 33;
@@ -1114,7 +1180,7 @@
             // btnImage
             // 
             this.btnImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnImage.Location = new System.Drawing.Point(1267, 155);
+            this.btnImage.Location = new System.Drawing.Point(1273, 155);
             this.btnImage.Name = "btnImage";
             this.btnImage.Size = new System.Drawing.Size(119, 43);
             this.btnImage.TabIndex = 31;
@@ -1144,7 +1210,7 @@
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.Red;
-            this.label13.Location = new System.Drawing.Point(904, 228);
+            this.label13.Location = new System.Drawing.Point(910, 228);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(0, 17);
@@ -1164,7 +1230,7 @@
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.ForeColor = System.Drawing.Color.Red;
-            this.label14.Location = new System.Drawing.Point(1423, 0);
+            this.label14.Location = new System.Drawing.Point(1429, 0);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(0, 17);
@@ -1184,7 +1250,7 @@
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.Red;
-            this.label15.Location = new System.Drawing.Point(1199, 59);
+            this.label15.Location = new System.Drawing.Point(1205, 59);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(0, 17);
@@ -1194,7 +1260,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(841, 125);
+            this.label4.Location = new System.Drawing.Point(847, 125);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 17);
             this.label4.TabIndex = 3;
@@ -1204,7 +1270,7 @@
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.Red;
-            this.label16.Location = new System.Drawing.Point(1131, 111);
+            this.label16.Location = new System.Drawing.Point(1137, 111);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(0, 17);
@@ -1214,7 +1280,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(841, 57);
+            this.label5.Location = new System.Drawing.Point(847, 57);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(40, 17);
             this.label5.TabIndex = 4;
@@ -1225,7 +1291,7 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.Red;
-            this.label11.Location = new System.Drawing.Point(1213, 155);
+            this.label11.Location = new System.Drawing.Point(1219, 155);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(0, 17);
@@ -1235,7 +1301,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(808, 12);
+            this.label6.Location = new System.Drawing.Point(814, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 17);
             this.label6.TabIndex = 5;
@@ -1246,7 +1312,7 @@
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
             this.label12.ForeColor = System.Drawing.Color.Red;
-            this.label12.Location = new System.Drawing.Point(1213, 207);
+            this.label12.Location = new System.Drawing.Point(1219, 207);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(0, 17);
@@ -1266,7 +1332,7 @@
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
             this.label10.ForeColor = System.Drawing.Color.Red;
-            this.label10.Location = new System.Drawing.Point(1213, 106);
+            this.label10.Location = new System.Drawing.Point(1219, 106);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(0, 17);
@@ -1296,16 +1362,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.Color.Moccasin;
             this.panel3.Controls.Add(this.label53);
-            this.panel3.Location = new System.Drawing.Point(31, 23);
+            this.panel3.Location = new System.Drawing.Point(31, 11);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1654, 100);
+            this.panel3.Size = new System.Drawing.Size(1636, 100);
             this.panel3.TabIndex = 57;
             // 
             // label53
             // 
+            this.label53.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label53.AutoSize = true;
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label53.Location = new System.Drawing.Point(547, 25);
+            this.label53.Location = new System.Drawing.Point(588, 25);
             this.label53.Name = "label53";
             this.label53.Size = new System.Drawing.Size(572, 51);
             this.label53.TabIndex = 51;
@@ -1319,9 +1387,9 @@
             this.groupBox2.Controls.Add(this.bntAdd);
             this.groupBox2.Controls.Add(this.bntDelete);
             this.groupBox2.Controls.Add(this.btnUpdate);
-            this.groupBox2.Location = new System.Drawing.Point(1452, 457);
+            this.groupBox2.Location = new System.Drawing.Point(1458, 581);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(223, 365);
+            this.groupBox2.Size = new System.Drawing.Size(223, 344);
             this.groupBox2.TabIndex = 48;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Option";
@@ -1384,17 +1452,59 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.groupBox13);
             this.tabPage3.Controls.Add(this.panel1);
             this.tabPage3.Controls.Add(this.groupBox7);
             this.tabPage3.Controls.Add(this.groupBox8);
             this.tabPage3.Controls.Add(this.panelCus);
-            this.tabPage3.Location = new System.Drawing.Point(4, 28);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1691, 829);
+            this.tabPage3.Size = new System.Drawing.Size(1694, 1044);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Customer";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox13
+            // 
+            this.groupBox13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox13.Controls.Add(this.btnReloadCus);
+            this.groupBox13.Controls.Add(this.label57);
+            this.groupBox13.Controls.Add(this.btnSearrchFullnameCus);
+            this.groupBox13.Controls.Add(this.txtSearchFullnameCus);
+            this.groupBox13.Location = new System.Drawing.Point(20, 120);
+            this.groupBox13.Name = "groupBox13";
+            this.groupBox13.Size = new System.Drawing.Size(1642, 109);
+            this.groupBox13.TabIndex = 57;
+            this.groupBox13.TabStop = false;
+            this.groupBox13.Text = "Search";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(189, 40);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(57, 17);
+            this.label57.TabIndex = 49;
+            this.label57.Text = "Search ";
+            // 
+            // btnSearrchFullnameCus
+            // 
+            this.btnSearrchFullnameCus.Location = new System.Drawing.Point(712, 33);
+            this.btnSearrchFullnameCus.Name = "btnSearrchFullnameCus";
+            this.btnSearrchFullnameCus.Size = new System.Drawing.Size(147, 42);
+            this.btnSearrchFullnameCus.TabIndex = 48;
+            this.btnSearrchFullnameCus.Text = "Search";
+            this.btnSearrchFullnameCus.UseVisualStyleBackColor = true;
+            this.btnSearrchFullnameCus.Click += new System.EventHandler(this.btnSearrchFullnameCus_Click);
+            // 
+            // txtSearchFullnameCus
+            // 
+            this.txtSearchFullnameCus.Location = new System.Drawing.Point(376, 41);
+            this.txtSearchFullnameCus.Name = "txtSearchFullnameCus";
+            this.txtSearchFullnameCus.Size = new System.Drawing.Size(318, 22);
+            this.txtSearchFullnameCus.TabIndex = 47;
             // 
             // panel1
             // 
@@ -1402,16 +1512,18 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Moccasin;
             this.panel1.Controls.Add(this.label34);
-            this.panel1.Location = new System.Drawing.Point(20, 18);
+            this.panel1.Location = new System.Drawing.Point(20, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1654, 100);
+            this.panel1.Size = new System.Drawing.Size(1642, 100);
             this.panel1.TabIndex = 56;
             // 
             // label34
             // 
+            this.label34.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(507, 24);
+            this.label34.Location = new System.Drawing.Point(564, 24);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(607, 51);
             this.label34.TabIndex = 50;
@@ -1423,9 +1535,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.Controls.Add(this.btnRefreshCus);
             this.groupBox7.Controls.Add(this.btnDeleteCus);
-            this.groupBox7.Location = new System.Drawing.Point(1451, 459);
+            this.groupBox7.Location = new System.Drawing.Point(1434, 552);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(223, 364);
+            this.groupBox7.Size = new System.Drawing.Size(223, 355);
             this.groupBox7.TabIndex = 54;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Option";
@@ -1464,9 +1576,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox8.Controls.Add(this.tbCustomer);
-            this.groupBox8.Location = new System.Drawing.Point(20, 459);
+            this.groupBox8.Location = new System.Drawing.Point(20, 550);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(1413, 364);
+            this.groupBox8.Size = new System.Drawing.Size(1387, 367);
             this.groupBox8.TabIndex = 55;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "List of Customer";
@@ -1482,86 +1594,20 @@
             this.tbCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDCustomer,
             this.fullnameCus,
+            this.usernameCus,
             this.phoneCus,
             this.emailCus,
             this.DOBCus,
             this.genderCus,
-            this.usernameCus,
             this.statusCus});
             this.tbCustomer.DataSource = this.customerBindingSource3;
             this.tbCustomer.Location = new System.Drawing.Point(18, 21);
             this.tbCustomer.Name = "tbCustomer";
             this.tbCustomer.RowHeadersWidth = 51;
             this.tbCustomer.RowTemplate.Height = 100;
-            this.tbCustomer.Size = new System.Drawing.Size(1380, 325);
+            this.tbCustomer.Size = new System.Drawing.Size(1354, 328);
             this.tbCustomer.TabIndex = 0;
             this.tbCustomer.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tbCustomer_CellClick);
-            // 
-            // IDCustomer
-            // 
-            this.IDCustomer.DataPropertyName = "IDCustomer";
-            this.IDCustomer.HeaderText = "IDCustomer";
-            this.IDCustomer.MinimumWidth = 6;
-            this.IDCustomer.Name = "IDCustomer";
-            this.IDCustomer.ReadOnly = true;
-            this.IDCustomer.Width = 125;
-            // 
-            // fullnameCus
-            // 
-            this.fullnameCus.DataPropertyName = "fullnameCus";
-            this.fullnameCus.HeaderText = "fullnameCus";
-            this.fullnameCus.MinimumWidth = 6;
-            this.fullnameCus.Name = "fullnameCus";
-            this.fullnameCus.Width = 200;
-            // 
-            // phoneCus
-            // 
-            this.phoneCus.DataPropertyName = "phoneCus";
-            this.phoneCus.HeaderText = "phoneCus";
-            this.phoneCus.MinimumWidth = 6;
-            this.phoneCus.Name = "phoneCus";
-            this.phoneCus.Width = 200;
-            // 
-            // emailCus
-            // 
-            this.emailCus.DataPropertyName = "emailCus";
-            this.emailCus.HeaderText = "emailCus";
-            this.emailCus.MinimumWidth = 6;
-            this.emailCus.Name = "emailCus";
-            this.emailCus.Width = 200;
-            // 
-            // DOBCus
-            // 
-            this.DOBCus.DataPropertyName = "DOBCus";
-            this.DOBCus.HeaderText = "DOBCus";
-            this.DOBCus.MinimumWidth = 6;
-            this.DOBCus.Name = "DOBCus";
-            this.DOBCus.Width = 200;
-            // 
-            // genderCus
-            // 
-            this.genderCus.DataPropertyName = "genderCus";
-            this.genderCus.HeaderText = "genderCus";
-            this.genderCus.MinimumWidth = 6;
-            this.genderCus.Name = "genderCus";
-            this.genderCus.Width = 200;
-            // 
-            // usernameCus
-            // 
-            this.usernameCus.DataPropertyName = "usernameCus";
-            this.usernameCus.HeaderText = "usernameCus";
-            this.usernameCus.MinimumWidth = 6;
-            this.usernameCus.Name = "usernameCus";
-            this.usernameCus.Width = 200;
-            // 
-            // statusCus
-            // 
-            this.statusCus.DataPropertyName = "statusCus";
-            this.statusCus.HeaderText = "statusCus";
-            this.statusCus.MinimumWidth = 6;
-            this.statusCus.Name = "statusCus";
-            this.statusCus.Visible = false;
-            this.statusCus.Width = 125;
             // 
             // customerBindingSource3
             // 
@@ -1595,9 +1641,9 @@
             this.panelCus.Controls.Add(this.label49);
             this.panelCus.Controls.Add(this.label50);
             this.panelCus.Controls.Add(this.txtIDCus);
-            this.panelCus.Location = new System.Drawing.Point(20, 140);
+            this.panelCus.Location = new System.Drawing.Point(20, 236);
             this.panelCus.Name = "panelCus";
-            this.panelCus.Size = new System.Drawing.Size(1654, 301);
+            this.panelCus.Size = new System.Drawing.Size(1642, 301);
             this.panelCus.TabIndex = 53;
             this.panelCus.TabStop = false;
             this.panelCus.Text = "Customer details";
@@ -1607,7 +1653,7 @@
             this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox10.Controls.Add(this.radioMaleCus);
             this.groupBox10.Controls.Add(this.radioFemailCus);
-            this.groupBox10.Location = new System.Drawing.Point(1033, 94);
+            this.groupBox10.Location = new System.Drawing.Point(1021, 94);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(308, 79);
             this.groupBox10.TabIndex = 45;
@@ -1636,7 +1682,9 @@
             // dateDOBCus
             // 
             this.dateDOBCus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateDOBCus.Location = new System.Drawing.Point(1033, 35);
+            this.dateDOBCus.CustomFormat = "dd-MM-yyyy";
+            this.dateDOBCus.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateDOBCus.Location = new System.Drawing.Point(1021, 35);
             this.dateDOBCus.Name = "dateDOBCus";
             this.dateDOBCus.Size = new System.Drawing.Size(308, 22);
             this.dateDOBCus.TabIndex = 44;
@@ -1672,7 +1720,7 @@
             // txtEmailCus
             // 
             this.txtEmailCus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmailCus.Location = new System.Drawing.Point(1033, 232);
+            this.txtEmailCus.Location = new System.Drawing.Point(1021, 232);
             this.txtEmailCus.Name = "txtEmailCus";
             this.txtEmailCus.ReadOnly = true;
             this.txtEmailCus.Size = new System.Drawing.Size(308, 22);
@@ -1701,7 +1749,7 @@
             this.label37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label37.AutoSize = true;
             this.label37.ForeColor = System.Drawing.Color.Red;
-            this.label37.Location = new System.Drawing.Point(919, 212);
+            this.label37.Location = new System.Drawing.Point(907, 212);
             this.label37.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(0, 17);
@@ -1740,7 +1788,7 @@
             this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label41.AutoSize = true;
             this.label41.ForeColor = System.Drawing.Color.Red;
-            this.label41.Location = new System.Drawing.Point(1252, 43);
+            this.label41.Location = new System.Drawing.Point(1240, 43);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(0, 17);
@@ -1750,7 +1798,7 @@
             // 
             this.label42.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(894, 109);
+            this.label42.Location = new System.Drawing.Point(882, 109);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(0, 17);
             this.label42.TabIndex = 3;
@@ -1760,7 +1808,7 @@
             this.label43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label43.AutoSize = true;
             this.label43.ForeColor = System.Drawing.Color.Red;
-            this.label43.Location = new System.Drawing.Point(1183, 151);
+            this.label43.Location = new System.Drawing.Point(1171, 151);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(0, 17);
@@ -1770,7 +1818,7 @@
             // 
             this.label44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(912, 32);
+            this.label44.Location = new System.Drawing.Point(900, 32);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(87, 17);
             this.label44.TabIndex = 4;
@@ -1781,7 +1829,7 @@
             this.label45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label45.AutoSize = true;
             this.label45.ForeColor = System.Drawing.Color.Red;
-            this.label45.Location = new System.Drawing.Point(1266, 139);
+            this.label45.Location = new System.Drawing.Point(1254, 139);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(0, 17);
@@ -1791,7 +1839,7 @@
             // 
             this.label46.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(947, 232);
+            this.label46.Location = new System.Drawing.Point(935, 232);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(42, 17);
             this.label46.TabIndex = 5;
@@ -1802,7 +1850,7 @@
             this.label47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label47.AutoSize = true;
             this.label47.ForeColor = System.Drawing.Color.Red;
-            this.label47.Location = new System.Drawing.Point(1266, 191);
+            this.label47.Location = new System.Drawing.Point(1254, 191);
             this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(0, 17);
@@ -1812,7 +1860,7 @@
             // 
             this.label48.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(933, 136);
+            this.label48.Location = new System.Drawing.Point(921, 136);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(56, 17);
             this.label48.TabIndex = 6;
@@ -1823,7 +1871,7 @@
             this.label49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label49.AutoSize = true;
             this.label49.ForeColor = System.Drawing.Color.Red;
-            this.label49.Location = new System.Drawing.Point(1265, 146);
+            this.label49.Location = new System.Drawing.Point(1253, 146);
             this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(0, 17);
@@ -2021,11 +2069,184 @@
             this.productBindingSource4.DataMember = "Product";
             this.productBindingSource4.DataSource = this.cOFFEEDataSet5;
             // 
+            // btnReloadEmp
+            // 
+            this.btnReloadEmp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReloadEmp.Location = new System.Drawing.Point(1018, 29);
+            this.btnReloadEmp.Name = "btnReloadEmp";
+            this.btnReloadEmp.Size = new System.Drawing.Size(147, 42);
+            this.btnReloadEmp.TabIndex = 47;
+            this.btnReloadEmp.Text = "Reload";
+            this.btnReloadEmp.UseVisualStyleBackColor = true;
+            this.btnReloadEmp.Click += new System.EventHandler(this.btnReloadEmp_Click);
+            // 
+            // btnReloadCus
+            // 
+            this.btnReloadCus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReloadCus.Location = new System.Drawing.Point(1058, 41);
+            this.btnReloadCus.Name = "btnReloadCus";
+            this.btnReloadCus.Size = new System.Drawing.Size(147, 42);
+            this.btnReloadCus.TabIndex = 51;
+            this.btnReloadCus.Text = "Reload";
+            this.btnReloadCus.UseVisualStyleBackColor = true;
+            this.btnReloadCus.Click += new System.EventHandler(this.btnReloadCus_Click);
+            // 
+            // btnReload
+            // 
+            this.btnReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReload.Location = new System.Drawing.Point(1432, 38);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(149, 42);
+            this.btnReload.TabIndex = 46;
+            this.btnReload.Text = "Reload";
+            this.btnReload.UseVisualStyleBackColor = true;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
+            // IDEmployee
+            // 
+            this.IDEmployee.DataPropertyName = "IDEmployee";
+            this.IDEmployee.HeaderText = "IDEmployee";
+            this.IDEmployee.MinimumWidth = 6;
+            this.IDEmployee.Name = "IDEmployee";
+            this.IDEmployee.ReadOnly = true;
+            this.IDEmployee.Width = 125;
+            // 
+            // fullnameEmp
+            // 
+            this.fullnameEmp.DataPropertyName = "fullnameEmp";
+            this.fullnameEmp.HeaderText = "fullnameEmp";
+            this.fullnameEmp.MinimumWidth = 6;
+            this.fullnameEmp.Name = "fullnameEmp";
+            this.fullnameEmp.Width = 200;
+            // 
+            // usernameEmp
+            // 
+            this.usernameEmp.DataPropertyName = "usernameEmp";
+            this.usernameEmp.HeaderText = "usernameEmp";
+            this.usernameEmp.MinimumWidth = 6;
+            this.usernameEmp.Name = "usernameEmp";
+            this.usernameEmp.Width = 200;
+            // 
+            // phoneEmp
+            // 
+            this.phoneEmp.DataPropertyName = "phoneEmp";
+            this.phoneEmp.HeaderText = "phoneEmp";
+            this.phoneEmp.MinimumWidth = 6;
+            this.phoneEmp.Name = "phoneEmp";
+            this.phoneEmp.Width = 200;
+            // 
+            // emailEmp
+            // 
+            this.emailEmp.DataPropertyName = "emailEmp";
+            this.emailEmp.HeaderText = "emailEmp";
+            this.emailEmp.MinimumWidth = 6;
+            this.emailEmp.Name = "emailEmp";
+            this.emailEmp.Width = 200;
+            // 
+            // DOBEmp
+            // 
+            this.DOBEmp.DataPropertyName = "DOBEmp";
+            this.DOBEmp.HeaderText = "DOBEmp";
+            this.DOBEmp.MinimumWidth = 6;
+            this.DOBEmp.Name = "DOBEmp";
+            this.DOBEmp.Width = 200;
+            // 
+            // genderEmp
+            // 
+            this.genderEmp.DataPropertyName = "genderEmp";
+            this.genderEmp.HeaderText = "genderEmp";
+            this.genderEmp.MinimumWidth = 6;
+            this.genderEmp.Name = "genderEmp";
+            this.genderEmp.Width = 200;
+            // 
+            // position
+            // 
+            this.position.DataPropertyName = "position";
+            this.position.HeaderText = "position";
+            this.position.MinimumWidth = 6;
+            this.position.Name = "position";
+            this.position.Width = 200;
+            // 
+            // statusEmp
+            // 
+            this.statusEmp.DataPropertyName = "statusEmp";
+            this.statusEmp.HeaderText = "statusEmp";
+            this.statusEmp.MinimumWidth = 6;
+            this.statusEmp.Name = "statusEmp";
+            this.statusEmp.Visible = false;
+            this.statusEmp.Width = 125;
+            // 
+            // IDCustomer
+            // 
+            this.IDCustomer.DataPropertyName = "IDCustomer";
+            this.IDCustomer.HeaderText = "IDCustomer";
+            this.IDCustomer.MinimumWidth = 6;
+            this.IDCustomer.Name = "IDCustomer";
+            this.IDCustomer.ReadOnly = true;
+            this.IDCustomer.Width = 125;
+            // 
+            // fullnameCus
+            // 
+            this.fullnameCus.DataPropertyName = "fullnameCus";
+            this.fullnameCus.HeaderText = "fullnameCus";
+            this.fullnameCus.MinimumWidth = 6;
+            this.fullnameCus.Name = "fullnameCus";
+            this.fullnameCus.Width = 200;
+            // 
+            // usernameCus
+            // 
+            this.usernameCus.DataPropertyName = "usernameCus";
+            this.usernameCus.HeaderText = "usernameCus";
+            this.usernameCus.MinimumWidth = 6;
+            this.usernameCus.Name = "usernameCus";
+            this.usernameCus.Width = 200;
+            // 
+            // phoneCus
+            // 
+            this.phoneCus.DataPropertyName = "phoneCus";
+            this.phoneCus.HeaderText = "phoneCus";
+            this.phoneCus.MinimumWidth = 6;
+            this.phoneCus.Name = "phoneCus";
+            this.phoneCus.Width = 200;
+            // 
+            // emailCus
+            // 
+            this.emailCus.DataPropertyName = "emailCus";
+            this.emailCus.HeaderText = "emailCus";
+            this.emailCus.MinimumWidth = 6;
+            this.emailCus.Name = "emailCus";
+            this.emailCus.Width = 200;
+            // 
+            // DOBCus
+            // 
+            this.DOBCus.DataPropertyName = "DOBCus";
+            this.DOBCus.HeaderText = "DOBCus";
+            this.DOBCus.MinimumWidth = 6;
+            this.DOBCus.Name = "DOBCus";
+            this.DOBCus.Width = 200;
+            // 
+            // genderCus
+            // 
+            this.genderCus.DataPropertyName = "genderCus";
+            this.genderCus.HeaderText = "genderCus";
+            this.genderCus.MinimumWidth = 6;
+            this.genderCus.Name = "genderCus";
+            this.genderCus.Width = 200;
+            // 
+            // statusCus
+            // 
+            this.statusCus.DataPropertyName = "statusCus";
+            this.statusCus.HeaderText = "statusCus";
+            this.statusCus.MinimumWidth = 6;
+            this.statusCus.Name = "statusCus";
+            this.statusCus.Visible = false;
+            this.statusCus.Width = 125;
+            // 
             // Product
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1723, 876);
+            this.ClientSize = new System.Drawing.Size(1726, 966);
             this.Controls.Add(this.tabControlProduct);
             this.Name = "Product";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -2033,6 +2254,8 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Product_Load);
             this.tabPage2.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
@@ -2049,6 +2272,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource3)).EndInit();
             this.tabControlProduct.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.Search.ResumeLayout(false);
+            this.Search.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbProduct)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -2060,6 +2285,8 @@
             this.panel3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
+            this.groupBox13.ResumeLayout(false);
+            this.groupBox13.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.groupBox7.ResumeLayout(false);
@@ -2196,14 +2423,6 @@
         private System.Windows.Forms.BindingSource employeeBindingSource6;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtUsername;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDCustomer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameCus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneCus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailCus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DOBCus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderCus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameCus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusCus;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Panel panel1;
@@ -2253,15 +2472,6 @@
         private System.Windows.Forms.DataGridView tbProduct;
         private System.Windows.Forms.BindingSource productBindingSource4;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDEmployee;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameEmp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneEmp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailEmp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DOBEmp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn genderEmp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameEmp;
-        private System.Windows.Forms.DataGridViewTextBoxColumn position;
-        private System.Windows.Forms.DataGridViewTextBoxColumn statusEmp;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDProduct1;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDCategory1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameProduct1;
@@ -2276,6 +2486,41 @@
         private System.Windows.Forms.Label lblCheckUsername;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblCheckPhone;
+        private System.Windows.Forms.GroupBox Search;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.GroupBox groupBox13;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Button btnSearchFullname;
+        private System.Windows.Forms.TextBox txtsSearchFullname;
+        private System.Windows.Forms.Button btnSearchCategory;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TextBox txtSearchName;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Button btnSearrchFullnameCus;
+        private System.Windows.Forms.TextBox txtSearchFullnameCus;
+        private System.Windows.Forms.ComboBox cbbSearchCategory;
+        private System.Windows.Forms.Button btnReloadEmp;
+        private System.Windows.Forms.Button btnReloadCus;
+        private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDEmployee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DOBEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn position;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusEmp;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDCustomer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullnameCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn usernameCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DOBCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn genderCus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn statusCus;
     }
 }
 
