@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Management.Models
@@ -82,70 +83,38 @@ namespace Management.Models
             con.Close();
             return dt;
         }
-
-
-        public bool addProduct(products pro)
+        /**
+         * search by name product
+         * 
+         * */
+        public DataTable searchByNameProduct(string name)
         {
-
-
-            string sql = "insert into Product(nameProduct, available,imageUrl, price,description,IDCategory, photo) values (@nameProduct,@available,@imageUrl,@price,@description,@IDCategory,@photo)";
-            //tao ket noi toi sql
-            conn = db.GetConnection();
-
-            try
-            {
-                cmd = new SqlCommand(sql, conn);
-                conn.Open();
-                cmd.Parameters.Add("@nameProduct", SqlDbType.NVarChar).Value = pro.NameProduct;
-                cmd.Parameters.Add("@available", SqlDbType.NVarChar).Value = pro.InventoryProduct;
-                cmd.Parameters.Add("@imageUrl", SqlDbType.NVarChar).Value = pro.Image;
-                cmd.Parameters.Add("@price", SqlDbType.Float).Value = pro.Price;
-                cmd.Parameters.Add("@description", SqlDbType.Float).Value = pro.Description;
-                cmd.Parameters.Add("@IDCategory", SqlDbType.Int).Value = pro.IdCatogory;
-                cmd.Parameters.Add("@photo", SqlDbType.Image).Value = pro.Photo;
-                cmd.ExecuteNonQuery();
-                conn.Close();
-            }
-            catch (Exception e)
-            {
-                return false;
-            }
-            return true;
-
-        }
-
-        public bool delete(products pro)
-        {
-            string sql = "delete Product where IDProduct=@IDProduct";
-            cmd = new SqlCommand(sql, conn);
-            
+            string sql;
+            sql = "select * from Product where nameProduct like'%"+name+"%'";
             SqlConnection con = db.GetConnection();
-            try
-            {                
-                conn.Open();
-                cmd.Parameters.Add("@IDProduct", SqlDbType.Int).Value = pro.IdProduct;
-                cmd.ExecuteNonQuery();
-                conn.Close();
-            }
-
-            catch (Exception e)
-            {
-                return false;
-            }
-            return true;
-
-        }
-        public void update(products pro)
-        {
-            string sql = "update Product set nameProduct=@nameProduct, available=@available,imageUrl=@imageUrl, price=@price,description=@description,IDCategory=@IDCategory,photo=@photo where IDProduct=@IDProduct";
-            //tao ket noi toi sql
-            SqlConnection con = db.GetConnection();
-            SqlCommand cmd = new SqlCommand(sql, con);
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);//SqldataAdapter thuc hien đở dữ liệu và data set, cập nhật database, SqlCommand thực thi câu lệnh sql insert update delete
             con.Open();
-            cmd.ExecuteNonQuery();
-            cmd.Dispose();
+            DataTable dt = new DataTable();
+            da.Fill(dt);//Fill dung để đổ dữ liệu vào dataSet
             con.Close();
-
+            return dt;
         }
+        /**
+        * search by category
+        * 
+        * */
+        public DataTable searchByCategory(int category)
+        {
+            string sql;
+            sql = "select * from Product where IDCategory like'" + category + "'";
+            SqlConnection con = db.GetConnection();
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);//SqldataAdapter thuc hien đở dữ liệu và data set, cập nhật database, SqlCommand thực thi câu lệnh sql insert update delete
+            con.Open();
+            DataTable dt = new DataTable();
+            da.Fill(dt);//Fill dung để đổ dữ liệu vào dataSet
+            con.Close();
+            return dt;
+        }
+
     }
 }

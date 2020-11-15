@@ -61,5 +61,22 @@ namespace Management.Models
             con.Close();
             return dt;
         }
+
+        /**
+        * search by fullname customer
+        * 
+        * */
+        public DataTable searchByFullnameCus(string name)
+        {
+            string sql;
+            sql = "select * from Customer where fullnameCus like'%" + name + "%' or usernameCus like '%" + name + "%'";
+            SqlConnection con = db.GetConnection();
+            SqlDataAdapter da = new SqlDataAdapter(sql, con);//SqldataAdapter thuc hien đở dữ liệu và data set, cập nhật database, SqlCommand thực thi câu lệnh sql insert update delete
+            con.Open();
+            DataTable dt = new DataTable();
+            da.Fill(dt);//Fill dung để đổ dữ liệu vào dataSet
+            con.Close();
+            return dt;
+        }
     }
 }
