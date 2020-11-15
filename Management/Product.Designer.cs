@@ -30,12 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -196,6 +190,22 @@
             this.statusCus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.customerBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.panelCus = new System.Windows.Forms.GroupBox();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.label35 = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.label38 = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.label62 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label59 = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label60 = new System.Windows.Forms.Label();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.label36 = new System.Windows.Forms.Label();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.label63 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.radioMaleCus = new System.Windows.Forms.RadioButton();
             this.radioFemailCus = new System.Windows.Forms.RadioButton();
@@ -204,7 +214,6 @@
             this.txtPhoneCus = new System.Windows.Forms.TextBox();
             this.txtEmailCus = new System.Windows.Forms.TextBox();
             this.txtFullNameCus = new System.Windows.Forms.TextBox();
-            this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
@@ -219,20 +228,12 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.productTableAdapter = new Management.COFFEEDataSet2TableAdapters.ProductTableAdapter();
             this.employeeTableAdapter = new Management.COFFEEDataSet3TableAdapters.EmployeeTableAdapter();
-            this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter1 = new Management.COFFEEDataSet4TableAdapters.EmployeeTableAdapter();
             this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.customerTableAdapter = new Management.COFFEEDataSet4TableAdapters.CustomerTableAdapter();
             this.cOFFEEDataSet4BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cOFFEEDataSet2 = new Management.COFFEEDataSet2();
-            this.cOFFEEDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.employeeBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
-            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.cOFFEEDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productTableAdapter1 = new Management.COFFEEDataSet5TableAdapters.ProductTableAdapter();
             this.employeeBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
             this.employeeTableAdapter2 = new Management.COFFEEDataSet5TableAdapters.EmployeeTableAdapter();
@@ -251,21 +252,17 @@
             this.IDProduct = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label52 = new System.Windows.Forms.Label();
             this.productBindingSource4 = new System.Windows.Forms.BindingSource(this.components);
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label59 = new System.Windows.Forms.Label();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.label60 = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.label63 = new System.Windows.Forms.Label();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.label35 = new System.Windows.Forms.Label();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.label38 = new System.Windows.Forms.Label();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label61 = new System.Windows.Forms.Label();
-            this.label62 = new System.Windows.Forms.Label();
+            this.employeeBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cOFFEEDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.employeeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.productBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.cOFFEEDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -318,32 +315,35 @@
             ((System.ComponentModel.ISupportInitialize)(this.tbCustomer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource3)).BeginInit();
             this.panelCus.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel25.SuspendLayout();
             this.groupBox10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource4)).BeginInit();
-            this.panel14.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel24.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel27.SuspendLayout();
-            this.panel28.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPage2
@@ -367,6 +367,7 @@
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.label51);
             this.panel2.Location = new System.Drawing.Point(25, 19);
@@ -1315,14 +1316,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbProduct.AutoGenerateColumns = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tbProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.tbProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDProduct1,
@@ -1335,24 +1328,8 @@
             this.imageUrl1,
             this.photo1});
             this.tbProduct.DataSource = this.productBindingSource3;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tbProduct.DefaultCellStyle = dataGridViewCellStyle2;
             this.tbProduct.Location = new System.Drawing.Point(16, 34);
             this.tbProduct.Name = "tbProduct";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tbProduct.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.tbProduct.RowHeadersWidth = 51;
             this.tbProduct.RowTemplate.Height = 100;
             this.tbProduct.Size = new System.Drawing.Size(1359, 291);
@@ -1827,6 +1804,7 @@
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel3.Controls.Add(this.pictureBox6);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.label53);
             this.panel3.Location = new System.Drawing.Point(31, 20);
@@ -1956,6 +1934,7 @@
             this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Controls.Add(this.pictureBox3);
             this.panel1.Controls.Add(this.label34);
             this.panel1.Location = new System.Drawing.Point(26, 20);
@@ -2117,14 +2096,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbCustomer.AutoGenerateColumns = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tbCustomer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.tbCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbCustomer.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IDCustomer,
@@ -2136,24 +2107,8 @@
             this.genderCus,
             this.statusCus});
             this.tbCustomer.DataSource = this.customerBindingSource3;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tbCustomer.DefaultCellStyle = dataGridViewCellStyle5;
             this.tbCustomer.Location = new System.Drawing.Point(18, 30);
             this.tbCustomer.Name = "tbCustomer";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tbCustomer.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.tbCustomer.RowHeadersWidth = 51;
             this.tbCustomer.RowTemplate.Height = 100;
             this.tbCustomer.Size = new System.Drawing.Size(1354, 326);
@@ -2268,6 +2223,174 @@
             this.panelCus.TabStop = false;
             this.panelCus.Text = "Customer details";
             // 
+            // panel26
+            // 
+            this.panel26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel26.BackColor = System.Drawing.Color.LightCoral;
+            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel26.Controls.Add(this.label35);
+            this.panel26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel26.Location = new System.Drawing.Point(833, 232);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(140, 46);
+            this.panel26.TabIndex = 64;
+            // 
+            // label35
+            // 
+            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label35.Location = new System.Drawing.Point(34, 8);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(57, 24);
+            this.label35.TabIndex = 5;
+            this.label35.Text = "Email";
+            // 
+            // panel27
+            // 
+            this.panel27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel27.BackColor = System.Drawing.Color.LightCoral;
+            this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel27.Controls.Add(this.label38);
+            this.panel27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel27.Location = new System.Drawing.Point(833, 133);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(140, 46);
+            this.panel27.TabIndex = 65;
+            // 
+            // label38
+            // 
+            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(33, 7);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(74, 24);
+            this.label38.TabIndex = 6;
+            this.label38.Text = "Gender";
+            // 
+            // panel28
+            // 
+            this.panel28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel28.BackColor = System.Drawing.Color.LightCoral;
+            this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel28.Controls.Add(this.label40);
+            this.panel28.Location = new System.Drawing.Point(833, 31);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(140, 46);
+            this.panel28.TabIndex = 66;
+            // 
+            // label40
+            // 
+            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(14, 8);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(110, 24);
+            this.label40.TabIndex = 4;
+            this.label40.Text = "Date of Birth";
+            // 
+            // label61
+            // 
+            this.label61.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label61.AutoSize = true;
+            this.label61.ForeColor = System.Drawing.Color.Red;
+            this.label61.Location = new System.Drawing.Point(830, 231);
+            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(0, 20);
+            this.label61.TabIndex = 63;
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(761, 128);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(0, 20);
+            this.label62.TabIndex = 62;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.LightCoral;
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel14.Controls.Add(this.label59);
+            this.panel14.Location = new System.Drawing.Point(183, 99);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(140, 46);
+            this.panel14.TabIndex = 58;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(21, 10);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(97, 24);
+            this.label59.TabIndex = 1;
+            this.label59.Text = "Full Name";
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.LightCoral;
+            this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel19.Controls.Add(this.label60);
+            this.panel19.Location = new System.Drawing.Point(183, 166);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(140, 46);
+            this.panel19.TabIndex = 59;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label60.Location = new System.Drawing.Point(30, 10);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(66, 24);
+            this.label60.TabIndex = 2;
+            this.label60.Text = "Phone";
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.LightCoral;
+            this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel24.Controls.Add(this.label36);
+            this.panel24.Location = new System.Drawing.Point(183, 31);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(140, 46);
+            this.panel24.TabIndex = 60;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label36.Location = new System.Drawing.Point(13, 12);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(113, 24);
+            this.label36.TabIndex = 0;
+            this.label36.Text = "ID Customer";
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.LightCoral;
+            this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel25.Controls.Add(this.label63);
+            this.panel25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel25.Location = new System.Drawing.Point(183, 232);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(140, 46);
+            this.panel25.TabIndex = 57;
+            // 
+            // label63
+            // 
+            this.label63.AutoEllipsis = true;
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(21, 8);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(97, 24);
+            this.label63.TabIndex = 48;
+            this.label63.Text = "Username";
+            // 
             // groupBox10
             // 
             this.groupBox10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -2347,16 +2470,6 @@
             this.txtFullNameCus.ReadOnly = true;
             this.txtFullNameCus.Size = new System.Drawing.Size(308, 27);
             this.txtFullNameCus.TabIndex = 14;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(13, 12);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(113, 24);
-            this.label36.TabIndex = 0;
-            this.label36.Text = "ID Customer";
             // 
             // label37
             // 
@@ -2499,10 +2612,6 @@
             this.cOFFEEDataSet4BindingSource.DataSource = this.cOFFEEDataSet4;
             this.cOFFEEDataSet4BindingSource.Position = 0;
             // 
-            // productBindingSource
-            // 
-            this.productBindingSource.DataMember = "Product";
-            // 
             // cOFFEEDataSet2
             // 
             this.cOFFEEDataSet2.DataSetName = "COFFEEDataSet2";
@@ -2635,163 +2744,45 @@
             this.productBindingSource4.DataMember = "Product";
             this.productBindingSource4.DataSource = this.cOFFEEDataSet5;
             // 
-            // panel14
+            // productBindingSource
             // 
-            this.panel14.BackColor = System.Drawing.Color.LightCoral;
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel14.Controls.Add(this.label59);
-            this.panel14.Location = new System.Drawing.Point(183, 99);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(140, 46);
-            this.panel14.TabIndex = 58;
+            this.productBindingSource.DataMember = "Product";
             // 
-            // label59
+            // pictureBox4
             // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(21, 10);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(97, 24);
-            this.label59.TabIndex = 1;
-            this.label59.Text = "Full Name";
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(1531, 17);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(67, 50);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 67;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // panel19
+            // pictureBox5
             // 
-            this.panel19.BackColor = System.Drawing.Color.LightCoral;
-            this.panel19.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel19.Controls.Add(this.label60);
-            this.panel19.Location = new System.Drawing.Point(183, 166);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(140, 46);
-            this.panel19.TabIndex = 59;
+            this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(1525, 17);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(67, 50);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 68;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // label60
+            // pictureBox6
             // 
-            this.label60.AutoSize = true;
-            this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(30, 10);
-            this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(66, 24);
-            this.label60.TabIndex = 2;
-            this.label60.Text = "Phone";
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.LightCoral;
-            this.panel24.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel24.Controls.Add(this.label36);
-            this.panel24.Location = new System.Drawing.Point(183, 31);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(140, 46);
-            this.panel24.TabIndex = 60;
-            // 
-            // panel25
-            // 
-            this.panel25.BackColor = System.Drawing.Color.LightCoral;
-            this.panel25.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel25.Controls.Add(this.label63);
-            this.panel25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel25.Location = new System.Drawing.Point(183, 232);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(140, 46);
-            this.panel25.TabIndex = 57;
-            // 
-            // label63
-            // 
-            this.label63.AutoEllipsis = true;
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(21, 8);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(97, 24);
-            this.label63.TabIndex = 48;
-            this.label63.Text = "Username";
-            // 
-            // panel26
-            // 
-            this.panel26.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel26.BackColor = System.Drawing.Color.LightCoral;
-            this.panel26.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel26.Controls.Add(this.label35);
-            this.panel26.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel26.Location = new System.Drawing.Point(833, 232);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(140, 46);
-            this.panel26.TabIndex = 64;
-            // 
-            // label35
-            // 
-            this.label35.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(34, 8);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(57, 24);
-            this.label35.TabIndex = 5;
-            this.label35.Text = "Email";
-            // 
-            // panel27
-            // 
-            this.panel27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel27.BackColor = System.Drawing.Color.LightCoral;
-            this.panel27.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel27.Controls.Add(this.label38);
-            this.panel27.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel27.Location = new System.Drawing.Point(833, 133);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(140, 46);
-            this.panel27.TabIndex = 65;
-            // 
-            // label38
-            // 
-            this.label38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(33, 7);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(74, 24);
-            this.label38.TabIndex = 6;
-            this.label38.Text = "Gender";
-            // 
-            // panel28
-            // 
-            this.panel28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel28.BackColor = System.Drawing.Color.LightCoral;
-            this.panel28.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel28.Controls.Add(this.label40);
-            this.panel28.Location = new System.Drawing.Point(833, 31);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(140, 46);
-            this.panel28.TabIndex = 66;
-            // 
-            // label40
-            // 
-            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(14, 8);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(110, 24);
-            this.label40.TabIndex = 4;
-            this.label40.Text = "Date of Birth";
-            // 
-            // label61
-            // 
-            this.label61.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label61.AutoSize = true;
-            this.label61.ForeColor = System.Drawing.Color.Red;
-            this.label61.Location = new System.Drawing.Point(830, 231);
-            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(0, 20);
-            this.label61.TabIndex = 63;
-            // 
-            // label62
-            // 
-            this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(761, 128);
-            this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(0, 20);
-            this.label62.TabIndex = 62;
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(1513, 16);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(67, 50);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox6.TabIndex = 68;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // Product
             // 
@@ -2883,26 +2874,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource3)).EndInit();
             this.panelCus.ResumeLayout(false);
             this.panelCus.PerformLayout();
-            this.groupBox10.ResumeLayout(false);
-            this.groupBox10.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource4)).EndInit();
+            this.panel26.ResumeLayout(false);
+            this.panel26.PerformLayout();
+            this.panel27.ResumeLayout(false);
+            this.panel27.PerformLayout();
+            this.panel28.ResumeLayout(false);
+            this.panel28.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.panel19.ResumeLayout(false);
@@ -2911,12 +2888,29 @@
             this.panel24.PerformLayout();
             this.panel25.ResumeLayout(false);
             this.panel25.PerformLayout();
-            this.panel26.ResumeLayout(false);
-            this.panel26.PerformLayout();
-            this.panel27.ResumeLayout(false);
-            this.panel27.PerformLayout();
-            this.panel28.ResumeLayout(false);
-            this.panel28.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet4BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet2BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOFFEEDataSet1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -3153,6 +3147,9 @@
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Panel panel25;
         private System.Windows.Forms.Label label63;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 
