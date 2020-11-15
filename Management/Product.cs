@@ -108,6 +108,8 @@ namespace Management
             lblEmail.Text = "";
             lblCheckPhone.Text = "";
             cbbCategory.SelectedIndex = -1;
+            txtSearchName.Text = "";
+            cbbSearchCategory.SelectedIndex = -1;
             //refresh employee
             txtIDEmp.Text = "";
             txtFullname.Text = "";
@@ -123,6 +125,8 @@ namespace Management
             txtUsername.Enabled = true;
             lblEmail.Visible = false;//an thong bao loi email
             lblCheckPhone.Visible = false;//an thong bao loi phone
+            panelPassword.Visible = true;
+            txtsSearchFullname.Text = "";
             //refresh customer
             txtIDCus.Text = "";
             txtFullNameCus.Text = "";
@@ -132,7 +136,7 @@ namespace Management
             txtUsernameCus.Enabled = true;
             radioFemailCus.Checked = false;
             radioMaleCus.Checked = false;
-
+            txtSearchFullnameCus.Text = "";
         }
 
         /**
@@ -298,6 +302,7 @@ namespace Management
 
         private void tbEmployee_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            panelPassword.Visible = false;
             checkUpdateOrAdd = "update";
             lblCheckUsername.Text = "";
             txtUsername.Enabled = false;
@@ -504,7 +509,7 @@ namespace Management
             }
             else
             {
-                lblEmail.Text = "Email invalid. Ex hoahong@gmail.com";
+                lblEmail.Text = "Email invalid. Ex: hong@gmail.com";
                 lblEmail.ForeColor = System.Drawing.Color.Red;
                 excuteEmail = false;
             }
@@ -598,5 +603,7 @@ namespace Management
         {
             tbCustomer.DataSource = cusList.searchByFullnameCus(txtSearchFullnameCus.Text);
         }
+
+       
     }
 }
