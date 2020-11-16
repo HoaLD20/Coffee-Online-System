@@ -29,6 +29,9 @@
     <link rel="stylesheet" href="~/Content/css/flaticon.css">
     <link rel="stylesheet" href="~/Content/css/icomoon.css">
     <link rel="stylesheet" href="~/Content/css/style.css">
+    <style>
+
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -56,6 +59,26 @@
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
                     <li class="nav-item "><a href="@Url.Action("Login", "HomePage")" class="nav-link">Login</a></li>
                     <!-- <li class="nav-item cart"><a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li> -->
+                    <div class="search hidden-sm hidden-xs">
+                        <div class="">
+                            @using (Html.BeginForm("SearchResult", "Search"))
+                            {
+                            <div class="form-search-controls">
+                                <input type="text" name="txtSearch" id="txtsearch" placeholder="Search..." />
+                                <button class="btn btn-primary" title="Search" type="submit" id="btnsearch" value="Search">Search</button>
+                                <select name="lbgroup" id="lbgroup" class="mdb-select md-form">
+                                    <option value="0" selected="selected">ALL</option>
+                                    <option class="option-1" value="1">PRODUCT</option>
+                                    <option class="option-1" value="2">CATEGORY</option>
+                                </select>
+                             
+                            </div>
+                              
+                                
+                            }
+
+                        </div>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -87,11 +110,12 @@
                     <h2 class="mb-4">Our Story</h2>
                 </div>
                 <div>
-                    <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+                    <p>Employees at the company Process Impact presently spend an average of 65 minutes per day going to the cafeteria to select, purchase, and eat lunch. About 20 minutes of this time is spent walking to and from the cafeteria, selecting their meals, and paying by cash or credit card. When employees go out for lunch, they spend an average of 90 minutes off-site. Some employees phone the cafeteria in advance to order a meal to be ready for them to pick up. Employees don’t always get the selections they want because the cafeteria runs out of certain items. The cafeteria wastes a significant quantity of food that is not purchased and must be thrown away. These same issues apply to breakfast and supper, although far fewer employees use the cafeteria for those meals than for lunch.</p>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section class="ftco-section img" id="ftco-testimony" style="background-image: url(/Content/images/bg_1.jpg);" data-stellar-background-ratio="0.5">
         <div class="overlay"></div>
@@ -106,74 +130,75 @@
         </div>
         <div class="container-wrap">
             <div class="row d-flex no-gutters">
-                <div class="col-lg align-self-sm-end">
+                <div class="col-lg align-self-sm-end ftco-animate">
                     <div class="testimony">
                         <blockquote>
-                            <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.&rdquo;</p>
+                            <p>&ldquo;Coffee is a beverage that puts one to sleep when not drank.&rdquo;</p>
                         </blockquote>
                         <div class="author d-flex mt-4">
                             <div class="image mr-3 align-self-center">
                                 <img src="images/person_1.jpg" alt="">
                             </div>
-                            <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
+                            <div class="name align-self-center">Collection <span class="position"></span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg align-self-sm-end">
                     <div class="testimony overlay">
                         <blockquote>
-                            <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&rdquo;</p>
+                            <p>&ldquo;I have measured out my life with coffee spoons.&rdquo;</p>
                         </blockquote>
                         <div class="author d-flex mt-4">
                             <div class="image mr-3 align-self-center">
                                 <img src="images/person_2.jpg" alt="">
                             </div>
-                            <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
+                            <div class="name align-self-center">Collection <span class="position"></span></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg align-self-sm-end">
+                <div class="col-lg align-self-sm-end ftco-animate">
                     <div class="testimony">
                         <blockquote>
-                            <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small  line of blind text by the name. &rdquo;</p>
+                            <p>&ldquo;Good communication is just as stimulating as black coffee, and just as hard to sleep after. &rdquo;</p>
                         </blockquote>
                         <div class="author d-flex mt-4">
                             <div class="image mr-3 align-self-center">
                                 <img src="images/person_3.jpg" alt="">
                             </div>
-                            <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
+                            <div class="name align-self-center">Collection  <span class="position"></span></div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg align-self-sm-end">
                     <div class="testimony overlay">
                         <blockquote>
-                            <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however.&rdquo;</p>
+                            <p>&ldquo;Way too much coffee. But if it weren't for the coffee, I'd have no identifiable personality whatsoever.&rdquo;</p>
                         </blockquote>
                         <div class="author d-flex mt-4">
                             <div class="image mr-3 align-self-center">
                                 <img src="images/person_2.jpg" alt="">
                             </div>
-                            <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
+                            <div class="name align-self-center">Collection <span class="position"></span></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg align-self-sm-end">
+                <div class="col-lg align-self-sm-end ftco-animate">
                     <div class="testimony">
                         <blockquote>
-                            <p>&ldquo;Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small  line of blind text by the name. &rdquo;</p>
+                            <p>&ldquo;I never drink coffee at lunch. I find it keeps me awake for the afternoon. &rdquo;</p>
                         </blockquote>
                         <div class="author d-flex mt-4">
                             <div class="image mr-3 align-self-center">
                                 <img src="images/person_3.jpg" alt="">
                             </div>
-                            <div class="name align-self-center">Louise Kelly <span class="position">Illustrator Designer</span></div>
+                            <div class="name align-self-center">Collection<span class="position"></span></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <section class="ftco-section">
         <div class="container">
