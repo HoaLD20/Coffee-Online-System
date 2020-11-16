@@ -142,58 +142,23 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
-    <Compile Include="Controllers\EmployeeController.cs" />
-    <Compile Include="Controllers\productsController.cs" />
-    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="DAO\CartDao.cs" />
+    <Compile Include="DAO\CustomerDao.cs" />
+    <Compile Include="DAO\ProductDao.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Account.cs">
-      <DependentUpon>coffee.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Category.cs">
-      <DependentUpon>coffee.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\coffee.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>coffee.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\coffee.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>coffee.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\coffee.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>coffee.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Customer.cs">
-      <DependentUpon>coffee.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\AccountandCustomer.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Coffee.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DBConection.cs" />
-    <Compile Include="Models\Employee.cs">
-      <DependentUpon>coffee.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Order.cs">
-      <DependentUpon>coffee.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\OrderDetail.cs">
-      <DependentUpon>coffee.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Payment.cs">
-      <DependentUpon>coffee.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\Product.cs">
-      <DependentUpon>coffee.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\products.cs" />
-    <Compile Include="Models\searchdao.cs" />
-    <Compile Include="Models\sysdiagram.cs">
-      <DependentUpon>coffee.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Models\Employee.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
+    <Compile Include="Models\Payment.cs" />
+    <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -233,9 +198,17 @@
     <Content Include="Content\images\bg_2.jpg" />
     <Content Include="Content\images\bg_3.jpg" />
     <Content Include="Content\images\bg_4.jpg" />
+    <Content Include="Content\images\BLACKTEWITHMILK.jpg" />
     <Content Include="Content\images\burger-1.jpg" />
     <Content Include="Content\images\burger-2.jpg" />
     <Content Include="Content\images\burger-3.jpg" />
+    <Content Include="Content\images\ca-phe-da-xay.jpg" />
+    <Content Include="Content\images\CAPPUCCINOCOFFEE.jpg" />
+    <Content Include="Content\images\CaramelCoffee.jpg" />
+    <Content Include="Content\images\CARAMELICEBLENDED.jpg" />
+    <Content Include="Content\images\cheesecake.jpg" />
+    <Content Include="Content\images\CHOCOLATEICEBLENDED.jpg" />
+    <Content Include="Content\images\cupcake.jpg" />
     <Content Include="Content\images\dessert-1.jpg" />
     <Content Include="Content\images\dessert-2.jpg" />
     <Content Include="Content\images\dessert-3.jpg" />
@@ -260,17 +233,22 @@
     <Content Include="Content\images\drink-7.jpg" />
     <Content Include="Content\images\drink-8.jpg" />
     <Content Include="Content\images\drink-9.jpg" />
+    <Content Include="Content\images\Banhmi.jpg" />
     <Content Include="Content\images\gallery-1.jpg" />
     <Content Include="Content\images\gallery-2.jpg" />
     <Content Include="Content\images\gallery-3.jpg" />
     <Content Include="Content\images\gallery-4.jpg" />
+    <Content Include="Content\images\GREENTEA.jpg" />
     <Content Include="Content\images\image_1.jpg" />
     <Content Include="Content\images\image_2.jpg" />
     <Content Include="Content\images\image_3.jpg" />
     <Content Include="Content\images\image_4.jpg" />
     <Content Include="Content\images\image_5.jpg" />
     <Content Include="Content\images\image_6.jpg" />
+    <Content Include="Content\images\lattee.jpg" />
+    <Content Include="Content\images\lemon-iced-tea.jpg" />
     <Content Include="Content\images\loc.png" />
+    <Content Include="Content\images\LONGANTEA.jpg" />
     <Content Include="Content\images\menu-1.jpg" />
     <Content Include="Content\images\menu-2.jpg" />
     <Content Include="Content\images\menu-3.jpg" />
@@ -278,6 +256,10 @@
     <Content Include="Content\images\person_2.jpg" />
     <Content Include="Content\images\person_3.jpg" />
     <Content Include="Content\images\person_4.jpg" />
+    <Content Include="Content\images\socolacoffees.jpg" />
+    <Content Include="Content\images\strawberry.jpg" />
+    <Content Include="Content\images\tiramisu.jpg" />
+    <Content Include="Content\images\whitecoffeeisceblended.jpg" />
     <Content Include="Content\js\aos.js" />
     <Content Include="Content\js\bootstrap-datepicker.js" />
     <Content Include="Content\js\bootstrap.min.js" />
@@ -321,16 +303,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\coffee.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>coffee.edmx</DependentUpon>
-      <LastGenOutput>coffee.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\coffee.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>coffee.edmx</DependentUpon>
-      <LastGenOutput>coffee.cs</LastGenOutput>
-    </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Content\css\.DS_Store" />
@@ -457,13 +429,6 @@
     <Content Include="Content\scss\bootstrap\_utilities.scss" />
     <Content Include="Content\scss\bootstrap\_variables.scss" />
     <Content Include="Content\scss\style.scss" />
-    <EntityDeploy Include="Models\coffee.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>coffee.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\coffee.edmx.diagram">
-      <DependentUpon>coffee.edmx</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -506,8 +471,7 @@
     <Content Include="Views\HomePage\Contact.cshtml" />
     <Content Include="Views\HomePage\Login.cshtml" />
     <Content Include="Views\HomePage\Register.cshtml" />
-    <Content Include="Views\Search\SearchResult.cshtml" />
-    <Content Include="Views\Search\searchNull.cshtml" />
+    <Content Include="Views\HomePage\Menu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

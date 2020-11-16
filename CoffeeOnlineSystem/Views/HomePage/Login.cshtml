@@ -2,6 +2,8 @@
     ViewBag.Title = "Login";
     Layout = null;
 }
+@model CoffeeOnlineSystem.Models.Account
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -156,10 +158,17 @@
             transition: all 0.8s;
             transition: all 0.8s
         }
+
+        .validation-summary-errors ul {
+            list-style: none;
+            margin-left: -40px
+        }
     </style>
+
 
 </head>
 <body>
+
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
             <a class="navbar-brand" href="@Url.Action("Home", "HomePage")">Coffee<small>Blend</small></a>
@@ -168,11 +177,11 @@
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item "><a href="@Url.Action("Home", "HomePage")" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="@Url.Action("Home", "HomePage")" class="nav-link">Home</a></li>
+                    <li class="nav-item "><a href="@Url.Action("Menu", "HomePage")" class="nav-link">Menu</a></li>
                     <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="@Url.Action("About", "HomePage")" class="nav-link">About</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
@@ -183,29 +192,17 @@
                         </div>
                     </li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="nav-item active"><a href="@Url.Action("Login","HomePage")" class="nav-link">Login</a></li>
-                    <div class="search hidden-sm hidden-xs">
-                        <div class="">
-                            @using (Html.BeginForm("SearchResult", "Search"))
-                            {
-                                <div class="form-search-controls">
-                                    <input type="text" name="txtSearch" id="txtsearch" placeholder="Search..." />
-                                    <button class="btn btn-primary" title="Search" type="submit" id="btnsearch" value="Search">Search</button>
-                                    <select name="lbgroup" id="lbgroup" class="mdb-select md-form">
-                                        <option value="0" selected="selected">ALL</option>
-                                        <option class="option-1" value="1">PRODUCT</option>
-                                        <option class="option-1" value="2">CATEGORY</option>
-                                    </select>
-                                </div>
+                    @{ var a = @Session["login"]; }
+                    @if (a != null)
+                    {
 
+                    }
+                    else
+                    {
+                        <li class="nav-item active"><a href="@Url.Action("Login", "HomePage")" class="nav-link">Login</a></li>
+                    }
 
-                            }
-
-                        </div>
-                    </div>
-                    @*
-        <li class="nav-item cart"><a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li>
-                    *@
+                    <!-- <li class="nav-item cart"><a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li> -->
                 </ul>
             </div>
         </div>
@@ -214,17 +211,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <form class="box">
+                <div class="box">
                     <h1>Login</h1>
-                    <form>
-                        <input type="text" name="" placeholder="Username" required>
-                        <input type="password" name="" placeholder="Password" required> <a class="forgot text-muted" href="#">Forgot password?</a>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
+                        @Html.TextBoxFor(model => model.username, new { @class = "form-control", @placeholder = "Username", @autofocus = "autofocus", @required = "required" });
+                        @Html.PasswordFor(model => model.password, new { @class = "form-control", @placeholder = "Password", @autofocus = "autofocus", @required = "required" });
                         <div>
-                            <input type="submit" name="" value="Login" href="#">
-                            <p  href="#" class="sm-text mx-auto mb-3">Don't have an account? <a href="@Url.Action("Register","HomePage")" class="btn btn-outline-success">Create new</a></p>
-
+                            <input type="submit" value="Sign in">
+                            <p href="#" class="sm-text mx-auto mb-3">Don't have an account? <a href="@Url.Action("Register", "HomePage")" class="btn btn-outline-success">Sign up</a></p>
                         </div>
-                    </form>
+                    }
                     <div class="col-md-12">
                         <ul class="social-network social-circle">
                             <li><a href="#" class="icoFacebook" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
@@ -232,7 +231,7 @@
                             <li><a href="#" class="icoGoogle" title="Google +"><i class="fab fa-google-plus"></i></a></li>
                         </ul>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>

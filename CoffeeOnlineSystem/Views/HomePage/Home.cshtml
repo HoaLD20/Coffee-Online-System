@@ -34,10 +34,10 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="@Url.Action("Home", "HomePage")" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li class="nav-item "><a href="@Url.Action("Menu", "HomePage")" class="nav-link">Menu</a></li>
                     <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="@Url.Action("About", "HomePage") " class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="@Url.Action("About", "HomePage")" class="nav-link">About</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
@@ -48,7 +48,15 @@
                         </div>
                     </li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="nav-item "><a href="@Url.Action("Login", "HomePage")" class="nav-link">Login</a></li>
+                    @{ var a = @Session["login"]; }
+                    @if (a != null)
+                    {
+
+                    }
+                    else
+                    {
+                        <li class="nav-item"><a href="@Url.Action("Login", "HomePage")" class="nav-link">Login</a></li>
+                    }
                     <!-- <li class="nav-item cart"><a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li> -->
                     <div class="search hidden-sm hidden-xs">
                         <div class="">
