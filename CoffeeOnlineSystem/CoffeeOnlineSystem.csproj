@@ -472,6 +472,7 @@
     <Content Include="Views\HomePage\Login.cshtml" />
     <Content Include="Views\HomePage\Register.cshtml" />
     <Content Include="Views\HomePage\Menu.cshtml" />
+    <Content Include="Views\HomePage\ChangeInfor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
