@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace CoffeeOnlineSystem.Controllers
 {
-    public class CustomerController : Controller
+   /* public class CustomerController : Controller
     {
 
         //CUSTOMER
@@ -39,4 +39,5 @@ namespace CoffeeOnlineSystem.Controllers
        
 
     }
+   */
 }

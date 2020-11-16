@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace CoffeeOnlineSystem.Controllers
 {
+    /*
     public class EmployeeController : Controller
     {
         // GET: Employee
@@ -80,4 +81,5 @@ namespace CoffeeOnlineSystem.Controllers
 
 
     }
+    */
 }

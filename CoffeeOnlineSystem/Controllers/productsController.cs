@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace CoffeeOnlineSystem.Controllers
 {
-    public class productsController : Controller
+   public class productsController : Controller
     {
         // GET: products
         public ActionResult Index(string strSearch)
