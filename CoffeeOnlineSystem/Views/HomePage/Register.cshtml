@@ -214,9 +214,11 @@
                         @Html.TextBoxFor(model => model.Customer.fullnameCus, new { @class = "form-control", @placeholder = "Fullname", @autofocus = "autofocus", @required = "required" });
                         @Html.TextBoxFor(model => model.Customer.phoneCus, new { @class = "form-control", @placeholder = "Phone number", @autofocus = "autofocus", @required = "required" });
                         @Html.TextBoxFor(model => model.Customer.emailCus, new { @class = "form-control", @placeholder = "Email", @autofocus = "autofocus", @required = "required" });
-                        @Html.EditorFor(model => model.Customer.DOBCus, new { @class = "form-control",@type="date"});
-                        @Html.RadioButtonFor(model => model.Customer.genderCus, "Male")
-                        @Html.RadioButtonFor(model => model.Customer.genderCus, "Female")
+                        <input type="date" name="DOB" class="form-control" />
+                        <select name="gender">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
                         <div>
                             <input type="submit" value="Register">
                             <p href="#" class="sm-text mx-auto mb-3">Already have an account? <a href="@Url.Action("Login", "HomePage")" class="btn btn-outline-success">Sign in</a></p>

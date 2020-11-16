@@ -1,5 +1,6 @@
 ﻿using CoffeeOnlineSystem.DAO;
 using CoffeeOnlineSystem.Models;
+using System;
 using System.Text;
 using System.Web.Mvc;
 namespace ASM_C.Controllers
@@ -7,6 +8,8 @@ namespace ASM_C.Controllers
 
     public class HomePageController : Controller
     {
+        private object f;
+
         public ActionResult Home()
         {
             return View();
@@ -50,12 +53,14 @@ namespace ASM_C.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Register(AccountandCustomer accountandCustomer)
+        public ActionResult Register(AccountandCustomer accountandCustomer,FormCollection f)
         {
             CustomerDao customerDao = new CustomerDao();
             Account acc = accountandCustomer.Account;
             Customer customer = accountandCustomer.Customer;
+            customer.DOBCus = DateTime.ParseExact(f["DOB"], "yyyy-MM-dd", null); ;
             customer.usernameCus = acc.username;
+            customer.genderCus = f["gender"].ToString();
             customer.statusCus = 1;
             int i = customerDao.Register(customer, acc);
 
