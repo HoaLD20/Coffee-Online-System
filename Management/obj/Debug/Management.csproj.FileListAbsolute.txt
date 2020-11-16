@@ -56,3 +56,4 @@ C:\Users\asus\Desktop\asm C#\Coffee-Online-System\Management\bin\Debug\es\DevExp
 C:\Users\asus\Desktop\asm C#\Coffee-Online-System\Management\bin\Debug\ja\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Users\asus\Desktop\asm C#\Coffee-Online-System\Management\bin\Debug\ru\DevExpress.Pdf.v20.1.Core.resources.dll
 C:\Users\asus\Desktop\asm C#\Coffee-Online-System\Management\obj\Debug\Management.csproj.CopyComplete
+C:\Users\asus\Desktop\asm C#\Coffee-Online-System\Management\obj\Debug\Management.login.resources

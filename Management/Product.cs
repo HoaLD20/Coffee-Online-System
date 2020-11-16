@@ -604,6 +604,28 @@ namespace Management
             tbCustomer.DataSource = cusList.searchByFullnameCus(txtSearchFullnameCus.Text);
         }
 
-       
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            login pro = new login();
+            pro.ShowDialog();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            login pro = new login();
+            pro.ShowDialog();
+        }
+
+        /**
+         * logout
+         * */
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            login pro = new login();
+            pro.ShowDialog();
+        }
     }
 }
