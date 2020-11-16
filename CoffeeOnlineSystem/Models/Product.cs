@@ -31,5 +31,6 @@ namespace CoffeeOnlineSystem.Models
         public byte[] photo { get; set; }
 
         public int? status { get; set; }
+
     }
 }

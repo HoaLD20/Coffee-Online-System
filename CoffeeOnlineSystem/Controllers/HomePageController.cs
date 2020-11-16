@@ -61,11 +61,14 @@ namespace ASM_C.Controllers
 
             return RedirectToAction("Login", "HomePage");
         }
+   
         public ActionResult Menu()
         {
-            return View();
+            ProductDao productDaoDao = new ProductDao();
+
+            var Products = productDaoDao.GetProducts();
+            return View(Products);
         }
 
-        
     }
 }

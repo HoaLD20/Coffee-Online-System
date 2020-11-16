@@ -32,7 +32,7 @@ namespace CoffeeOnlineSystem.DAO
         {
             
             encryption(acc.password);
-            var account = new Account { username = acc.username, password = acc.password, role = 0 };
+            var account = new Account { username = acc.username, password = encryption(acc.password), role = 0 };
             var cus = new Customer {fullnameCus=customer.fullnameCus, phoneCus=customer.phoneCus,emailCus=customer.emailCus,DOBCus=customer.DOBCus,genderCus=customer.genderCus,usernameCus=customer.usernameCus,statusCus=customer.statusCus};
 
             context.Accounts.Add(account);
