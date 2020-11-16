@@ -1,0 +1,84 @@
+﻿@model IEnumerable<CoffeeOnlineSystem.Models.Product>
+
+@{
+    ViewBag.Title = "SearchResult";
+    Layout = "~/Views/Shared/_LayoutCoffee.cshtml";
+}
+
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="@Url.Action("Home", "HomePage")">Coffee<small>Blend</small></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="oi oi-menu"></span> Menu
+        </button>
+        <div class="collapse navbar-collapse" id="ftco-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a href="@Url.Action("Home", "HomePage")" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="@Url.Action("About", "HomePage") " class="nav-link">About</a></li>
+                <li class="nav-item"><a href="@Url.Action("search", "HomePage") " class="nav-link">Search</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                        <a class="dropdown-item" href="shop.html">Shop</a>
+                        <a class="dropdown-item" href="product-single.html">Single Product</a>
+                        <a class="dropdown-item" href="room.html">Cart</a>
+                        <a class="dropdown-item" href="checkout.html">Checkout</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item "><a href="@Url.Action("Login", "HomePage")" class="nav-link">Login</a></li>
+                <!-- <li class="nav-item cart"><a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li> -->
+                <div class="search hidden-sm hidden-xs">
+                    <div class="">
+                        @using (Html.BeginForm("SearchResult", "Search"))
+                        {
+                            <div class="form-search-controls">
+                                <input type="text" name="txtSearch" id="txtsearch" placeholder="Search..." />
+                                <button class="btn btn-primary" title="Search" type="submit" id="btnsearch" value="Search">Search</button>
+                                <select name="lbgroup" id="lbgroup" class="mdb-select md-form">
+                                    <option value="0" selected="selected">ALL</option>
+                                    <option class="option-1" value="1">PRODUCT</option>
+                                    <option class="option-1" value="2">CATEGORY</option>
+                                </select>
+
+                            </div>
+
+
+                        }
+
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="col-md-15 d-flex align-items-center">
+
+    <div class="tab-content ftco-animate" id="v-pills-tabContent">
+        <!-- Coffee -->
+        <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab">
+            <div class="row">
+                @foreach (var emp in Model)
+                {
+                    
+                        <div class="col-md-4 text-center">
+                            <div class="menu-wrap">
+                                <a href="#" class="menu-img img mb-4" style="background-image: url(@emp.imageUrl);"></a>
+                                <div class="text">
+                                    <h3><a href="#">@emp.nameProduct</a></h3>
+                                    <p>@emp.description</p>
+                                    <p class="price"><span>@emp.price</span></p>
+                                    <p><a href="#" class="btn btn-primary btn-outline-primary">Add to cart</a></p>
+                                </div>
+                            </div>
+                        </div>
+                }
+            </div>
+        </div>
+        </div>
+    </div>
+      
