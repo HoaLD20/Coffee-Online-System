@@ -9,8 +9,6 @@ namespace CoffeeOnlineSystem.Models
     [Table("Account")]
     public partial class Account
     {
-
-
         [Key]
         [StringLength(50)]
         public string username { get; set; }

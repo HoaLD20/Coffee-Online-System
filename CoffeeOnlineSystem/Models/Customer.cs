@@ -31,7 +31,5 @@ namespace CoffeeOnlineSystem.Models
         public string usernameCus { get; set; }
 
         public int? statusCus { get; set; }
-
     }
-
 }

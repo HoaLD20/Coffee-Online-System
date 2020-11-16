@@ -63,7 +63,10 @@ namespace ASM_C.Controllers
         }
         public ActionResult Menu()
         {
-            return View();
+            ProductDao productDaoDao = new ProductDao();
+
+            var Products = productDaoDao.GetProducts();
+            return View(Products);
         }
 
         

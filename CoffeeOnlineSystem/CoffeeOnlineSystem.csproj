@@ -142,9 +142,6 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\HomePageController.cs" />
-    <Compile Include="Controllers\CustomerController.cs" />
-    <Compile Include="Controllers\EmployeeController.cs" />
-    <Compile Include="Controllers\productsController.cs" />
     <Compile Include="DAO\CustomerDao.cs" />
     <Compile Include="DAO\ProductDao.cs" />
     <Compile Include="Global.asax.cs">
@@ -161,7 +158,6 @@
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -201,9 +197,17 @@
     <Content Include="Content\images\bg_2.jpg" />
     <Content Include="Content\images\bg_3.jpg" />
     <Content Include="Content\images\bg_4.jpg" />
+    <Content Include="Content\images\BLACKTEWITHMILK.jpg" />
     <Content Include="Content\images\burger-1.jpg" />
     <Content Include="Content\images\burger-2.jpg" />
     <Content Include="Content\images\burger-3.jpg" />
+    <Content Include="Content\images\ca-phe-da-xay.jpg" />
+    <Content Include="Content\images\CAPPUCCINOCOFFEE.jpg" />
+    <Content Include="Content\images\CaramelCoffee.jpg" />
+    <Content Include="Content\images\CARAMELICEBLENDED.jpg" />
+    <Content Include="Content\images\cheesecake.jpg" />
+    <Content Include="Content\images\CHOCOLATEICEBLENDED.jpg" />
+    <Content Include="Content\images\cupcake.jpg" />
     <Content Include="Content\images\dessert-1.jpg" />
     <Content Include="Content\images\dessert-2.jpg" />
     <Content Include="Content\images\dessert-3.jpg" />
@@ -228,17 +232,22 @@
     <Content Include="Content\images\drink-7.jpg" />
     <Content Include="Content\images\drink-8.jpg" />
     <Content Include="Content\images\drink-9.jpg" />
+    <Content Include="Content\images\Banhmi.jpg" />
     <Content Include="Content\images\gallery-1.jpg" />
     <Content Include="Content\images\gallery-2.jpg" />
     <Content Include="Content\images\gallery-3.jpg" />
     <Content Include="Content\images\gallery-4.jpg" />
+    <Content Include="Content\images\GreenTeaIceBlended.jpg" />
     <Content Include="Content\images\image_1.jpg" />
     <Content Include="Content\images\image_2.jpg" />
     <Content Include="Content\images\image_3.jpg" />
     <Content Include="Content\images\image_4.jpg" />
     <Content Include="Content\images\image_5.jpg" />
     <Content Include="Content\images\image_6.jpg" />
+    <Content Include="Content\images\lattee.jpg" />
+    <Content Include="Content\images\lemon-iced-tea.jpg" />
     <Content Include="Content\images\loc.png" />
+    <Content Include="Content\images\LONGANTEA.jpg" />
     <Content Include="Content\images\menu-1.jpg" />
     <Content Include="Content\images\menu-2.jpg" />
     <Content Include="Content\images\menu-3.jpg" />
@@ -246,6 +255,10 @@
     <Content Include="Content\images\person_2.jpg" />
     <Content Include="Content\images\person_3.jpg" />
     <Content Include="Content\images\person_4.jpg" />
+    <Content Include="Content\images\socolacoffee.jpg" />
+    <Content Include="Content\images\strawberry.jpg" />
+    <Content Include="Content\images\tiramisu.png" />
+    <Content Include="Content\images\whitecoffeeisceblended.jpg" />
     <Content Include="Content\js\aos.js" />
     <Content Include="Content\js\bootstrap-datepicker.js" />
     <Content Include="Content\js\bootstrap.min.js" />

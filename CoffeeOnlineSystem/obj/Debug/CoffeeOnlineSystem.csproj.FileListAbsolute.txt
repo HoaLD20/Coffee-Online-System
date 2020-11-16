@@ -257,3 +257,7 @@ C:\Users\Admin\Documents\GitHub\Coffee-Online-System\CoffeeOnlineSystem\bin\Enti
 C:\Users\Admin\Documents\GitHub\Coffee-Online-System\CoffeeOnlineSystem\bin\EntityFramework.SqlServer.dll
 C:\Users\Admin\Documents\GitHub\Coffee-Online-System\CoffeeOnlineSystem\bin\EntityFramework.xml
 C:\Users\Admin\Documents\GitHub\Coffee-Online-System\CoffeeOnlineSystem\bin\EntityFramework.SqlServer.xml
+C:\Users\DELL\Desktop\Coffee-Online-System\CoffeeOnlineSystem\bin\EntityFramework.dll
+C:\Users\DELL\Desktop\Coffee-Online-System\CoffeeOnlineSystem\bin\EntityFramework.SqlServer.dll
+C:\Users\DELL\Desktop\Coffee-Online-System\CoffeeOnlineSystem\bin\EntityFramework.xml
+C:\Users\DELL\Desktop\Coffee-Online-System\CoffeeOnlineSystem\bin\EntityFramework.SqlServer.xml
