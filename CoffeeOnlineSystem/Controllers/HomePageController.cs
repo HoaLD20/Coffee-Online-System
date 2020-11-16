@@ -35,6 +35,12 @@ namespace ASM_C.Controllers
         {
             return View();
         }
+
+        public ActionResult ChangeInfor()
+        {
+            return View();
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Login(Account account)
