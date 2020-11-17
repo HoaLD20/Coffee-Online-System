@@ -25,8 +25,8 @@
     <link rel="stylesheet" href="~/Content/css/icomoon.css">
     <link rel="stylesheet" href="~/Content/css/style.css">
     <link rel="stylesheet" href="~/Content/js/bootstrap.min.js">
+    <link rel="stylesheet" href="~/Content/lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/Content/js/jquery-3.2.1.min.js">
-    <link rel="stylesheet" href="~/Content/css/css/csslogin.css">
     <style>
         body {
             margin: 0;
@@ -48,7 +48,7 @@
             margin-top: 100px
         }
 
-            .box input[type="text"],
+            .box input[type="text"], .box input[type="email"], .box input[type="date"], .box select,
             .box input[type="password"] {
                 border: 0;
                 background: none;
@@ -70,7 +70,7 @@
                 font-weight: 500
             }
 
-            .box input[type="text"]:focus,
+            .box input[type="text"]:focus, .box input[type="email"]:focus, .box input[type="date"]:focus, .box select:focus,
             .box input[type="password"]:focus {
                 width: 300px;
                 border-color: #2ecc71
@@ -169,6 +169,8 @@
     </style>
 </head>
 <body>
+ 
+
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
             <a class="navbar-brand" href="@Url.Action("Home", "HomePage")">Coffee<small>Blend</small></a>
@@ -227,24 +229,23 @@
                     {
                         @Html.AntiForgeryToken()
                         @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
+
                         @Html.TextBoxFor(model => model.Account.username, new { @class = "form-control", @placeholder = "Username", @autofocus = "autofocus", @required = "required" });
                         @Html.PasswordFor(model1 => model1.Account.password, new { @class = "form-control", @placeholder = "Password", @autofocus = "autofocus", @required = "required" });
-
                         @Html.TextBoxFor(model => model.Customer.fullnameCus, new { @class = "form-control", @placeholder = "Fullname", @autofocus = "autofocus", @required = "required" });
                         @Html.TextBoxFor(model => model.Customer.phoneCus, new { @class = "form-control", @placeholder = "Phone number", @autofocus = "autofocus", @required = "required" });
-                        @Html.TextBoxFor(model => model.Customer.emailCus, new { @class = "form-control", @placeholder = "Email", @autofocus = "autofocus", @required = "required" });
-                        <input type="date" name="DOB" class="form-control" />
-                        <select name="gender">
-                            <option value="Male">Male</option>
+                       
+                        <input type="email" name="txtemail" class="form-control" placeholder="Email" required />
+                        <input type="date" name="DOB" class="form-control text-center" value="2020-11-18" />
+                        <select style="padding:unset;text-align-last:center;b" name="txtgender" class="custom-select " >
+                            <option style="color:blue" value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
                         <div>
                             <input type="submit" value="Register">
                             <p href="#" class="sm-text mx-auto mb-3">Already have an account? <a href="@Url.Action("Login", "HomePage")" class="btn btn-outline-success">Sign in</a></p>
-
                         </div>
                     }
-
                 </div>
             </div>
         </div>
