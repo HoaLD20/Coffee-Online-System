@@ -1,6 +1,7 @@
 ﻿using CoffeeOnlineSystem.DAO;
 using CoffeeOnlineSystem.Models;
 using System;
+using System.Collections;
 using System.Text;
 using System.Web.Mvc;
 namespace ASM_C.Controllers
@@ -8,6 +9,7 @@ namespace ASM_C.Controllers
 
     public class HomePageController : Controller
     {
+        Hashtable Cart = new Hashtable();
         private object f;
 
         public ActionResult Home()
@@ -68,6 +70,7 @@ namespace ASM_C.Controllers
         }
         public ActionResult Menu()
         {
+
             ProductDao productDaoDao = new ProductDao();
 
             var Products = productDaoDao.GetProducts();
