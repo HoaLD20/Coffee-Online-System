@@ -23,10 +23,11 @@
     <link rel="stylesheet" href="~/Content/css/jquery.timepicker.css">
     <link rel="stylesheet" href="~/Content/css/flaticon.css">
     <link rel="stylesheet" href="~/Content/css/icomoon.css">
-    <link rel="stylesheet" href="~/Content/css/style.css">
     <link rel="stylesheet" href="~/Content/js/bootstrap.min.js">
     <link rel="stylesheet" href="~/Content/lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/Content/js/jquery-3.2.1.min.js">
+    <link rel="stylesheet" href="~/Content/css/style.css">
+    <link rel="stylesheet" href="~/Content/css/css/csslogin.css">
     <style>
         body {
             margin: 0;
@@ -70,11 +71,13 @@
                 font-weight: 500
             }
 
+
             .box input[type="text"]:focus, .box input[type="email"]:focus, .box input[type="date"]:focus, .box select:focus,
             .box input[type="password"]:focus {
                 width: 300px;
                 border-color: #2ecc71
             }
+
 
             .box input[type="submit"] {
                 border: 0;
@@ -167,9 +170,23 @@
             margin-left: -40px
         }
     </style>
+
+    <script type="text/javascript">
+            function validate() {
+                var password1 = $("#txtpassword").val();
+                var password2 = $("#txtconpassword").val();
+                if (password1 == password2) {
+                    $("#validate-status").html("Valid").css('color', 'green');
+                }
+                else {
+                    $("#validate-status").html("Invalid").css('color', 'red');;
+                }
+
+        };
+    </script>
 </head>
 <body>
- 
+
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
@@ -179,22 +196,28 @@
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a href="@Url.Action("Home", "HomePage")" class="nav-link">Home</a></li>
+                    <li class="nav-item "><a href="@Url.Action("Home", "HomePage")" class="nav-link">Home</a></li>
                     <li class="nav-item "><a href="@Url.Action("Menu", "HomePage")" class="nav-link">Menu</a></li>
-                    <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="@Url.Action("Service", "HomePage")" class="nav-link">Services</a></li>
                     <li class="nav-item"><a href="@Url.Action("About", "HomePage")" class="nav-link">About</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="room.html" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
                         <div class="dropdown-menu" aria-labelledby="dropdown04">
-                            <a class="dropdown-item" href="shop.html">Shop</a>
-                            <a class="dropdown-item" href="product-single.html">Single Product</a>
-                            <a class="dropdown-item" href="room.html">Cart</a>
-                            <a class="dropdown-item" href="checkout.html">Checkout</a>
+                            <a class="dropdown-item" href="@Url.Action("Productinfo", "HomePage")">Single Product</a>
+                            <a class="dropdown-item" href="@Url.Action("Cart", "HomePage")">Cart</a>
+                            <a class="dropdown-item" href="@Url.Action("Checkout", "HomePage")">Checkout</a>
                         </div>
                     </li>
                     <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="nav-item active"><a href="@Url.Action("Login", "HomePage")" class="nav-link">Login</a></li>
+                    @{ var a = @Session["login"]; }
+                    @if (a != null)
+                    {
+
+                    }
+                    else
+                    {
+                        <li class="nav-item active"><a href="@Url.Action("Login", "HomePage")" class="nav-link">Login</a></li>
+                    }
                     <!-- <li class="nav-item cart"><a href="cart.html" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li> -->
                 </ul>
             </div>
@@ -212,19 +235,24 @@
                         @Html.ValidationSummary(true, null, new { @class = "alert alert-danger" })
 
                         @Html.TextBoxFor(model => model.Account.username, new { @class = "form-control", @placeholder = "Username", @autofocus = "autofocus", @required = "required" });
-                        @Html.PasswordFor(model1 => model1.Account.password, new { @class = "form-control", @placeholder = "Password", @autofocus = "autofocus", @required = "required" });
+                        <input class="form-control" type="password" name="txtpassword" id="txtpassword" placeholder="Password" onkeyup="" />
+                        <span id="message1" class="confirm-message"></span>
+                        <div>
+                        <input class="form-control" type="password" name="txtconpassword" id="txtconpassword" placeholder="Confirm Password" onkeyup="validate()" />
+                        <span id='validate-status'></span>
+                         </div>
                         @Html.TextBoxFor(model => model.Customer.fullnameCus, new { @class = "form-control", @placeholder = "Fullname", @autofocus = "autofocus", @required = "required" });
                         @Html.TextBoxFor(model => model.Customer.phoneCus, new { @class = "form-control", @placeholder = "Phone number", @autofocus = "autofocus", @required = "required" });
-                       
+
                         <input type="email" name="txtemail" class="form-control" placeholder="Email" required />
                         <input type="date" name="DOB" class="form-control text-center" value="2020-11-18" />
-                        <select style="padding:unset;text-align-last:center;b" name="txtgender" class="custom-select " >
+                        <select style="padding:unset;text-align-last:center;b" name="txtgender" class="custom-select ">
                             <option style="color:blue" value="Male">Male</option>
                             <option value="Female">Female</option>
                         </select>
                         <div>
                             <input type="submit" value="Register">
-                            <p href="#" class="sm-text mx-auto mb-3">Already have an account? <a href="@Url.Action("Login", "HomePage")" class="btn btn-outline-success">Sign in</a></p>
+                            <p href="@Url.Action("Login", "HomePage")" class="sm-text mx-auto mb-3">Already have an account? <a href="@Url.Action("Login", "HomePage")" class="btn btn-outline-success">Sign in</a></p>
                         </div>
                     }
                 </div>

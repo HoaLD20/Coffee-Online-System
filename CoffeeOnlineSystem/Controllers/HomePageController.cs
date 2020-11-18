@@ -9,10 +9,26 @@ namespace ASM_C.Controllers
 
     public class HomePageController : Controller
     {
-        Hashtable Cart = new Hashtable();
+        Hashtable ShoppingCart = new Hashtable();
         private object f;
 
         public ActionResult Home()
+        {
+            return View();
+        }
+        public ActionResult Service()
+        {
+            return View();
+        }
+        public ActionResult Cart()
+        {
+            return View();
+        }
+        public ActionResult Productinfo()
+        {
+            return View();
+        }
+        public ActionResult Checkout()
         {
             return View();
         }
@@ -62,11 +78,26 @@ namespace ASM_C.Controllers
             Customer customer = accountandCustomer.Customer;
             customer.DOBCus = DateTime.ParseExact(f["DOB"], "yyyy-MM-dd", null); ;
             customer.usernameCus = acc.username;
-            customer.genderCus = f["gender"].ToString();
-            customer.statusCus = 1;
-            int i = customerDao.Register(customer, acc);
-
-            return RedirectToAction("Login", "HomePage");
+            acc.password = f["txtpassword"].ToString();
+            string txtconfpassword = f["txtconpassword"].ToString();
+            if (acc.password.CompareTo(txtconfpassword) == 0)
+            {
+                customer.genderCus = f["txtgender"].ToString();
+                customer.emailCus = f["txtemail"].ToString();
+                customer.statusCus = 1;
+                int i = customerDao.Register(customer, acc);
+                Console.WriteLine(i);
+                if (i != 0)
+                {
+                    return RedirectToAction("Login", "HomePage");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Username or Password is not correct.");
+                }
+            }
+            else ModelState.AddModelError("", "Password and Confirm Password not match");
+            return View();
         }
         public ActionResult Menu()
         {
